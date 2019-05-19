@@ -1,5 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
+import "normalize.css/normalize.css";
+import Slider from "./Slider";
 
 const App = () => {
   return (
@@ -8,8 +10,37 @@ const App = () => {
         {/*
          */}
         <header>
-          <h1>Header</h1>
+          <h1>Nephelizer</h1>
         </header>
+        <div className="center-grid">
+          <div className="section">
+            <Slider />
+          </div>
+          <div className="section">
+            <span>.</span>
+          </div>
+          <div className="section">
+            <span>.</span>
+          </div>
+          <div className="section">
+            <span>.</span>
+          </div>
+          <div className="section">
+            <span>.</span>
+          </div>
+          <div className="section">
+            <span>.</span>
+          </div>
+          <div className="section">
+            <span>.</span>
+          </div>
+          <div className="section">
+            <span>.</span>
+          </div>
+          <div className="section">
+            <span>.</span>
+          </div>
+        </div>
       </div>
     </React.StrictMode>
   );

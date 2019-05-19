@@ -3,13 +3,44 @@
 font-family: 'GFS Neohellenic', sans-serif; */
 
 * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
   box-sizing: border-box;
   color: whitesmoke;
 }
+html {
+  font-size: 62.5%;
+}
 
 body {
+  font-size: 1.6rem;
   /* background-color: #81a69b; */
-  background: radial-gradient(circle farthest-side, #f1d297, #ebc264);
+  background: radial-gradient(circle farthest-side, #f5d79f, #ebc264);
   margin: 0;
   font-family: "Caesar Dressing", "Segoe UI", Tahoma, Verdana, sans-serif;
+  text-align: center;
+}
+
+h1 {
+  letter-spacing: 2rem;
+  text-shadow: 0px 0px 4px #d4cbad;
+  color: #333;
+}
+
+.center-grid {
+  margin: auto;
+  width: 90vw;
+  height: 90vh;
+  border: 1px solid orangered;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.section {
+  color: green;
+  border: 1px solid teal;
 }

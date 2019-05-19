@@ -9,9 +9,11 @@
     "eslint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "dependencies": {
+    "normalize.css": "^8.0.1",
     "prettier": "^1.17.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
