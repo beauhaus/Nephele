@@ -1,0 +1,41 @@
+{
+  "name": "nephelizer",
+  "version": "1.0.0",
+  "description": "built from react 16.8.4 course on FrontEndMasters",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "format": "prettier \"src/**/*.{js,html}\" --write",
+    "eslint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+  },
+  "dependencies": {
+    "prettier": "^1.17.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.2.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "eslint-plugin-react-hooks": "^1.6.0",
+    "parcel-bundler": "^1.12.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beauhaus/Nephelizer.git"
+  },
+  "keywords": [],
+  "author": "Beau Jackson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beauhaus/Nephelizer/issues"
+  },
+  "homepage": "https://github.com/beauhaus/Nephelizer#readme"
+}

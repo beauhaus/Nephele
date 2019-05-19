@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+assets/
+dist/
+coverage/
+.vscode/
+.env
+.cache/
+scrap/
