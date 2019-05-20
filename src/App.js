@@ -11,7 +11,7 @@ const App = () => {
 
       <div className="center-grid">
         <header className="section">
-          <h1>Nephelizer</h1>
+          <h1>Nephele</h1>
         </header>
         <aside className="section aside-left">
           <i>.</i>
