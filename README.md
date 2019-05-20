@@ -12,7 +12,8 @@ React App that paints clouds in the browser
 | **Styling**       | Styled-Components | ***√***         |
 
 
-![Select page screenshot](https://github.com/beauhaus/Nephelizer/blob/master/readmeRefImg/scrnshot.png?raw=true "Select page screenshot")
+![First page screenshot](https://github.com/beauhaus/Nephelizer/blob/master/readmeRefImg/scrnshot.png?raw=true "First page screenshot")
+![Second page screenshot](https://github.com/beauhaus/Nephelizer/blob/master/readmeRefImg/scrnshot2.png?raw=true "Second page screenshot")
 
 
 
