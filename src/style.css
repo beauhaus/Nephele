@@ -15,10 +15,6 @@ html {
 
 body {
   font-size: 1.6rem;
-  /* background-color: #81a69b; */
-  /* background: radial-gradient(circle farthest-side, #ffd078, #5f4300); */
-  /* background: radial-gradient(circle farthest-side, #fdda9a, #5f4300); */
-  /* background: radial-gradient(circle, #ffd078, #5f4300);  */
   background: linear-gradient(
     90deg,
     #5f4300 0%,
@@ -53,7 +49,6 @@ svg {
   z-index: -1;
 }
 header {
-  /* border: 2px solid red; */
   height: 5vh;
 }
 h1 {
@@ -72,9 +67,31 @@ h1 {
   grid-template-rows: repeat(3, 1fr);
 }
 .section {
-  color: green;
-  /* border: 1px solid teal; */
+  color: #080808;
+  /* position: relative; */
 }
+h2,
+h3 {
+  margin-bottom: -2vh;
+}
+.slider-wrapper {
+  font-family: "Stylish", sans-serif;
+  font-size: 2rem;
+  font-weight: 200;
+}
+/* label[for="slider1"],
+label[for="slider2"],
+label[for="slider3"] { */
+/* targeting label text */
+/* position: absolute; */
+/* float: left; */
+/* } */
 input {
-  width: 80%;
+  width: 90%;
+  cursor: pointer;
 }
+
+/* input:placeholder-shown + label {
+  opacity: 0;
+  transform: translateY(1rem);
+} */

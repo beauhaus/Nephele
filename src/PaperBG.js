@@ -34,13 +34,3 @@ const PaperBG = () => {
 };
 
 export default PaperBG;
-
-/*
-<defs>
-        <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop id="stop-top" offset="0%" />
-          <stop id="stop-bot" offset="100%" />
-        </linearGradient>
-      </defs>
-      
-*/

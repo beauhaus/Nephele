@@ -1,45 +1,31 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
-const LovelyDiv = styled.div`
-  font-family: "Stylish", sans-serif;
+const SliderWrapper = styled.div``;
 
-  font-size: 2rem;
-  font-weight: 200;
-  h1,
-  h2,
-  h3 {
-    color: #050505;
-  }
-`;
+const Slider3 = () => {
+  const [value, setValue] = useState(50);
 
-// const [todos, setTodos] = useState(todosData);
-class Slider3 extends Component {
-  state = { value: 0 };
-
-  changeHandler = e => {
-    const slider3val = e.target.value;
-    return this.setState({ value: slider3val });
+  const changeHandler = val => {
+    setValue(val);
   };
 
-  render() {
-    return (
-      <LovelyDiv className="slider">
-        <label htmlFor="slider3">
-          slider3
-          <input
-            onChange={this.changeHandler}
-            className="slider-3"
-            type="range"
-            min={0}
-            max={100}
-            value={this.state.value}
-          />
-        </label>
-        <h2>{this.state.value}</h2>
-      </LovelyDiv>
-    );
-  }
-}
-
+  return (
+    <SliderWrapper className="slider-wrapper">
+      <label htmlFor="slider3">
+        slider3
+        <input
+          onChange={e => changeHandler(e.target.value)}
+          onBlur={e => changeHandler(e.target.value)}
+          className="slider-3"
+          type="range"
+          min={0}
+          max={100}
+          value={value}
+        />
+      </label>
+      <h2>{value}</h2>
+    </SliderWrapper>
+  );
+};
 export default Slider3;

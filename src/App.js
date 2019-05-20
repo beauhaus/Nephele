@@ -8,41 +8,39 @@ import PaperBG from "./PaperBG";
 
 const App = () => {
   return (
-    <React.StrictMode>
-      <div id="app-wrapper">
-        <PaperBG />
-        <header>
-          <h1>Nephelizer</h1>
-        </header>
-        <div className="center-grid">
-          <div className="section" />
-          <div className="section">
-            <span>.</span>
-          </div>
-          <div className="section">
-            <span>.</span>
-          </div>
-          <div className="section">
-            <span>.</span>
-          </div>
-          <div className="section">
-            <span>.</span>
-          </div>
-          <div className="section">
-            <span>.</span>
-          </div>
-          <div className="section">
-            <Slider1 />
-          </div>
-          <div className="section">
-            <Slider2 />
-          </div>
-          <div className="section">
-            <Slider3 />
-          </div>
+    <div id="app-wrapper">
+      <PaperBG />
+      <header>
+        <h1>Nephelizer</h1>
+      </header>
+      <div className="center-grid">
+        <div className="section" />
+        <div className="section">
+          <span>.</span>
+        </div>
+        <div className="section">
+          <span>.</span>
+        </div>
+        <div className="section">
+          <span>.</span>
+        </div>
+        <div className="section">
+          <span>.</span>
+        </div>
+        <div className="section">
+          <span>.</span>
+        </div>
+        <div className="section">
+          <Slider1 />
+        </div>
+        <div className="section">
+          <Slider2 />
+        </div>
+        <div className="section">
+          <Slider3 />
         </div>
       </div>
-    </React.StrictMode>
+    </div>
   );
 };
 render(<App />, document.getElementById("root"));
