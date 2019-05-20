@@ -18,8 +18,8 @@ body {
   background: linear-gradient(
     90deg,
     #5f4300 0%,
-    #dbae5b 10%,
-    #d8c39d 50%,
+    #bb944d 20%,
+    #d8c39d 70%,
     #dbae5b 90%,
     #5f4300 100%
   );
@@ -61,7 +61,7 @@ h1 {
   margin: auto;
   width: 90vw;
   height: 90vh;
-  /* border: 1px solid orangered; */
+  border: 1px solid orangered;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
@@ -86,12 +86,79 @@ label[for="slider3"] { */
 /* position: absolute; */
 /* float: left; */
 /* } */
-input {
+input[type="range"] {
+  -webkit-appearance: none;
   width: 90%;
   cursor: pointer;
+  background: transparent;
 }
 
-/* input:placeholder-shown + label {
-  opacity: 0;
-  transform: translateY(1rem);
-} */
+input[type="range"]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border-width: 0px;
+  height: 30px;
+  width: 30px;
+  /* background: #ffffff; */
+  background: orangered;
+  background: url("./images/cloud_thumb.svg");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center top;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
+}
+input[type="range"]::-moz-range-thumb {
+  border-width: 0px;
+  height: 30px;
+  width: 30px;
+  /* background: #ffffff; */
+  background: url("./images/cloud_thumb.svg");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center top;
+  cursor: pointer;
+  filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
+}
+/* All the same stuff for IE */
+input[type="range"]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 10px;
+  border-radius: 50%;
+  background: #ffffff;
+  /* background-image: url("./images/cloud_thumb.svg"); */
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}

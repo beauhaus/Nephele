@@ -6,7 +6,7 @@ import styled from "styled-components";
 const StyledPaperBG = styled.svg`
   width: 100%;
   height: 100%;
-  opacity: 0.5;
+  opacity: 0.7;
   /* display: none; */
   rect {
     filter: url(#paperBG);
@@ -24,7 +24,7 @@ const PaperBG = () => {
           numOctaves="5"
         />
         <feDiffuseLighting id="light" in="noise" surfaceScale="2">
-          <feDistantLight azimuth="45" elevation="60" />
+          <feDistantLight azimuth="45" elevation="80" />
         </feDiffuseLighting>
       </filter>
 

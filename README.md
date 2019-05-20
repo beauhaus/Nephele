@@ -14,10 +14,12 @@ React App that paints clouds in the browser
 
 ![First page screenshot](https://github.com/beauhaus/Nephelizer/blob/master/readmeRefImg/scrnshot.png?raw=true "First page screenshot")
 ![Second page screenshot](https://github.com/beauhaus/Nephelizer/blob/master/readmeRefImg/scrnshot2.png?raw=true "Second page screenshot")
+![Third page screenshot](https://github.com/beauhaus/Nephelizer/blob/master/readmeRefImg/scrnshot3.png?raw=true "Third page screenshot")
+#### custom slider thumbs as svg images
 
 
 
-##Attributions
+## Attributions
 
 React scaffolding using the recommendations Brian Holt's excellent react <a href="https://frontendmasters.com/teachers/brian-holt/" target="_blank" title="Click to visit this class">course on FrontEndMasters</a>
 
