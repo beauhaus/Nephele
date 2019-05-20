@@ -1,17 +1,14 @@
 @import url("https://fonts.googleapis.com/css?family=Caesar+Dressing|GFS+Neohellenic&display=swap");
 /* font-family: 'Caesar Dressing', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 font-family: 'GFS Neohellenic', sans-serif; */
-
+@import url("https://fonts.googleapis.com/css?family=Stylish&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Spectral+SC:200,300,400&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-* {
-  box-sizing: border-box;
-  color: whitesmoke;
-}
 html {
   font-size: 62.5%;
 }
@@ -19,12 +16,46 @@ html {
 body {
   font-size: 1.6rem;
   /* background-color: #81a69b; */
-  background: radial-gradient(circle farthest-side, #f5d79f, #ebc264);
+  /* background: radial-gradient(circle farthest-side, #ffd078, #5f4300); */
+  /* background: radial-gradient(circle farthest-side, #fdda9a, #5f4300); */
+  /* background: radial-gradient(circle, #ffd078, #5f4300);  */
+  background: linear-gradient(
+    90deg,
+    #5f4300 0%,
+    #dbae5b 10%,
+    #d8c39d 50%,
+    #dbae5b 90%,
+    #5f4300 100%
+  );
   margin: 0;
   font-family: "Caesar Dressing", "Segoe UI", Tahoma, Verdana, sans-serif;
   text-align: center;
 }
+#root {
+  width: 100vw;
+  height: 100vh;
+}
 
+#app-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+header {
+  /* border: 2px solid red; */
+  height: 5vh;
+}
 h1 {
   letter-spacing: 2rem;
   text-shadow: 0px 0px 4px #d4cbad;
@@ -35,12 +66,15 @@ h1 {
   margin: auto;
   width: 90vw;
   height: 90vh;
-  border: 1px solid orangered;
+  /* border: 1px solid orangered; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
 .section {
   color: green;
-  border: 1px solid teal;
+  /* border: 1px solid teal; */
+}
+input {
+  width: 80%;
 }

@@ -1,21 +1,21 @@
 import React from "react";
 import { render } from "react-dom";
 import "normalize.css/normalize.css";
-import Slider from "./Slider";
+import Slider1 from "./Slider1";
+import Slider2 from "./Slider2";
+import Slider3 from "./Slider3";
+import PaperBG from "./PaperBG";
 
 const App = () => {
   return (
     <React.StrictMode>
-      <div>
-        {/*
-         */}
+      <div id="app-wrapper">
+        <PaperBG />
         <header>
           <h1>Nephelizer</h1>
         </header>
         <div className="center-grid">
-          <div className="section">
-            <Slider />
-          </div>
+          <div className="section" />
           <div className="section">
             <span>.</span>
           </div>
@@ -32,13 +32,13 @@ const App = () => {
             <span>.</span>
           </div>
           <div className="section">
-            <span>.</span>
+            <Slider1 />
           </div>
           <div className="section">
-            <span>.</span>
+            <Slider2 />
           </div>
           <div className="section">
-            <span>.</span>
+            <Slider3 />
           </div>
         </div>
       </div>
@@ -46,32 +46,3 @@ const App = () => {
   );
 };
 render(<App />, document.getElementById("root"));
-
-/*
-        <svg width="100%" preserveAspectRatio="none">
-          <filter id="roughpaper" x="0%" y="0%" width="100%" height="100%">
-            <feTurbulence
-              type="fractalNoise"
-              baseFrequency="0.04"
-              result="noise"
-              numOctaves="5"
-            />
-            <feDiffuseLighting
-              in="noise"
-              lightingColor="white"
-              surfaceScale="2"
-            >
-              <feDistantLight azimuth="45" elevation="60" />
-            </feDiffuseLighting>
-            <rect
-              x="0"
-              y="0"
-              width="100%"
-              height="100%"
-              filter="url(#roughpaper)"
-              fill="none"
-            />
-          </filter>
-        </svg>
-
-*/
