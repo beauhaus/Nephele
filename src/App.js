@@ -1,43 +1,35 @@
 import React from "react";
 import { render } from "react-dom";
 import "normalize.css/normalize.css";
-import Slider1 from "./Slider1";
-import Slider2 from "./Slider2";
-import Slider3 from "./Slider3";
+import Slider from "./Slider";
 import PaperBG from "./PaperBG";
 
 const App = () => {
   return (
     <div id="app-wrapper">
       <PaperBG />
-      <header>
-        <h1>Nephelizer</h1>
-      </header>
+
       <div className="center-grid">
-        <div className="section" />
-        <div className="section">
-          <span>.</span>
+        <header className="section">
+          <h1>Nephelizer</h1>
+        </header>
+        <aside className="section aside-left">
+          <i>.</i>
+        </aside>
+        <div className="section cloud-display">
+          <img src="http://placebear.com/300/200" alt="bear" />
         </div>
-        <div className="section">
-          <span>.</span>
+        <aside className="section aside-right">
+          <i>.</i>{" "}
+        </aside>
+        <div className="section opacity-section">
+          <Slider attrReference="opacity" />
         </div>
-        <div className="section">
-          <span>.</span>
+        <div className="section border-color-section">
+          <Slider attrReference="border-color" />
         </div>
-        <div className="section">
-          <span>.</span>
-        </div>
-        <div className="section">
-          <span>.</span>
-        </div>
-        <div className="section">
-          <Slider1 />
-        </div>
-        <div className="section">
-          <Slider2 />
-        </div>
-        <div className="section">
-          <Slider3 />
+        <div className="section blur-section">
+          <Slider attrReference="blur" />
         </div>
       </div>
     </div>

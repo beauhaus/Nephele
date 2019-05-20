@@ -1,4 +1,4 @@
-# Nephelizer
+# Nephele
 React App that paints clouds in the browser
 
 

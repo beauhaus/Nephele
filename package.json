@@ -1,5 +1,5 @@
 {
-  "name": "nephelizer",
+  "name": "nephele",
   "version": "1.0.0",
   "description": "built from react 16.8.4 course on FrontEndMasters",
   "main": "index.js",
@@ -9,6 +9,7 @@
     "eslint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },
   "dependencies": {
+    "copy-to-clipboard": "^3.2.0",
     "normalize.css": "^8.0.1",
     "prettier": "^1.17.0",
     "react": "^16.8.6",
