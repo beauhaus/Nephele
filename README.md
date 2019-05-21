@@ -1,19 +1,23 @@
 # Nephele
-React App that paints clouds in the browser
+### Tool to be ported into Codepen as a complement to clouds article.
+
+User will be able to experiment and observe effects of adjustments to several relevant values affecting cloud image
 
 
 ## Feature-set
 
-| <h3>Feature</h3>  | <h3>Notes</h3>    | <h3>Status</h3> |
-| :---------------- | :---------------- | :-------------- |
-| **React**         | 16.4.2            | ***√***         |
-| **Normalization** | normalize.css     | *Pending*       |
-| **Layout**        | CSS Grid/Flexbox  | ***√***         |
-| **Styling**       | Styled-Components | ***√***         |
+| <h3>Feature</h3>  | <h3>Notes</h3>      | <h3>Status</h3> |
+| :---------------- | :------------------ | :-------------- |
+| **React**         | 16.4.2              | ***√***         |
+| **Normalization** | Safari, Moz, Chrome | ***√***         |
+| **Layout**        | CSS Grid/Flexbox    | ***√***         |
+| **Styling**       | Styled-Components   | ***√***         |
 
 
 ![First page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot.jpg?raw=true "First page screenshot")
+
 ![Second page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot2.jpg?raw=true "Second page screenshot")
+
 ![Third page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot3.jpg?raw=true "Third page screenshot")
 #### custom slider thumbs as svg images. woohoo.
 
