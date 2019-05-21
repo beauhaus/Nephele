@@ -15,7 +15,11 @@ const StyledPaperBG = styled.svg`
 
 const PaperBG = () => {
   return (
-    <StyledPaperBG viewBox="0 0 900 1440" preserveAspectRatio="none">
+    <StyledPaperBG
+      id="bg-texture"
+      viewBox="0 0 900 1440"
+      preserveAspectRatio="none"
+    >
       <filter id="paperBG" x="0%" y="0%" width="100%" height="100%">
         <feTurbulence
           type="fractalNoise"

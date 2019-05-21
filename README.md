@@ -12,9 +12,10 @@ React App that paints clouds in the browser
 | **Styling**       | Styled-Components | ***√***         |
 
 
-![First page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot.png?raw=true "First page screenshot")
-![Second page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot2.png?raw=true "Second page screenshot")
-![Third page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot3.png?raw=true "Third page screenshot")
+![First page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot.jpg?raw=true "First page screenshot")
+![Second page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot2.jpg?raw=true "Second page screenshot")
+![Third page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot3.jpg?raw=true "Third page screenshot")
+![Fourth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot4.jpg?raw=true "Fourth page screenshot")
 #### custom slider thumbs as svg images
 
 

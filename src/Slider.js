@@ -6,13 +6,24 @@ const SliderWrapper = styled.div`
   font-family: "Stylish", sans-serif;
   font-size: 2rem;
   font-weight: 200;
-  border: 1px solid blue;
-  & input {
-    border: 1px solid brown;
+  position: relative;
+  margin-top: 0.5rem;
+  & .val-display {
+    position: absolute;
+    top: 0;
+    right: 1vw;
+  }
+  & input[type="range"] {
+    /* border: 1px solid brown; */
+    margin: auto -1rem auto auto;
+    -webkit-appearance: none;
+    width: 94%;
+    cursor: pointer;
+    background: transparent;
   }
   & input[type="range"]::-webkit-slider-thumb {
   }
-  & label[for="slider"] {
+  & .attr-reference {
     color: brown;
   }
 `;
@@ -23,10 +34,11 @@ const Slider = props => {
   const slideChangeHandler = input => setValue(input);
 
   return (
-    <SliderWrapper className={`slider-wrapper ${props.attrReference}`}>
+    <SliderWrapper
+      className={`slider-wrapper section ${props.attrReference}-section`}
+    >
       <label htmlFor="slider">
-        {props.attrReference}
-
+        <p className="attr-reference">{props.attrReference}</p>
         <input
           onChange={e => slideChangeHandler(e.target.value)}
           onBlur={e => slideChangeHandler(e.target.value)}
@@ -37,7 +49,7 @@ const Slider = props => {
           value={value}
         />
       </label>
-      <h2>{value}</h2>
+      <h2 className="val-display">{value}</h2>
     </SliderWrapper>
   );
 };
