@@ -94,14 +94,6 @@ h3 {
 /*** INPUTS AND SLIDERS ***/
 /**************************/
 
-input[type="range"] {
-  /* margin: 0.5rem auto;
-  -webkit-appearance: none; */
-  /* width: 94%; */
-  /* cursor: pointer;
-  background: transparent; */
-}
-
 input[type="range"]:focus {
   outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
 }
@@ -171,4 +163,30 @@ input[type="range"]::-moz-range-track {
 
 .testing {
   fill: #7a5a5b;
+}
+.code-display {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 12px;
+  right: 12px;
+  /* margin-bottom: 12px; */
+  /* margin-right: 12px; */
+  grid-row: 3/-1;
+  grid-column: 3/-1;
+  /* border: 1px solid green; */
+}
+
+.annotation {
+  font-family: "Trebuchet MS", sans-serif;
+  font-weight: 100;
+  font-size: 3rem;
+}
+#zeus {
+  width: 180px;
+  /* float: right; */
+  /* border: 1px solid orange; */
+  position: absolute;
+  bottom: -2vh;
+  right: 0;
 }

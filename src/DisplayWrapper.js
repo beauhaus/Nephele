@@ -22,9 +22,9 @@ const DisplayWrapper = props => {
 
   return (
     <StyledDisplayWrapper className="section cloud-display">
-      <h2>CLOUD DISPLAY</h2>
+      <h2 className="annotation"><i>CLOUD DISPLAY</i></h2>
     </StyledDisplayWrapper>
   );
 };
 export default DisplayWrapper;
-<img src="http://placebear.com/800/000" alt="bear" />;
+// <img src="http://placebear.com/800/000" alt="bear" />;

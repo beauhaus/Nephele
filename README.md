@@ -15,8 +15,14 @@ React App that paints clouds in the browser
 ![First page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot.jpg?raw=true "First page screenshot")
 ![Second page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot2.jpg?raw=true "Second page screenshot")
 ![Third page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot3.jpg?raw=true "Third page screenshot")
+#### custom slider thumbs as svg images. woohoo.
+
 ![Fourth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot4.jpg?raw=true "Fourth page screenshot")
-#### custom slider thumbs as svg images
+
+![Fifth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot5.jpg?raw=true "Fifth page screenshot")
+#### Zeus codes beside what will be a text display of resulting code (using copy-to-clipboard library);
+
+
 
 
 
