@@ -9,6 +9,7 @@ const StyledDisplayWrapper = styled.div`
   width: 100%;
   height: 100%;
   max-height: 100%;
+  z-index: 10;
   & h2 {
     margin-top: 20vh;
     color: whitesmoke;
@@ -22,7 +23,9 @@ const DisplayWrapper = props => {
 
   return (
     <StyledDisplayWrapper className="section cloud-display">
-      <h2 className="annotation"><i>CLOUD DISPLAY</i></h2>
+      <h2 className="annotation">
+        <i>CLOUD DISPLAY</i>
+      </h2>
     </StyledDisplayWrapper>
   );
 };

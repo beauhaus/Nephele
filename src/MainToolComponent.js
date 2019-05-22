@@ -2,7 +2,6 @@ import React from "react";
 import Slider from "./Slider";
 import DisplayWrapper from "./DisplayWrapper";
 import OuterFrame from "./OuterFrame";
-
 import zeusCoding from "./images/zeuscoding.svg";
 
 const MainToolComponent = () => {
@@ -11,11 +10,10 @@ const MainToolComponent = () => {
       <OuterFrame />
 
       <header className="section">
-        <h1>Nephele</h1>
+        <h1 id="title">Nephele</h1>
       </header>
       <aside className="section aside-left">
         <Slider attrReference="box-shadow: <blur-radius>" />
-        
 
         <Slider attrReference="numOctaves" min="0" max="10" />
         <Slider attrReference="baseFrequency" />

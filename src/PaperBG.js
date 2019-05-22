@@ -1,13 +1,10 @@
-// import React, { Component } from "react";
 import React from "react";
-// import { render } from "react-dom";
 import styled from "styled-components";
 
 const StyledPaperBG = styled.svg`
   width: 100%;
   height: 100%;
-  opacity: 0.7;
-  /* display: none; */
+  opacity: 0.4;
   rect {
     filter: url(#paperBG);
   }
@@ -23,13 +20,25 @@ const PaperBG = () => {
       <filter id="paperBG" x="0%" y="0%" width="100%" height="100%">
         <feTurbulence
           type="fractalNoise"
-          baseFrequency="0.04"
+          baseFrequency="0.01"
           result="noise"
-          numOctaves="5"
+          numOctaves="8"
         />
-        <feDiffuseLighting id="light" in="noise" surfaceScale="2">
-          <feDistantLight azimuth="45" elevation="80" />
+
+        <feDiffuseLighting id="light" in="noise" surfaceScale="20">
+          <feDistantLight azimuth="45" elevation="70" />
         </feDiffuseLighting>
+        {/*
+          <feTurbulence
+    type="fractalNoise"
+    baseFrequency="0.04"
+    result="noise"
+    numOctaves="5"
+  />
+          <feDiffuseLighting id="light" in="noise" surfaceScale="2">
+        <feDistantLight azimuth="45" elevation="80" />
+      </feDiffuseLighting>
+  */}
       </filter>
 
       <rect id="paper" x="0" y="0" width="100%" height="100%" />
