@@ -12,7 +12,7 @@ const StyledTilesWrap = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(14px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(14px, 1fr));
   grid-gap: 4px;
-  opacity: 0.3;
+  opacity: 0.5;
 `;
 
 const genArr = new Array(4000).fill(""); //2000

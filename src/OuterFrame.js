@@ -2,10 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledFrame = styled.svg`
+  box-shadow: 0px 0px 2px 2px rgba(236, 230, 219, 1);
+  /* box-shadow: 1px 1px 2px 2px rgba(68, 33, 36, 0.4); */
   grid-row: 1/-1;
   grid-column: 1/7;
-  /* width: 100%;
-  height: 100%; */
   & #outer-frame-bg {
     fill: #cec0a1;
     stroke: #442124;
@@ -24,7 +24,7 @@ const StyledFrame = styled.svg`
 
 const OuterFrame = () => {
   return (
-    <StyledFrame viewBox="0 0 1295 750" preserveAspectRatio="none">
+    <StyledFrame viewBox="0 0 1295 746" preserveAspectRatio="none">
       <path
         id="outer-frame-bg"
         d="M1 1v745h1293V1H1zm1281 733H13V13h1269v721z"

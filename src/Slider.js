@@ -8,10 +8,12 @@ const SliderWrapper = styled.div`
   font-weight: 200;
   position: relative;
   margin-top: 0.5rem;
+
   & .val-display {
     position: absolute;
     top: 0;
     right: 1vw;
+    font-size: 1.8rem;
   }
   & input[type="range"] {
     /* border: 1px solid brown; */

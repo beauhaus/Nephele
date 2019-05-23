@@ -1,6 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Caesar+Dressing|GFS+Neohellenic&display=swap");
-/* font-family: 'Caesar Dressing', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-font-family: 'GFS Neohellenic', sans-serif; */
 @import url("https://fonts.googleapis.com/css?family=Stylish&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Spectral+SC:200,300,400&display=swap");
 
@@ -16,7 +14,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background: linear-gradient(35deg, #a2adb4 40%, #d8c39d 100%);
+  background: linear-gradient(35deg, #a2adb4 30%, #d8c39d 70%);
   margin: 0;
   font-family: "Caesar Dressing", "Segoe UI", Tahoma, Verdana, sans-serif;
   text-align: center;
@@ -56,14 +54,17 @@ h1 {
   /* color: #555; */
 }
 
+/*EXPERIMENTAL TEXT EFFECT */
 #title {
-  /* background: -webkit-linear-gradient(270deg, #12111b 50%, #fff);
+  background: -webkit-linear-gradient(270deg, #10203a 30%, #fff 80%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  /* text-fill-color: transparent; */
-  /* -webkit-text-stroke: 0.2px white; */
-  font-size: 3.5rem;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0px 0px 1px rgb(54, 44, 14));
+}
+
+#title {
+  font-size: 3.7rem;
 }
 
 .center-grid {
@@ -182,12 +183,13 @@ input[type="range"]::-moz-range-track {
   font-size: 3rem;
 }
 #zeus {
-  width: 180px;
-  /* float: right; */
-  /* border: 1px solid orange; */
+  /* width: 18rem; */
   position: absolute;
-  bottom: -2vh;
+  width: 10vw;
+  /* top: 8vh; */
   right: 0;
+  bottom: 0;
+  margin-bottom: 18px;
 }
 
 .testing {
@@ -204,6 +206,8 @@ input[type="range"]::-moz-range-track {
   color: #6dc5ab;
   color: #e2846c;
   color: #5a8664;
-  color: #85a567;
-  color: #ad73ad;
+  color: rgba(68, 33, 36, 0.952);
+  color: rgb(245, 226, 202);
+  color: #c0c2c5;
+  color: rgba(236, 230, 219, 0.904);
 }
