@@ -29,7 +29,6 @@ const SliderWrapper = styled.div`
 `;
 
 const Slider = props => {
-  console.log("ff > Slider", props);
   const [value, setValue] = useState(50);
   const slideChangeHandler = input => setValue(input);
 

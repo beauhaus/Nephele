@@ -1,66 +1,34 @@
 import React from "react";
-// import styled from "styled-components";
-import styled, { ThemeProvider } from "styled-components";
+import styled from "styled-components";
+import Tile from "./Tile";
 
-const tileColors = [
-  "",
-  "#e2846c",
-  "teal",
-  "",
-  "",
-  "",
-  "",
-  "",
-  "#000",
-  "#98a7a2"
-];
-
-const StyledTiles = styled.div`
+const StyledTilesWrap = styled.div`
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  /* border: 20px solid red; */
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(22px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(22px, 1fr));
-  grid-gap: 10px;
-  opacity: 0.1;
-  /* overflow: hidden; */
-  & .tile-elem {
-    border: 1px solid transparent;
-    color: white;
-    font-family: sans-serif;
-    mix-blend-mode: multiply;
-  }
+  grid-template-columns: repeat(auto-fill, minmax(14px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(14px, 1fr));
+  grid-gap: 4px;
+  opacity: 0.3;
 `;
 
-// neg & pos rand nums
-const negPos = () => Math.floor(Math.random() * 30) - 21;
-console.log("negPos: ", negPos);
-
-const oriented = {
-  transform: `rotate(${negPos()}deg)`
-};
-
-const genArr = new Array(2000).fill("").map((val, idx) => {
-  var randy = () => Math.floor(Math.random() * 9);
-  return (
-    <ThemeProvider key={idx} theme={oriented}>
-      <div
-        className="tile-elem"
-        key={idx}
-        style={{ backgroundColor: tileColors[randy()] }}
-      >
-        {""}
-      </div>
-    </ThemeProvider>
-  );
-});
+const genArr = new Array(4000).fill(""); //2000
 
 const Tiles = () => {
-  return <StyledTiles id="tiles">{genArr}</StyledTiles>;
+  return (
+    <StyledTilesWrap id="tiles">
+      {genArr.map((item, idx) => (
+        <Tile
+          key={idx}
+          rando={Math.floor(Math.random() * 11 - 5)}
+          rando2={Math.floor(Math.random() * 21) - 1}
+        />
+      ))}
+    </StyledTilesWrap>
+  );
 };
 
 export default Tiles;

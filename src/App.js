@@ -7,8 +7,8 @@ import Tiles from "./Tiles";
 const App = () => {
   return (
     <div id="app-wrapper">
-      <Tiles />
       <PaperBG />
+      <Tiles />
       <MainToolComponent />
       {/*
        */}

@@ -57,10 +57,10 @@ h1 {
 }
 
 #title {
-  background: -webkit-linear-gradient(270deg, #12111b 50%, #fff);
+  /* background: -webkit-linear-gradient(270deg, #12111b 50%, #fff);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
   /* text-fill-color: transparent; */
   /* -webkit-text-stroke: 0.2px white; */
   font-size: 3.5rem;
@@ -192,7 +192,7 @@ input[type="range"]::-moz-range-track {
 
 .testing {
   color: #6dc5ab;
-  color: #e2846c;
+  color: #b8ccc8;
   color: #e0cda4;
   color: #88747a;
   color: #afa4af;
