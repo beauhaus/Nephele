@@ -14,7 +14,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background: linear-gradient(35deg, #a2adb4 30%, #d8c39d 70%);
+  background: linear-gradient(35deg, #a2adb4 30%, #c5b9a2 70%);
   margin: 0;
   font-family: "Caesar Dressing", "Segoe UI", Tahoma, Verdana, sans-serif;
   text-align: center;
@@ -24,15 +24,13 @@ body {
   height: 100vh;
 }
 
-#app-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+#App {
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 svg#bg-texture {
   position: absolute;
@@ -67,18 +65,6 @@ h1 {
   font-size: 3.7rem;
 }
 
-.center-grid {
-  margin: 2vh auto auto auto;
-  padding: 10px;
-  width: 90vw;
-  height: 90vh;
-  /* border: 1px solid orangered; */
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: 10vh 1fr 20vh 10vh;
-  grid-gap: 10px;
-  position: relative;
-}
 h2,
 h3 {
   margin-bottom: 0;
@@ -200,14 +186,26 @@ input[type="range"]::-moz-range-track {
   color: #afa4af;
   color: #98a7a2;
   color: #e2846c;
-  color: #5a8664;
-  color: #85a567;
+  color: #3a191a;
+  color: #516920;
   color: #ad73ad;
   color: #6dc5ab;
   color: #e2846c;
-  color: #5a8664;
+  color: #bbae99;
   color: rgba(68, 33, 36, 0.952);
   color: rgb(245, 226, 202);
   color: #c0c2c5;
   color: rgba(236, 230, 219, 0.904);
+}
+
+#app-grid-wrapper {
+  width: 98vw;
+  height: 98vh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1vw, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(1vh, auto));
+  grid-gap: 3px;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 14px 4px brown;
 }

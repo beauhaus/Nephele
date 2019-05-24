@@ -35,9 +35,7 @@ const Slider = props => {
   const slideChangeHandler = input => setValue(input);
 
   return (
-    <SliderWrapper
-      className={`slider-wrapper section ${props.attrReference}-section`}
-    >
+    <SliderWrapper className={`slider-wrapper ${props.attrReference}-section`}>
       <label htmlFor="slider">
         <p className="attr-reference">{props.attrReference}</p>
         <input

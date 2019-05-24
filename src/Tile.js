@@ -36,8 +36,8 @@ const StyledTile = styled.div`
   font-size: 1.4rem;
   font-family: sans-serif;
   ${props => uniqTile(props)};
+  mix-blend-mode: color-dodge;
 `;
-// mix-blend-mode: color-dodge;
 // mix-blend-mode: color-burn;
 
 const Tile = props => {

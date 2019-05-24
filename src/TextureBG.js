@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const StyledPaperBG = styled.svg`
+const StyledTextureBG = styled.svg`
   width: 100%;
   height: 100%;
   opacity: 0.4;
@@ -10,9 +10,9 @@ const StyledPaperBG = styled.svg`
   }
 `;
 
-const PaperBG = () => {
+const TextureBG = () => {
   return (
-    <StyledPaperBG
+    <StyledTextureBG
       id="bg-texture"
       viewBox="0 0 900 1440"
       preserveAspectRatio="none"
@@ -42,8 +42,8 @@ const PaperBG = () => {
       </filter>
 
       <rect id="paper" x="0" y="0" width="100%" height="100%" />
-    </StyledPaperBG>
+    </StyledTextureBG>
   );
 };
 
-export default PaperBG;
+export default TextureBG;

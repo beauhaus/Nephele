@@ -3,28 +3,35 @@ import styled from "styled-components";
 
 const StyledFrame = styled.svg`
   box-shadow: 0px 0px 2px 2px rgba(236, 230, 219, 1);
-  /* box-shadow: 1px 1px 2px 2px rgba(68, 33, 36, 0.4); */
-  grid-row: 1/-1;
-  grid-column: 1/7;
+  opacity: 1;
+  /* grid-row: 1/-1;
+  grid-column: 1/-1; */
+  border: 1px dashed orange;
+  height: 100%;
+  width: 100%;
   & #outer-frame-bg {
-    fill: #cec0a1;
+    fill: #bbae99;
     stroke: #442124;
     stroke-width: 2;
   }
   & #outer-frame-vine {
     fill: none;
-    stroke: #7a5a5b;
+    stroke: #3a191a;
     stroke-width: 2;
   }
   & #outer-frame-leaves {
-    fill: #657545;
+    fill: #516920;
     stroke-width: 0;
   }
 `;
 
 const OuterFrame = () => {
   return (
-    <StyledFrame viewBox="0 0 1295 746" preserveAspectRatio="none">
+    <StyledFrame
+      className="outerFrame"
+      viewBox="0 0 1295 746"
+      preserveAspectRatio="none"
+    >
       <path
         id="outer-frame-bg"
         d="M1 1v745h1293V1H1zm1281 733H13V13h1269v721z"

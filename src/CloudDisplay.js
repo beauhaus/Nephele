@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 
 // const sliderThumbStyles = props => props;
-const StyledDisplayWrapper = styled.div`
+const StyledCloudDisplay = styled.section`
   position: absolute;
   top: 12px;
   right: 12px;
@@ -16,18 +16,18 @@ const StyledDisplayWrapper = styled.div`
   }
 `;
 
-const DisplayWrapper = props => {
+const CloudDisplay = props => {
   console.log("ff > Slider", props);
   // const [value, setValue] = useState(50);
   // const slideChangeHandler = input => setValue(input);
 
   return (
-    <StyledDisplayWrapper className="section cloud-display">
+    <StyledCloudDisplay className="cloud-display">
       <h2 className="annotation">
         <i>CLOUD DISPLAY</i>
       </h2>
-    </StyledDisplayWrapper>
+    </StyledCloudDisplay>
   );
 };
-export default DisplayWrapper;
+export default CloudDisplay;
 // <img src="http://placebear.com/800/000" alt="bear" />;
