@@ -2,13 +2,14 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledFrame = styled.svg`
-  box-shadow: 0px 0px 2px 2px rgba(236, 230, 219, 1);
-  opacity: 1;
-  /* grid-row: 1/-1;
-  grid-column: 1/-1; */
-  border: 1px dashed orange;
+  /* box-shadow: 2px 2px 4px 0px #dddbd6; */
+  drop-shadow: 
+  opacity: 0.4;
   height: 100%;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   & #outer-frame-bg {
     fill: #bbae99;
     stroke: #442124;
@@ -23,6 +24,8 @@ const StyledFrame = styled.svg`
     fill: #516920;
     stroke-width: 0;
   }
+  /* border: 2px solid black; */
+  
 `;
 
 const OuterFrame = () => {

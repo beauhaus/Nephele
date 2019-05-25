@@ -14,7 +14,7 @@ html {
 
 body {
   font-size: 1.6rem;
-  background: linear-gradient(35deg, #a2adb4 30%, #c5b9a2 70%);
+  background: linear-gradient(35deg, #a2adb4 30%, #b9b4ab 70%);
   margin: 0;
   font-family: "Caesar Dressing", "Segoe UI", Tahoma, Verdana, sans-serif;
   text-align: center;
@@ -196,6 +196,12 @@ input[type="range"]::-moz-range-track {
   color: rgb(245, 226, 202);
   color: #c0c2c5;
   color: rgba(236, 230, 219, 0.904);
+  color: #bdb7ac;
+  color: rgba(192, 194, 197, 1);
+  color: #816660;
+  color: #dddbd6;
+  -moz-border-bottom-colors: #000;
+  /* border-bottom-width: 2px; */
 }
 
 #app-grid-wrapper {
@@ -207,5 +213,5 @@ input[type="range"]::-moz-range-track {
   grid-template-rows: repeat(auto-fill, minmax(1vh, auto));
   grid-gap: 3px;
   overflow: hidden;
-  box-shadow: inset 0px 0px 14px 4px brown;
+  /* box-shadow: inset 0px 0px 14px 4px brown; */
 }

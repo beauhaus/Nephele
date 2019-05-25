@@ -26,12 +26,13 @@ User will be able to experiment and observe effects of adjustments to several re
 ![Fifth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot5.jpg?raw=true "Fifth page screenshot")
 #### Zeus codes beside what will be a text display of resulting code (using copy-to-clipboard library);
 
-
 ![Sixth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot6.jpg?raw=true "Sixth page screenshot")
 #### Experimenting with randomized mosaic theme
 
 ![Seventh page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot7.jpg?raw=true "Seventh page screenshot")
 #### Further experimentation (...planning on dailing this back )
+
+![Eighth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot8.jpg?raw=true "Eighth page screenshot")
 
 
 

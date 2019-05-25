@@ -8,13 +8,11 @@ import OuterFrame from "./OuterFrame";
 const StyledToolComp = styled.main`
   grid-area: 7 / 7/-7/-7;
   display: grid;
-  grid-template-columns: auto;
-  /* grid-template-rows: 10vh 1fr 20vh 10vh; */
-  grid-template-rows: auto;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
   grid-gap: 10px;
-  /* position: relative; */
-
-  border: 1px solid fuchsia;
+  position: relative;
+  /* border: 1px solid fuchsia; */
 `;
 
 const MainToolComponent = () => {
@@ -22,9 +20,17 @@ const MainToolComponent = () => {
     <StyledToolComp className="main-display">
       <OuterFrame />
       {/**
-      <header>
-      <h1 id="title">Nephele</h1>
-      </header>
+        <div className="slider-cont">1</div>
+        <div className="slider-cont">2</div>
+        <div className="slider-cont">3</div>
+        <div className="slider-cont">4</div>
+      <div className="cloud-display">CloudDisplay</div>
+      <div>CodeDisplay</div>
+      <div>bottom Left</div>
+
+        <header>
+          <h1 id="title">Nephele</h1>
+        </header>
       <aside className="aside-left">
       <Slider attrReference="box-shadow: <blur-radius>" />
       <Slider attrReference="numOctaves" min="0" max="10" />

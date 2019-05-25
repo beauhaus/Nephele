@@ -2,43 +2,44 @@ import React from "react";
 import styled from "styled-components";
 
 const tileColors = [
-  "rgba(192, 194, 197,0.4)",
-  "rgba(245, 226, 202,0.9)",
+  "#978c84",
+  "#92a39e",
+  "#e0dcc9",
+  "#816660",
+  "rgba(192, 194, 197,1)",
+  "#f1f0eb",
+  "#f1f0eb",
+  "transparent",
+  "slategrey",
+  "transparent",
+  "rgba(192, 194, 197,1)",
+  "rgba(245, 226, 202,1)",
+  "transparent",
   "rgba(192, 194, 197,0.3)",
-  "rgba(245, 226, 202,0.4)",
-  "rgba(192, 194, 197,0.7)",
-  "rgba(245, 226, 202,0.3)",
-  "rgba(192, 194, 197,0.2)",
-  "rgba(245, 226, 202,0.3)",
-  "rgba(192, 194, 197,0.1)",
-  "rgba(245, 226, 202,0.5)",
-  "rgba(192, 194, 197,0.5)",
-  "rgba(245, 226, 202,0.3)",
-  "",
-  "rgba(192, 194, 197,0.3)",
-  "",
-  "",
-  "",
-  "",
-  "",
-  ""
+  "transparent",
+  "transparent",
+  "transparent",
+  "transparent",
+  "transparent",
+  "transparent"
 ];
 
 const uniqTile = ({ rando, rando2 }) => {
   return `
   transform: rotate(${rando}deg);
   background-color:${tileColors[rando2]};
-    `;
+  filter: drop-shadow(1px 1px 0.5px rgba(39, 38, 38, 0.5));
+  `;
 };
 
 const StyledTile = styled.div`
   color: brown;
+  opacity: 0.7;
   font-size: 1.4rem;
-  font-family: sans-serif;
+  font-family: sans-serif; /* temp */
   ${props => uniqTile(props)};
-  mix-blend-mode: color-dodge;
+  mix-blend-mode: multiply;
 `;
-// mix-blend-mode: color-burn;
 
 const Tile = props => {
   return (

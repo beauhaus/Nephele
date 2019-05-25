@@ -1,12 +1,17 @@
 import React from "react";
 import MainToolComponent from "./MainToolComponent";
 import Tile from "./Tile";
+import styled from "styled-components";
 
+const StyledWrapper = styled.div`
+  /* filter: drop-shadow(-0.4px -0.4px 1px #272626); */
+`;
 const tilesArray = new Array(1700).fill(""); //2000
+// randNums 1700 ..
 
 const AppGridWrapper = () => {
   return (
-    <div id="app-grid-wrapper">
+    <StyledWrapper id="app-grid-wrapper">
       {tilesArray.map((item, idx) => (
         <Tile
           key={idx}
@@ -16,10 +21,10 @@ const AppGridWrapper = () => {
       ))}
       <MainToolComponent />
       {/*
-      <TextureBG />
+            orientRand = {randNums[idx]}
       <Tiles />
     */}
-    </div>
+    </StyledWrapper>
   );
 };
 export default AppGridWrapper;

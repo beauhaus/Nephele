@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledTextureBG = styled.svg`
   width: 100%;
   height: 100%;
-  opacity: 0.4;
+  opacity: 0.7;
   rect {
     filter: url(#paperBG);
   }
@@ -20,25 +20,24 @@ const TextureBG = () => {
       <filter id="paperBG" x="0%" y="0%" width="100%" height="100%">
         <feTurbulence
           type="fractalNoise"
-          baseFrequency="0.01"
+          baseFrequency="0.005"
           result="noise"
-          numOctaves="8"
+          numOctaves="5"
         />
 
-        <feDiffuseLighting id="light" in="noise" surfaceScale="20">
-          <feDistantLight azimuth="45" elevation="70" />
+        <feDiffuseLighting
+          id="light"
+          in="noise"
+          lightingColor="#dfddd7"
+          surfaceScale="20"
+          result="light"
+        >
+          <feDistantLight azimuth="45" elevation="50" />
         </feDiffuseLighting>
-        {/*
-          <feTurbulence
-    type="fractalNoise"
-    baseFrequency="0.04"
-    result="noise"
-    numOctaves="5"
-  />
-          <feDiffuseLighting id="light" in="noise" surfaceScale="2">
-        <feDistantLight azimuth="45" elevation="80" />
-      </feDiffuseLighting>
-  */}
+        <feMerge>
+          <feMergeNode in="noise" />
+          <feMergeNode in="light" />
+        </feMerge>
       </filter>
 
       <rect id="paper" x="0" y="0" width="100%" height="100%" />
