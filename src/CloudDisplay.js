@@ -9,7 +9,9 @@ const StyledCloudDisplay = styled.section`
   width: 100%;
   height: 100%;
   max-height: 100%;
-  z-index: 10;
+  background: linear-gradient(165deg, #090909 0%, #527785 100%);
+  box-shadow: inset 2px 2px 15px 4px rgba(0, 0, 0, 0.5);
+  /* z-index: 1; */
   & h2 {
     margin-top: 20vh;
     color: whitesmoke;
@@ -23,7 +25,7 @@ const CloudDisplay = props => {
 
   return (
     <StyledCloudDisplay className="cloud-display">
-      {"<h1>cloud display</h1>"}
+      <h2>HI CLOUD!</h2>
     </StyledCloudDisplay>
   );
 };
