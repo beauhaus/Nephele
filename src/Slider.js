@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import cloudThumbIcon from "./images/cloud_thumb.svg";
 
@@ -94,27 +94,35 @@ const SliderWrapper = styled.section`
     color: brown;
   }
 `;
+class Slider extends Component {
+  state = {
+    value: 50
+  };
+  slideChangeHandler(e) {
+    const { value } = e.target;
+    this.setState({ value });
+  }
+  render() {
+    return (
+      <SliderWrapper
+        className={`slider-wrapper ${this.props.attrReference}-section`}
+      >
+        <label htmlFor="slider">
+          <p className="attr-reference">{this.props.attrReference}</p>
+          <input
+            onChange={e => this.slideChangeHandler(e)}
+            onBlur={e => this.slideChangeHandler(e)}
+            className="slider"
+            type="range"
+            min={0}
+            max={100}
+            value={this.state.value}
+          />
+        </label>
+        <h2 className="val-display">{this.state.value}</h2>
+      </SliderWrapper>
+    );
+  }
+}
 
-const Slider = props => {
-  const [value, setValue] = useState(50);
-  const slideChangeHandler = input => setValue(input);
-
-  return (
-    <SliderWrapper className={`slider-wrapper ${props.attrReference}-section`}>
-      <label htmlFor="slider">
-        <p className="attr-reference">{props.attrReference}</p>
-        <input
-          onChange={e => slideChangeHandler(e.target.value)}
-          onBlur={e => slideChangeHandler(e.target.value)}
-          className="slider"
-          type="range"
-          min={0}
-          max={100}
-          value={value}
-        />
-      </label>
-      <h2 className="val-display">{value}</h2>
-    </SliderWrapper>
-  );
-};
 export default Slider;
