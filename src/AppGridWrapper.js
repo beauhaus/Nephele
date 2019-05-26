@@ -7,34 +7,34 @@ const StyledWrapper = styled.div`
   /* filter: drop-shadow(-0.4px -0.4px 1px #272626); */
 `;
 
-/* exploiting one call to Math.rand() to be used for both
+/*
+ * https://stackoverflow.com/a/43044960
+ * Math.rand() to be used for both
  * random color choices and random orientation
  * within <Tile/>
  */
-const randoArr = length => {
-  console.log("rA called");
-  var r = Math.random();
-  const arrayOfRand = [];
-  for (let i = 0; i < length; i++) {
-    arrayOfRand[i] = r;
-    r = r / 3;
-    r = r * 1000;
-    r = r - Math.floor(r);
-  }
-  return arrayOfRand;
-};
 
 const AppGridWrapper = () => {
-  const arrayTemplate = Array.from({ length: 1700 }, () => Math.random());
-  const arrayOfRand = randoArr(arrayTemplate.length);
+  const bigArr = ((length = 1700) => {
+    const tilesArray = [];
+    var r = Math.random();
+    for (let i = 0; i < length; i++) {
+      tilesArray[i] = r;
+      r = r / 0.03;
+      r = r - Math.floor(r);
+    }
+    return tilesArray;
+  })();
   return (
     <StyledWrapper id="app-grid-wrapper">
-      {arrayTemplate.map((item, idx) => {
+      {bigArr.map((item, idx, arr) => {
+        let arrIdx = arr[idx];
+        let arrIdx2 = arrIdx * 100 - Math.floor(arrIdx * 100);
         return (
           <Tile
             key={idx}
-            randoDirection={Math.floor(arrayOfRand[idx] * 11 - 5)}
-            randoColors={Math.floor(arrayOfRand[idx] * 21) - 1}
+            randoDirection={Math.floor(arrIdx * 11 - 5)}
+            randoColors={Math.floor(arrIdx2 * 21) - 1}
           />
         );
       })}
