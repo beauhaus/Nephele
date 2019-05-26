@@ -8,7 +8,7 @@ const SliderWrapper = styled.section`
   font-weight: 200;
   position: relative;
   margin-top: 0.5rem;
-
+  z-index: 2;
   & .val-display {
     position: absolute;
     top: 0;
@@ -95,11 +95,15 @@ const SliderWrapper = styled.section`
 `;
 class Slider extends Component {
   state = {
-    value: 50
+    value: 5
   };
+
   slideChangeHandler(e) {
     const { value } = e.target;
+    // console.log("val: ", value);
+    // console.log("props: ", this.props);
     this.setState({ value });
+    this.props.sliderValUpdate(this.props.attrReference, value);
   }
   render() {
     return (
@@ -110,11 +114,11 @@ class Slider extends Component {
           <p className="attr-reference">{this.props.attrReference}</p>
           <input
             onChange={e => this.slideChangeHandler(e)}
-            onBlur={e => this.slideChangeHandler(e)}
+            // onBlur={e => this.slideChangeHandler(e)}
             className="slider"
             type="range"
             min={0}
-            max={100}
+            max={10}
             value={this.state.value}
           />
         </label>

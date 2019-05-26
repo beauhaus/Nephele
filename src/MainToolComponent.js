@@ -1,6 +1,7 @@
-import React from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
-import Slider from "./Slider";
+import SliderContainer from "./SliderContainer";
+
 // import CloudDisplay from "./CloudDisplay";
 import OuterFrame from "./OuterFrame";
 // import zeusCoding from "./images/zeuscoding.svg";
@@ -30,35 +31,38 @@ const StyledToolComp = styled.main`
   }
 `;
 
-const MainToolComponent = () => {
-  return (
-    <StyledToolComp className="main-display">
-      <OuterFrame />
-      <section className="slider-container">
-        <Slider attrReference="box-shadow: <blur-radius>" />
-        <Slider attrReference="numOctaves" min="0" max="10" />
-        <Slider attrReference="baseFrequency" />
-        <Slider attrReference="feDisplacementMap scale" />
-      </section>
-      <section className="cloud-display">TOP RIGHT</section>
-      <section className="css-code-display">CSS code display</section>
-      <section className="svg-code-display">SVG code display</section>
-      {/**
-      <div className="cloud-display">CloudDisplay</div>
-      <div>CodeDisplay</div>
-      <div>bottom Left</div>
-        <header>
-          <h1 id="title">Nephele</h1>
-        </header>
-      <CloudDisplay />
-      
-      <div className="code-display">
-      
-      <img id="zeus" src={zeusCoding} alt="Zeus coding a cloud" />
-      </div>
-    */}
-    </StyledToolComp>
-  );
-};
-
+class MainToolComponent extends Component {
+  state = {
+    blurRadiusVal: 5
+  };
+  sliderValUpdate(attrRef, value) {
+    console.log("attrRef: ", attrRef);
+    console.log("value: ", value);
+  }
+  render() {
+    return (
+      <StyledToolComp className="main-display">
+        <OuterFrame />
+        <SliderContainer blurRadVal={this.state.blurRadiusVal} />
+        <section className="cloud-display">TOP RIGHT</section>
+        <section className="css-code-display">CSS code display</section>
+        <section className="svg-code-display">SVG code display</section>
+        {/**
+        <div className="cloud-display">CloudDisplay</div>
+        <div>CodeDisplay</div>
+        <div>bottom Left</div>
+          <header>
+            <h1 id="title">Nephele</h1>
+          </header>
+        <CloudDisplay />
+        
+        <div className="code-display">
+        
+        <img id="zeus" src={zeusCoding} alt="Zeus coding a cloud" />
+        </div>
+      */}
+      </StyledToolComp>
+    );
+  }
+}
 export default MainToolComponent;
