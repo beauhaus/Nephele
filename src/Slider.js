@@ -16,7 +16,6 @@ const SliderWrapper = styled.section`
     font-size: 1.8rem;
   }
   & input[type="range"] {
-    /* border: 1px solid brown; */
     margin: auto -1rem auto auto;
     -webkit-appearance: none;
     width: 94%;

@@ -30,7 +30,7 @@ User will be able to experiment and observe effects of adjustments to several re
 #### Experimenting with randomized mosaic theme
 
 ![Seventh page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot7.jpg?raw=true "Seventh page screenshot")
-#### Further experimentation (...planning on dailing this back )
+#### Further experimentation
 
 ![Eighth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot8.jpg?raw=true "Eighth page screenshot")
 
