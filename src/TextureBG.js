@@ -4,7 +4,7 @@ import styled from "styled-components";
 const StyledTextureBG = styled.svg`
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+  opacity: 0.5;
   rect {
     filter: url(#paperBG);
   }

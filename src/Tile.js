@@ -24,10 +24,10 @@ const tileColors = [
   "transparent"
 ];
 
-const uniqTile = ({ rando, rando2 }) => {
+const uniqTile = ({ randoDirection, randoColors }) => {
   return `
-  transform: rotate(${rando}deg);
-  background-color:${tileColors[rando2]};
+  transform: rotate(${randoDirection}deg);
+  background-color:${tileColors[randoColors]};
   filter: drop-shadow(1px 1px 0.5px rgba(39, 38, 38, 0.5));
   `;
 };
@@ -36,7 +36,6 @@ const StyledTile = styled.div`
   color: brown;
   opacity: 0.7;
   font-size: 1.4rem;
-  font-family: sans-serif; /* temp */
   ${props => uniqTile(props)};
   mix-blend-mode: multiply;
 `;
@@ -45,8 +44,8 @@ const Tile = props => {
   return (
     <StyledTile
       className="tile-elem"
-      rando={props.rando}
-      rando2={props.rando2}
+      randoDirection={props.randoDirection}
+      randoColors={props.randoColors}
     />
   );
 };

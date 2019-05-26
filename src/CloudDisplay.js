@@ -23,9 +23,7 @@ const CloudDisplay = props => {
 
   return (
     <StyledCloudDisplay className="cloud-display">
-      <h2 className="annotation">
-        <i>CLOUD DISPLAY</i>
-      </h2>
+      {"<h1>cloud display</h1>"}
     </StyledCloudDisplay>
   );
 };
