@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import cloudThumbIcon from "./images/cloud_thumb.svg";
-import BlurRadiusSlider from "./Sliders/BlurRadiusSlider";
-import NumOctavesSlider from "./Sliders/NumOctavesSlider";
-import BaseFrequencySlider from "./Sliders/BaseFrequencySlider";
+import cloudThumbIcon from "../images/cloud_thumb.svg";
+import lightningIcon from "../images/lightning.svg";
+import BlurRadiusSlider from "./BlurRadiusSlider";
+import NumOctavesSlider from "./NumOctavesSlider";
+import BaseFrequencySlider from "./BaseFrequencySlider";
+import ScaleSlider from "./ScaleSlider";
+import SpreadSlider from "./SpreadSlider";
 
 const StyledSliderWrapper = styled.section`
   font-size: 2rem;
@@ -22,7 +25,6 @@ const StyledSliderWrapper = styled.section`
     top: 0;
     right: 1vw;
     font-size: 2rem;
-    font-style: italic;
     font-family: "IM Fell Double Pica", serif;
     text-shadow: 1px 1px 1px #e2e0dd;
   }
@@ -48,7 +50,7 @@ const StyledSliderWrapper = styled.section`
     /* background-attachment: fixed; */
     background-position: center top;
     cursor: pointer;
-    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    margin-top: -1.8rem; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
   }
 
@@ -100,9 +102,22 @@ const StyledSliderWrapper = styled.section`
   & .attr-reference {
     font-family: "IM Fell Double Pica", serif;
     color: black;
+    margin-left: 1vw;
+    text-align: left;
     text-shadow: 1px 1px 1px #e2e0dd;
   }
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  #lightning {
+    margin-top: 1.5rem;
+    /* margin-top: 0.2vh; */
+    width: 8vw;
+    height: 3vh;
+    -webkit-filter: drop-shadow(1px 1px 0.5px #fff);
+    filter: drop-shadow(1px 1px 0.5px #fff);
+  }
+  .numOctaves-section {
+    margin-top: -1.5vh;
+  }
 `;
 
 class Slider extends Component {
@@ -121,9 +136,12 @@ class Slider extends Component {
   render() {
     return (
       <StyledSliderWrapper className="slider-container">
-        <BlurRadiusSlider attrReference={"<blur-radius>"} />
+        <BlurRadiusSlider attrReference={"blur-radius"} />
+        <SpreadSlider attrReference={"spread"} />
+        <img id="lightning" src={lightningIcon} alt="lightning Icon" />
         <NumOctavesSlider attrReference={"numOctaves"} />
         <BaseFrequencySlider attrReference={"baseFrequency"} />
+        <ScaleSlider attrReference={"scale"} />
       </StyledSliderWrapper>
     );
   }

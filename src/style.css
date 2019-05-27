@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Caesar+Dressing|GFS+Neohellenic&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Stylish&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Spectral+SC:200,300,400&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica&display=swap");
+/* font-family: 'IM Fell Double Pica', serif; */
+
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica&display=swap');
 
 * {
   margin: 0;
@@ -91,9 +95,9 @@ h3 {
   color: #bdb7ac;
   color: rgba(192, 194, 197, 1);
   color: #424040;
-  color: #dddbd6;
+  color: #e2e0dd;
   color: #dfddd7;
-  color: #b7b8b5;
+  color: #838383;
   -moz-border-bottom-colors: #272626;
   /* border-bottom-width: 2px; */
 }

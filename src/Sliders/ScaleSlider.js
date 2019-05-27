@@ -1,30 +1,26 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-const NumOctavesSliderWrapper = styled.section`
-    margin-top: 0;
+const ScaleSliderWrapper = styled.section`
   & .attr-reference {
     color: brown;
-
   }
 `;
-class NumOctavesSlider extends Component {
+class ScaleSlider extends Component {
   state = {
-    numOctavesValue: 5
+    scaleValue: 5
   };
 
   slideChangeHandler(e) {
     const { value } = e.target;
     // console.log("val: ", value);
     // console.log("props: ", this.props);
-    this.setState({ numOctavesValue: value });
-    this.props.NumOctavesSliderValUpdate(this.props.attrReference, value);
+    this.setState({ scaleValue: value });
+    this.props.ScaleSliderValUpdate(this.props.attrReference, value);
   }
   render() {
     return (
-      <NumOctavesSliderWrapper
-        className={`${this.props.attrReference}-section`}
-      >
+      <ScaleSliderWrapper className={`${this.props.attrReference}-section`}>
         <label htmlFor="num-octaves-slider">
           <p className="attr-reference">{this.props.attrReference}</p>
           <input
@@ -33,13 +29,13 @@ class NumOctavesSlider extends Component {
             type="range"
             min={0}
             max={10}
-            value={this.state.numOctavesValue}
+            value={this.state.scaleValue}
           />
         </label>
-        <h2 className="val-display">{this.state.numOctavesValue}</h2>
-      </NumOctavesSliderWrapper>
+        <h2 className="val-display">{this.state.scaleValue}</h2>
+      </ScaleSliderWrapper>
     );
   }
 }
 
-export default NumOctavesSlider;
+export default ScaleSlider;

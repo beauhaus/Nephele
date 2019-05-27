@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import SliderContainer from "./SliderContainer";
+import SliderContainer from "./Sliders/SliderContainer";
 
 // import CloudDisplay from "./CloudDisplay";
 import OuterFrame from "./OuterFrame";

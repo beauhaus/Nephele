@@ -19,16 +19,13 @@ class BlurRadiusSlider extends Component {
   render() {
     return (
       <BlurRadiusSliderWrapper
-        className={`blur-radius-slider-wrapper ${
-          this.props.attrReference
-        }-section`}
+        className={`${this.props.attrReference}-section`}
       >
         <label htmlFor="blur-radius-slider">
           <p className="attr-reference">{this.props.attrReference}</p>
           <input
             onChange={e => this.slideChangeHandler(e)}
             // onBlur={e => this.slideChangeHandler(e)}
-            className="BlurRadiusSlider"
             type="range"
             min={0}
             max={10}
