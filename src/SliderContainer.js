@@ -3,14 +3,15 @@ import styled from "styled-components";
 import cloudThumbIcon from "./images/cloud_thumb.svg";
 import BlurRadiusSlider from "./Sliders/BlurRadiusSlider";
 import NumOctavesSlider from "./Sliders/NumOctavesSlider";
+import BaseFrequencySlider from "./Sliders/BaseFrequencySlider";
 
 const StyledSliderWrapper = styled.section`
-  font-family: "Stylish", sans-serif;
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: lighter; /* TODO: is this used? */
   /* margin-top: 0.5rem; */
   z-index: 2;
   & section {
+    margin-top: 1rem;
     position: relative;
   }
   & label {
@@ -20,7 +21,10 @@ const StyledSliderWrapper = styled.section`
     position: absolute;
     top: 0;
     right: 1vw;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    font-style: italic;
+    font-family: "IM Fell Double Pica", serif;
+    text-shadow: 1px 1px 1px #e2e0dd;
   }
   & input[type="range"] {
     margin: auto -1rem auto auto;
@@ -61,7 +65,7 @@ const StyledSliderWrapper = styled.section`
   }
   /* All the same stuff for IE */
   input[type="range"]::-ms-thumb {
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    box-shadow: inset 1px 1px 1px #000000, inset 0px 0px 1px #0d0d0d;
     border: 1px solid #000000;
     height: 36px;
     width: 10px;
@@ -74,8 +78,8 @@ const StyledSliderWrapper = styled.section`
     width: 100%;
     height: 0.4rem;
     cursor: pointer;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3071a9;
+    box-shadow: inset 1px 1px 1px #000000, inset 0px 0px 1px #0d0d0d;
+    background: #acacac;
     border-radius: 0.1rem;
     border: 0.2px solid #010101;
   }
@@ -87,14 +91,16 @@ const StyledSliderWrapper = styled.section`
   input[type="range"]::-moz-range-track {
     height: 0.4rem;
     cursor: pointer;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3071a9;
+    box-shadow: inset 1px 1px 1px #000000, inset 0px 0px 1px #0d0d0d;
+    background: #acacac;
     border-radius: 0.1rem;
     border: 0.2px solid #010101;
   }
 
   & .attr-reference {
-    color: #010101;
+    font-family: "IM Fell Double Pica", serif;
+    color: black;
+    text-shadow: 1px 1px 1px #e2e0dd;
   }
   border: 1px solid red;
 `;
@@ -117,6 +123,7 @@ class Slider extends Component {
       <StyledSliderWrapper className="slider-container">
         <BlurRadiusSlider attrReference={"<blur-radius>"} />
         <NumOctavesSlider attrReference={"numOctaves"} />
+        <BaseFrequencySlider attrReference={"baseFrequency"} />
       </StyledSliderWrapper>
     );
   }
