@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import SliderContainer from "./Sliders/SliderContainer";
+import SlidersContainer from "./Sliders/SlidersContainer";
 
 // import CloudDisplay from "./CloudDisplay";
 import OuterFrame from "./OuterFrame";
@@ -16,9 +16,13 @@ const StyledToolComp = styled.main`
   padding: 1% 0.8%;
   & section {
     font-family: sans-serif;
+    /* background: green; */
   }
-  & .slider-container {
+  & .sliders-container {
     grid-area: 1/1/8/5;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    /* border: 1px solid white; */
   }
   & .cloud-display {
     grid-area: 1/5/8/-1;
@@ -43,7 +47,7 @@ class MainToolComponent extends Component {
     return (
       <StyledToolComp className="main-display">
         <OuterFrame />
-        <SliderContainer blurRadVal={this.state.blurRadiusVal} />
+        <SlidersContainer />
         <section className="cloud-display">TOP RIGHT</section>
         <section className="css-code-display">CSS code display</section>
         <section className="svg-code-display">SVG code display</section>

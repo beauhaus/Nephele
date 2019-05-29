@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 
-class SpreadSlider extends Component {
+class NightDaySlider extends Component {
   state = {
-    spreadValue: 5
+    nightDayValue: 5
   };
 
   slideChangeHandler(e) {
     const { value } = e.target;
     // console.log("val: ", value);
     // console.log("props: ", this.props);
-    this.setState({ spreadValue: value });
-    this.props.SpreadSliderValUpdate(this.props.attrReference, value);
+    this.setState({ nightDayValue: value });
+    this.props.nightDaySliderValUpdate(this.props.attrReference, value);
   }
   render() {
     return (
@@ -18,20 +18,26 @@ class SpreadSlider extends Component {
         htmlFor="num-octaves-slider"
         className={`${this.props.attrReference}-label slider-label`}
       >
-        <p className="attr-reference">
-          {this.props.attrReference}: {this.state.spreadValue}
-        </p>{" "}
+        <p>
+          <span role="img" aria-label="img">
+            🌜
+          </span>
+          ----------------------
+          <span role="img" aria-label="img">
+            ☀️
+          </span>
+        </p>
         <input
           onChange={e => this.slideChangeHandler(e)}
           // onBlur={e => this.slideChangeHandler(e)}
           type="range"
           min={0}
           max={10}
-          value={this.state.spreadValue}
+          value={this.state.nightDayValue}
         />
       </label>
     );
   }
 }
 
-export default SpreadSlider;
+export default NightDaySlider;

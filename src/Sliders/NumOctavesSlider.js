@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 
-const NumOctavesSliderWrapper = styled.section`
-    margin-top: 0;
-  & .attr-reference {
-    color: brown;
-
-  }
-`;
 class NumOctavesSlider extends Component {
   state = {
     numOctavesValue: 5
@@ -22,22 +14,22 @@ class NumOctavesSlider extends Component {
   }
   render() {
     return (
-      <NumOctavesSliderWrapper
-        className={`${this.props.attrReference}-section`}
+      <label
+        htmlFor="num-octaves-slider"
+        className={`${this.props.attrReference}-label slider-label`}
       >
-        <label htmlFor="num-octaves-slider">
-          <p className="attr-reference">{this.props.attrReference}</p>
-          <input
-            onChange={e => this.slideChangeHandler(e)}
-            // onBlur={e => this.slideChangeHandler(e)}
-            type="range"
-            min={0}
-            max={10}
-            value={this.state.numOctavesValue}
-          />
-        </label>
-        <h2 className="val-display">{this.state.numOctavesValue}</h2>
-      </NumOctavesSliderWrapper>
+        <p className="attr-reference">
+          {this.props.attrReference}: {this.state.numOctavesValue}
+        </p>
+        <input
+          onChange={e => this.slideChangeHandler(e)}
+          // onBlur={e => this.slideChangeHandler(e)}
+          type="range"
+          min={0}
+          max={10}
+          value={this.state.numOctavesValue}
+        />
+      </label>
     );
   }
 }

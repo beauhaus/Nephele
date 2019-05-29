@@ -1,10 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Caesar+Dressing|GFS+Neohellenic&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Stylish&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Spectral+SC:200,300,400&display=swap");
-@import url("https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica&display=swap");
-/* font-family: 'IM Fell Double Pica', serif; */
+/* @import url("https://fonts.googleapis.com/css?family=Caesar+Dressing|GFS+Neohellenic&display=swap"); */
 
-@import url('https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica&display=swap');
+@import url("https://fonts.googleapis.com/css?family=IM+Fell+Double+Pica&display=swap");
 
 * {
   margin: 0;
@@ -20,7 +16,7 @@ body {
   font-size: 1.6rem;
   background: linear-gradient(35deg, #a2adb4 30%, #b9b4ab 70%);
   margin: 0;
-  font-family: "Caesar Dressing", "Segoe UI", Tahoma, Verdana, sans-serif;
+  font-family: "IM Fell Double Pica", "Trebuchet MS", Tahoma, sans-serif;
   text-align: center;
 }
 #root {

@@ -7,31 +7,31 @@ import NumOctavesSlider from "./NumOctavesSlider";
 import BaseFrequencySlider from "./BaseFrequencySlider";
 import ScaleSlider from "./ScaleSlider";
 import SpreadSlider from "./SpreadSlider";
+import NightDaySlider from "./NightDaySlider";
 
-const StyledSliderWrapper = styled.section`
+const StyledSlidersWrapper = styled.section`
   font-size: 2rem;
   font-weight: lighter; /* TODO: is this used? */
   /* margin-top: 0.5rem; */
+  position: relative;
   z-index: 2;
-  & section {
-    margin-top: 1rem;
-    position: relative;
-  }
+  display: grid;
+  justify-content: center;
+  align-items: center;
   & label {
-    margin-top: 0.2vh;
+    /* border: 1px dashed blue; */
   }
   & .val-display {
-    position: absolute;
-    top: 0;
-    right: 1vw;
-    font-size: 2rem;
+    /* margin-top: -2vh; */
+    /* font-size: 2rem;
     font-family: "IM Fell Double Pica", serif;
-    text-shadow: 1px 1px 1px #e2e0dd;
+    text-shadow: 1px 1px 1px #e2e0dd; */
+    /* border: 1px solid red; */
   }
   & input[type="range"] {
     margin: auto -1rem auto auto;
     -webkit-appearance: none;
-    width: 94%;
+    width: 96%;
     cursor: pointer;
     background: transparent;
   }
@@ -105,22 +105,24 @@ const StyledSliderWrapper = styled.section`
     margin-left: 1vw;
     text-align: left;
     text-shadow: 1px 1px 1px #e2e0dd;
+    /* border: 1px solid blue; */
   }
   /* border: 1px solid red; */
   #lightning {
-    margin-top: 1.5rem;
+    /* margin-top: 1.5rem; */
     /* margin-top: 0.2vh; */
+    justify-self: center;
     width: 8vw;
     height: 3vh;
     -webkit-filter: drop-shadow(1px 1px 0.5px #fff);
     filter: drop-shadow(1px 1px 0.5px #fff);
   }
   .numOctaves-section {
-    margin-top: -1.5vh;
+    /* margin-top: -1.5vh; */
   }
 `;
 
-class Slider extends Component {
+class Sliders extends Component {
   state = {
     blurRadiusValue: 5,
     numOctavesValue: 5
@@ -135,16 +137,17 @@ class Slider extends Component {
   // }
   render() {
     return (
-      <StyledSliderWrapper className="slider-container">
+      <StyledSlidersWrapper className="sliders-container">
         <BlurRadiusSlider attrReference={"blur-radius"} />
         <SpreadSlider attrReference={"spread"} />
         <img id="lightning" src={lightningIcon} alt="lightning Icon" />
         <NumOctavesSlider attrReference={"numOctaves"} />
         <BaseFrequencySlider attrReference={"baseFrequency"} />
         <ScaleSlider attrReference={"scale"} />
-      </StyledSliderWrapper>
+        <NightDaySlider attrReference={"nightDay"} />
+      </StyledSlidersWrapper>
     );
   }
 }
 
-export default Slider;
+export default Sliders;

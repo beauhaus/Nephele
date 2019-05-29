@@ -1,11 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 
-const ScaleSliderWrapper = styled.section`
-  & .attr-reference {
-    color: brown;
-  }
-`;
 class ScaleSlider extends Component {
   state = {
     scaleValue: 5
@@ -20,20 +14,22 @@ class ScaleSlider extends Component {
   }
   render() {
     return (
-      <ScaleSliderWrapper className={`${this.props.attrReference}-section`}>
-        <label htmlFor="num-octaves-slider">
-          <p className="attr-reference">{this.props.attrReference}</p>
-          <input
-            onChange={e => this.slideChangeHandler(e)}
-            // onBlur={e => this.slideChangeHandler(e)}
-            type="range"
-            min={0}
-            max={10}
-            value={this.state.scaleValue}
-          />
-        </label>
-        <h2 className="val-display">{this.state.scaleValue}</h2>
-      </ScaleSliderWrapper>
+      <label
+        htmlFor="num-octaves-slider"
+        className={`${this.props.attrReference}-label slider-label`}
+      >
+        <p className="attr-reference">
+          {this.props.attrReference}: {this.state.scaleValue}
+        </p>
+        <input
+          onChange={e => this.slideChangeHandler(e)}
+          // onBlur={e => this.slideChangeHandler(e)}
+          type="range"
+          min={0}
+          max={10}
+          value={this.state.scaleValue}
+        />
+      </label>
     );
   }
 }

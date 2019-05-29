@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 
-const BlurRadiusSliderWrapper = styled.section`
-  opacity: 1;
-`;
 class BlurRadiusSlider extends Component {
   state = {
     blurRadiusValue: 5
@@ -18,22 +14,23 @@ class BlurRadiusSlider extends Component {
   }
   render() {
     return (
-      <BlurRadiusSliderWrapper
-        className={`${this.props.attrReference}-section`}
+      <label
+        htmlFor="blur-radius-slider"
+        className={`${this.props.attrReference}-label slider-label`}
       >
-        <label htmlFor="blur-radius-slider">
-          <p className="attr-reference">{this.props.attrReference}</p>
-          <input
-            onChange={e => this.slideChangeHandler(e)}
-            // onBlur={e => this.slideChangeHandler(e)}
-            type="range"
-            min={0}
-            max={10}
-            value={this.state.blurRadiusValue}
-          />
-        </label>
-        <h2 className="val-display">{this.state.blurRadiusValue}</h2>
-      </BlurRadiusSliderWrapper>
+        <p className="attr-reference">
+          {this.props.attrReference}: {this.state.blurRadiusValue}
+        </p>
+
+        <input
+          onChange={e => this.slideChangeHandler(e)}
+          // onBlur={e => this.slideChangeHandler(e)}
+          type="range"
+          min={0}
+          max={10}
+          value={this.state.blurRadiusValue}
+        />
+      </label>
     );
   }
 }

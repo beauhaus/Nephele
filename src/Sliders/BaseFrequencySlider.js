@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 
-const BaseFrequencySliderWrapper = styled.section`
-  opacity: 1;
-`;
 class BaseFrequencySlider extends Component {
   state = {
     baseFrequencyValue: 5
@@ -18,22 +14,22 @@ class BaseFrequencySlider extends Component {
   }
   render() {
     return (
-      <BaseFrequencySliderWrapper
-        className={`${this.props.attrReference}-section`}
+      <label
+        htmlFor="base-frequency-slider"
+        className={`${this.props.attrReference}-label slider-label`}
       >
-        <label htmlFor="blur-radius-slider">
-          <p className="attr-reference">{this.props.attrReference}</p>
-          <input
-            onChange={e => this.slideChangeHandler(e)}
-            // onBlur={e => this.slideChangeHandler(e)}
-            type="range"
-            min={0}
-            max={10}
-            value={this.state.baseFrequencyValue}
-          />
-        </label>
-        <h2 className="val-display">{this.state.baseFrequencyValue}</h2>
-      </BaseFrequencySliderWrapper>
+        <p className="attr-reference">
+          {this.props.attrReference}: {this.state.baseFrequencyValue}
+        </p>
+        <input
+          onChange={e => this.slideChangeHandler(e)}
+          // onBlur={e => this.slideChangeHandler(e)}
+          type="range"
+          min={0}
+          max={10}
+          value={this.state.baseFrequencyValue}
+        />
+      </label>
     );
   }
 }
