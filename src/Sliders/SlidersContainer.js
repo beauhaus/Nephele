@@ -95,12 +95,8 @@ const StyledSlidersWrapper = styled.section`
     margin-left: 1vw;
     text-align: left;
     text-shadow: 1px 1px 1px #e2e0dd;
-    /* border: 1px solid blue; */
   }
-  /* border: 1px solid red; */
   #lightning {
-    /* margin-top: 1.5rem; */
-    /* margin-top: 0.2vh; */
     justify-self: center;
     width: 8vw;
     height: 3vh;
@@ -110,7 +106,6 @@ const StyledSlidersWrapper = styled.section`
   }
   .numOctaves-label {
     margin-top: -2vh;
-    /* border: 1px solid pink; */
   }
 `;
 

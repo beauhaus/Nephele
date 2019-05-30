@@ -2,15 +2,14 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import arrowThumbIcon from "../images/arrow_thumb.svg";
-// import cloud from "../images/cloud_thumb.svg";
 
 const StyledNightDayLabel = styled.label`
   grid-column: 6;
   grid-row: 1/8;
   position: relative;
   width: 4vw;
-  /* border: 1px solid yellowgreen; */
   &#night-day input[type="range"] {
+    /* margin: auto -1rem auto auto; */
     transform-origin: 50% 50%;
     transform: translateX(50%) translateY(50%) rotate(270deg);
     position: absolute;
@@ -23,16 +22,20 @@ const StyledNightDayLabel = styled.label`
   }
   &#night-day input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
-    border-width: 0px;
-    height: 30px;
-    width: 30px;
+    /* border-width: 0px; */
+    height: 50px;
+    width: 50px;
     background-size: contain;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-position: center top;
-    background: url(${arrowThumbIcon});
+    background-position: center center;
+    background-image: url(${arrowThumbIcon});
     cursor: pointer;
-    margin-top: 0rem; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    margin-top: 0;
+    margin-left: 0;
+    /*this transform may need a relook after repositioning it's parent*/
+    transform: translateX(70%) translateY(20%) rotate(90deg);
+
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
   }
   &#night-day input[type="range"]::-moz-range-thumb {
