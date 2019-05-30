@@ -14,9 +14,6 @@ User will be able to experiment and observe effects of adjustments to several re
 | **Styling**       | Styled-Components   | ***√***         |
 
 
-![First page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot.jpg?raw=true "First page screenshot")
-
-![Second page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot2.jpg?raw=true "Second page screenshot")
 
 ![Third page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot3.jpg?raw=true "Third page screenshot")
 #### custom slider thumbs as svg images. woohoo.
@@ -35,6 +32,8 @@ User will be able to experiment and observe effects of adjustments to several re
 ![Eighth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot8.jpg?raw=true "Eighth page screenshot")
 
 ![Ninth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot9.jpg?raw=true "Ninth page screenshot")
+
+![Tenth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot10.jpg?raw=true "Tenth page screenshot")
 
 
 
