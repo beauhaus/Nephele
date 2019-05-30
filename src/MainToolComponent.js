@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import SlidersContainer from "./Sliders/SlidersContainer";
 
-// import CloudDisplay from "./CloudDisplay";
+import CloudDisplay from "./CloudDisplay";
 import OuterFrame from "./OuterFrame";
 // import zeusCoding from "./images/zeuscoding.svg";
 
@@ -48,17 +48,16 @@ class MainToolComponent extends Component {
       <StyledToolComp className="main-display">
         <OuterFrame />
         <SlidersContainer />
-        <section className="cloud-display">TOP RIGHT</section>
+        <CloudDisplay />
+
         <section className="css-code-display">CSS code display</section>
         <section className="svg-code-display">SVG code display</section>
         {/**
-        <div className="cloud-display">CloudDisplay</div>
         <div>CodeDisplay</div>
         <div>bottom Left</div>
           <header>
             <h1 id="title">Nephele</h1>
           </header>
-        <CloudDisplay />
         
         <div className="code-display">
         

@@ -7,7 +7,6 @@ import NumOctavesSlider from "./NumOctavesSlider";
 import BaseFrequencySlider from "./BaseFrequencySlider";
 import ScaleSlider from "./ScaleSlider";
 import SpreadSlider from "./SpreadSlider";
-import NightDaySlider from "./NightDaySlider";
 
 const StyledSlidersWrapper = styled.section`
   font-size: 2rem;
@@ -18,16 +17,7 @@ const StyledSlidersWrapper = styled.section`
   display: grid;
   justify-content: center;
   align-items: center;
-  & label {
-    /* border: 1px dashed blue; */
-  }
-  & .val-display {
-    /* margin-top: -2vh; */
-    /* font-size: 2rem;
-    font-family: "IM Fell Double Pica", serif;
-    text-shadow: 1px 1px 1px #e2e0dd; */
-    /* border: 1px solid red; */
-  }
+
   & input[type="range"] {
     margin: auto -1rem auto auto;
     -webkit-appearance: none;
@@ -116,9 +106,11 @@ const StyledSlidersWrapper = styled.section`
     height: 3vh;
     -webkit-filter: drop-shadow(1px 1px 0.5px #fff);
     filter: drop-shadow(1px 1px 0.5px #fff);
+    margin-bottom: -2vh;
   }
-  .numOctaves-section {
-    /* margin-top: -1.5vh; */
+  .numOctaves-label {
+    margin-top: -2vh;
+    /* border: 1px solid pink; */
   }
 `;
 
@@ -144,7 +136,6 @@ class Sliders extends Component {
         <NumOctavesSlider attrReference={"numOctaves"} />
         <BaseFrequencySlider attrReference={"baseFrequency"} />
         <ScaleSlider attrReference={"scale"} />
-        <NightDaySlider attrReference={"nightDay"} />
       </StyledSlidersWrapper>
     );
   }

@@ -107,5 +107,4 @@ h3 {
   grid-template-rows: repeat(auto-fill, minmax(1vh, auto));
   grid-gap: 3px;
   overflow: hidden;
-  /* box-shadow: inset 0px 0px 14px 4px brown; */
 }
