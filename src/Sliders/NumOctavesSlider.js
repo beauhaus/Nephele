@@ -10,16 +10,16 @@ class NumOctavesSlider extends Component {
     // console.log("val: ", value);
     // console.log("props: ", this.props);
     this.setState({ numOctavesValue: value });
-    this.props.NumOctavesSliderValUpdate(this.props.attrReference, value);
+    this.props.NumOctavesSliderValUpdate(this.props.attrRef, value);
   }
   render() {
     return (
       <label
         htmlFor="num-octaves-slider"
-        className={`${this.props.attrReference}-label slider-label`}
+        className={`${this.props.attrRef}-label slider-label`}
       >
         <p className="attr-reference">
-          {this.props.attrReference}: {this.state.numOctavesValue}
+          {this.props.attrRef}: {this.state.numOctavesValue}
         </p>
         <input
           onChange={e => this.slideChangeHandler(e)}

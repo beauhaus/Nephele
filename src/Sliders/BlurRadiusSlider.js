@@ -1,38 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 
-class BlurRadiusSlider extends Component {
-  state = {
-    blurRadiusValue: 5
-  };
-
-  slideChangeHandler(e) {
+const BlurRadiusSlider = props => {
+  const { blurValUpdater, blurVal, attrRef } = props;
+  const slideChangeHandler = e => {
     const { value } = e.target;
-    // console.log("val: ", value);
-    // console.log("props: ", this.props);
-    this.setState({ blurRadiusValue: value });
-    this.props.BlurRadiusSliderValUpdate(this.props.attrReference, value);
-  }
-  render() {
-    return (
-      <label
-        htmlFor="blur-radius-slider"
-        className={`${this.props.attrReference}-label slider-label`}
-      >
-        <p className="attr-reference">
-          {this.props.attrReference}: {this.state.blurRadiusValue}
-        </p>
+    blurValUpdater(value);
+  };
+  return (
+    <label htmlFor={props.htmlFor} className={`${attrRef}-label slider-label`}>
+      <p className="attr-reference">
+        {attrRef}: {blurVal}
+      </p>
 
-        <input
-          onChange={e => this.slideChangeHandler(e)}
-          // onBlur={e => this.slideChangeHandler(e)}
-          type="range"
-          min={0}
-          max={10}
-          value={this.state.blurRadiusValue}
-        />
-      </label>
-    );
-  }
-}
+      <input
+        onChange={e => slideChangeHandler(e)}
+        // onBlur={e => slideChangeHandler(e)}
+        type="range"
+        min={0}
+        max={10}
+        value={blurVal}
+      />
+    </label>
+  );
+};
 
 export default BlurRadiusSlider;

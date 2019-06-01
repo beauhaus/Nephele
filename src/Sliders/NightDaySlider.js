@@ -3,6 +3,12 @@ import styled from "styled-components";
 
 import arrowThumbIcon from "../images/arrow_thumb.svg";
 
+const stylesStore = ({ input }) => {
+  return `
+  border: 1px solid red;
+  `;
+};
+
 const StyledNightDayLabel = styled.label`
   grid-column: 6;
   grid-row: 1/8;
@@ -35,7 +41,6 @@ const StyledNightDayLabel = styled.label`
     margin-left: 0;
     /*this transform may need a relook after repositioning it's parent*/
     transform: translateX(70%) translateY(20%) rotate(90deg);
-
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
   }
   &#night-day input[type="range"]::-moz-range-thumb {
@@ -51,6 +56,10 @@ const StyledNightDayLabel = styled.label`
     cursor: pointer;
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
   }
+  & input[type="range"]:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+  ${props => stylesStore(props)};
 `;
 class NightDaySlider extends Component {
   state = {
@@ -58,25 +67,26 @@ class NightDaySlider extends Component {
   };
 
   slideChangeHandler(e) {
+    // console.log("e.tgt", e.target);
     const { value } = e.target;
     // console.log("val: ", value);
     // console.log("props: ", this.props);
     this.setState({ nightDayValue: value });
-    this.props.nightDaySliderValUpdate(this.props.attrReference, value);
+    this.props.nightDaySliderValUpdate(this.props.attrRef, value);
   }
   render() {
     return (
       <StyledNightDayLabel
         id="night-day"
         htmlFor="night-day-slider"
-        className={`${this.props.attrReference}-label slider-label`}
+        className={`${this.props.attrRef}-label slider-label`}
       >
         <input
           onChange={e => this.slideChangeHandler(e)}
           // onBlur={e => this.slideChangeHandler(e)}
           type="range"
-          min={0}
-          max={10}
+          min={1}
+          max={100}
           value={this.state.nightDayValue}
         />
       </StyledNightDayLabel>
@@ -85,3 +95,32 @@ class NightDaySlider extends Component {
 }
 
 export default NightDaySlider;
+
+/* REFERENCE for dynamic styles into styled-components */
+/*
+
+const tileColors=["red", "green", "blue"];
+
+const stylesStore(input)({ randoDirection, randoColors }) => {
+  return `
+  transform: rotate(${randoDirection}deg);
+  background-color:${tileColors[randoColors]};
+  `;
+};
+
+const StyledTile = styled.div`
+height: ---;
+weight: ---;
+  ${props => stylesStore(props)};
+`;
+
+
+------
+
+<StyledTile
+      className="tile-elem"
+      randoDirection={props.randoDirection}
+      randoColors={props.randoColors}
+    />
+
+    */

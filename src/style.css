@@ -97,14 +97,3 @@ h3 {
   -moz-border-bottom-colors: #272626;
   /* border-bottom-width: 2px; */
 }
-
-#app-grid-wrapper {
-  width: 98vw;
-  height: 98vh;
-  margin: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(1vw, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(1vh, auto));
-  grid-gap: 3px;
-  overflow: hidden;
-}

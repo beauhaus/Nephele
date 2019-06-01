@@ -4,7 +4,14 @@ import Tile from "./Tile";
 import styled from "styled-components";
 
 const StyledWrapper = styled.div`
-  /* filter: drop-shadow(-0.4px -0.4px 1px #272626); */
+  width: 98vw;
+  height: 98vh;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1vw, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(1vh, auto));
+  grid-gap: 3px;
+  overflow: hidden;
 `;
 
 /*

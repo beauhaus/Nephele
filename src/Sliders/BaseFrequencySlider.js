@@ -10,16 +10,16 @@ class BaseFrequencySlider extends Component {
     // console.log("val: ", value);
     // console.log("props: ", this.props);
     this.setState({ baseFrequencyValue: value });
-    this.props.BaseFrequencySliderValUpdate(this.props.attrReference, value);
+    this.props.BaseFrequencySliderValUpdate(this.props.attrRef, value);
   }
   render() {
     return (
       <label
         htmlFor="base-frequency-slider"
-        className={`${this.props.attrReference}-label slider-label`}
+        className={`${this.props.attrRef}-label slider-label`}
       >
         <p className="attr-reference">
-          {this.props.attrReference}: {this.state.baseFrequencyValue}
+          {this.props.attrRef}: {this.state.baseFrequencyValue}
         </p>
         <input
           onChange={e => this.slideChangeHandler(e)}

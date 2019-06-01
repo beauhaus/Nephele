@@ -1,25 +1,21 @@
 import React, { Component } from "react";
 
 class SpreadSlider extends Component {
-  state = {
-    spreadValue: 5
-  };
-
   slideChangeHandler(e) {
     const { value } = e.target;
-    // console.log("val: ", value);
-    // console.log("props: ", this.props);
-    this.setState({ spreadValue: value });
-    this.props.SpreadSliderValUpdate(this.props.attrReference, value);
+    // this.props.blurSliderUpdater(this.props.attrRef, value);
+    this.props.sliderValUpdater(this.props.attrRef, value);
   }
   render() {
+    // console.log("p>SPRslider: ", this.props);
+
     return (
       <label
         htmlFor="num-octaves-slider"
-        className={`${this.props.attrReference}-label slider-label`}
+        className={`${this.props.attrRef}-label slider-label`}
       >
         <p className="attr-reference">
-          {this.props.attrReference}: {this.state.spreadValue}
+          {this.props.attrRef}: {this.props.spreadVal}
         </p>{" "}
         <input
           onChange={e => this.slideChangeHandler(e)}
@@ -27,7 +23,7 @@ class SpreadSlider extends Component {
           type="range"
           min={0}
           max={10}
-          value={this.state.spreadValue}
+          value={this.props.spreadVal}
         />
       </label>
     );

@@ -5,6 +5,7 @@ import SlidersContainer from "./Sliders/SlidersContainer";
 import CloudDisplay from "./CloudDisplay";
 import OuterFrame from "./OuterFrame";
 // import zeusCoding from "./images/zeuscoding.svg";
+import slidersDB from "./Sliders/slidersDB.JSON";
 
 const StyledToolComp = styled.main`
   grid-area: 7 / 7/-7/-7;
@@ -36,34 +37,56 @@ const StyledToolComp = styled.main`
 `;
 
 class MainToolComponent extends Component {
+  //default vals for sliders
   state = {
-    blurRadiusVal: 5
+    blurVal: 5,
+    spreadVal: 5,
+    numOctavesVal: 5,
+    scaleVal: 5,
+    nightDayVal: 50
   };
-  sliderValUpdate(attrRef, value) {
-    console.log("attrRef: ", attrRef);
-    console.log("value: ", value);
+  componentDidMount() {
+    const testSlider = slidersDB;
+    console.log("componentDidMount: ", testSlider);
   }
+  blurValUpdater = blurVal => {
+    // console.log("blurValUpdated!");
+    // this.setState({ blurVal });
+  };
+
+  sliderValUpdater = (input1, input2) => {
+    console.log("valUpdated!");
+    // console.log("valUpdater inputs: ", input1, input2);
+  };
+
   render() {
+    const { blurVal, spreadVal, numOctavesVal, scaleVal } = this.state;
+    // console.log("vals: ", blurVal, spreadVal, numOctavesVal, scaleVal);
+    // console.log(slidersDB);
+    const sliders = slidersDB.sliders;
     return (
       <StyledToolComp className="main-display">
         <OuterFrame />
-        <SlidersContainer />
+        <SlidersContainer
+          slidersArray={sliders}
+          sliderValUpdater={this.sliderValUpdater}
+        />
+
+        {/**
+          <SlidersContainer
+          blurVal={blurVal}
+          spreadVal={spreadVal}
+          numOctavesVal={numOctavesVal}
+          scaleVal={scaleVal}
+          blurValUpdater={this.blurValUpdater}
+          spreadValUpdater={this.spreadValUpdater}
+          slidersDB={slidersDB}
+          />
+        */}
         <CloudDisplay />
 
         <section className="css-code-display">CSS code display</section>
         <section className="svg-code-display">SVG code display</section>
-        {/**
-        <div>CodeDisplay</div>
-        <div>bottom Left</div>
-          <header>
-            <h1 id="title">Nephele</h1>
-          </header>
-        
-        <div className="code-display">
-        
-        <img id="zeus" src={zeusCoding} alt="Zeus coding a cloud" />
-        </div>
-      */}
       </StyledToolComp>
     );
   }

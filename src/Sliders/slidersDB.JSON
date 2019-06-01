@@ -1,0 +1,14 @@
+{
+  "sliders": [
+    {
+      "name": "blurRadius",
+      "labelClassName": "blur-val-label",
+
+      "htmlFor": "blur-radius-slider",
+      "attrRef": "blur-val",
+      "min": 0,
+      "max": 10,
+      "value": 5
+    }
+  ]
+}

@@ -7,6 +7,7 @@ import NumOctavesSlider from "./NumOctavesSlider";
 import BaseFrequencySlider from "./BaseFrequencySlider";
 import ScaleSlider from "./ScaleSlider";
 import SpreadSlider from "./SpreadSlider";
+import DataSlider from "./DataSlider";
 
 const StyledSlidersWrapper = styled.section`
   font-size: 2rem;
@@ -109,31 +110,38 @@ const StyledSlidersWrapper = styled.section`
   }
 `;
 
-class Sliders extends Component {
-  state = {
-    blurRadiusValue: 5,
-    numOctavesValue: 5
-  };
+const SlidersContaner = props => {
+  const { slidersArray, sliderValUpdater } = props;
+  return (
+    <StyledSlidersWrapper className="sliders-container">
+      {slidersArray.map((item, idx) => (
+        <DataSlider
+          key={idx}
+          name={item.name}
+          labelClassName={item.labelClassName}
+          attrRef={item.attrRef}
+          labelName={item.labelName}
+          min={item.min}
+          max={item.max}
+          value={item.value}
+          sliderValUpdater={sliderValUpdater}
+        />
+      ))}
 
-  // slideChangeHandler(e) {
-  //   const { value } = e.target;
-  //   // console.log("val: ", value);
-  //   // console.log("props: ", this.props);
-  //   this.setState({ value });
-  //   this.props.sliderValUpdate(this.props.attrReference, value);
-  // }
-  render() {
-    return (
-      <StyledSlidersWrapper className="sliders-container">
-        <BlurRadiusSlider attrReference={"blur-radius"} />
-        <SpreadSlider attrReference={"spread"} />
+      {/*
+          <DataSlider key={idx} item={item} valUpdater={props.valUpdater} />
+        <SpreadSlider
+        spreadVal={spreadVal}
+        spreadValUpdater={spreadValUpdater}
+        attrRef={"spreadVal"}
+        />
         <img id="lightning" src={lightningIcon} alt="lightning Icon" />
-        <NumOctavesSlider attrReference={"numOctaves"} />
-        <BaseFrequencySlider attrReference={"baseFrequency"} />
-        <ScaleSlider attrReference={"scale"} />
-      </StyledSlidersWrapper>
-    );
-  }
-}
+        <NumOctavesSlider attrRef={"numOctaves"} />
+        <BaseFrequencySlider attrRef={"baseFrequency"} />
+        <ScaleSlider attrRef={"scale"} />
+      */}
+    </StyledSlidersWrapper>
+  );
+};
 
-export default Sliders;
+export default SlidersContaner;
