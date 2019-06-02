@@ -61,7 +61,7 @@ const StyledNightDayLabel = styled.label`
   }
   ${props => stylesStore(props)};
 `;
-class NightDaySlider extends Component {
+class SkySlider extends Component {
   state = {
     nightDayValue: 5
   };
@@ -72,7 +72,7 @@ class NightDaySlider extends Component {
     // console.log("val: ", value);
     // console.log("props: ", this.props);
     this.setState({ nightDayValue: value });
-    this.props.nightDaySliderValUpdate(this.props.attrRef, value);
+    this.props.skySliderValUpdate(this.props.attrRef, value);
   }
   render() {
     return (
@@ -94,7 +94,7 @@ class NightDaySlider extends Component {
   }
 }
 
-export default NightDaySlider;
+export default SkySlider;
 
 /* REFERENCE for dynamic styles into styled-components */
 /*

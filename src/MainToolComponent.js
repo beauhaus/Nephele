@@ -44,7 +44,7 @@ class MainToolComponent extends Component {
     numOctavesVal: 5,
     baseFrequencyVal: 5,
     scaleVal: 5,
-    nightDayVal: 50
+    skyVal: 50
   };
   componentDidMount() {
     // const testSlider = slidersDB;

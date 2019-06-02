@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import NightDaySlider from "./Sliders/NightDaySlider";
+import SkySlider from "./Sliders/SkySlider";
 import moonIcon from "./images/moonIcon.svg";
 import sunIcon from "./images/sunIcon.svg";
 
@@ -35,7 +35,7 @@ const CloudDisplay = props => {
     <StyledCloudDisplay className="cloud-display">
       <img id="moonIcon" src={moonIcon} alt="moon" />
       <img id="sunIcon" src={sunIcon} alt="sun" />
-      <NightDaySlider attrRef="night-day" />
+      <SkySlider attrRef="night-day" />
     </StyledCloudDisplay>
   );
 };
