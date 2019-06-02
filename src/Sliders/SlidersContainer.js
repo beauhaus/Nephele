@@ -111,19 +111,14 @@ const StyledSlidersWrapper = styled.section`
 `;
 
 const SlidersContaner = props => {
-  const { slidersArray, sliderValUpdater } = props;
+  const { sliderValUpdater, slidersArray } = props;
+
   return (
     <StyledSlidersWrapper className="sliders-container">
-      {slidersArray.map((item, idx) => (
+      {slidersArray.map(slider => (
         <DataSlider
-          key={idx}
-          name={item.name}
-          labelClassName={item.labelClassName}
-          attrRef={item.attrRef}
-          labelName={item.labelName}
-          min={item.min}
-          max={item.max}
-          value={item.value}
+          key={slider.name}
+          slider={slider}
           sliderValUpdater={sliderValUpdater}
         />
       ))}

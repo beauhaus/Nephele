@@ -46,30 +46,31 @@ class MainToolComponent extends Component {
     nightDayVal: 50
   };
   componentDidMount() {
-    const testSlider = slidersDB;
-    console.log("componentDidMount: ", testSlider);
+    // const testSlider = slidersDB;
+    // console.log("componentDidMount: ", testSlider);
   }
-  blurValUpdater = blurVal => {
-    // console.log("blurValUpdated!");
-    // this.setState({ blurVal });
-  };
 
-  sliderValUpdater = (input1, input2) => {
-    console.log("valUpdated!");
-    // console.log("valUpdater inputs: ", input1, input2);
+  sliderValUpdater = (whichState, valUpdate) => {
+    switch (whichState) {
+      case "blur-val":
+        this.setState({ blurVal: valUpdate });
+        console.log(valUpdate);
+        break;
+      default:
+        break;
+    }
   };
 
   render() {
     const { blurVal, spreadVal, numOctavesVal, scaleVal } = this.state;
-    // console.log("vals: ", blurVal, spreadVal, numOctavesVal, scaleVal);
-    // console.log(slidersDB);
-    const sliders = slidersDB.sliders;
+
     return (
       <StyledToolComp className="main-display">
         <OuterFrame />
         <SlidersContainer
-          slidersArray={sliders}
+          slidersArray={slidersDB.slidersArray}
           sliderValUpdater={this.sliderValUpdater}
+          // sliderStateVal={}
         />
 
         {/**

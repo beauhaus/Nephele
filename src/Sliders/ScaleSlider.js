@@ -7,8 +7,6 @@ class ScaleSlider extends Component {
 
   slideChangeHandler(e) {
     const { value } = e.target;
-    // console.log("val: ", value);
-    // console.log("props: ", this.props);
     this.setState({ scaleValue: value });
     this.props.ScaleSliderValUpdate(this.props.attrRef, value);
   }

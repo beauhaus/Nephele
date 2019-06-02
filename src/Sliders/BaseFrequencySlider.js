@@ -7,8 +7,6 @@ class BaseFrequencySlider extends Component {
 
   slideChangeHandler(e) {
     const { value } = e.target;
-    // console.log("val: ", value);
-    // console.log("props: ", this.props);
     this.setState({ baseFrequencyValue: value });
     this.props.BaseFrequencySliderValUpdate(this.props.attrRef, value);
   }

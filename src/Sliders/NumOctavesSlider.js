@@ -7,8 +7,6 @@ class NumOctavesSlider extends Component {
 
   slideChangeHandler(e) {
     const { value } = e.target;
-    // console.log("val: ", value);
-    // console.log("props: ", this.props);
     this.setState({ numOctavesValue: value });
     this.props.NumOctavesSliderValUpdate(this.props.attrRef, value);
   }

@@ -31,10 +31,6 @@ const StyledCloudDisplay = styled.section`
 `;
 
 const CloudDisplay = props => {
-  // console.log("ff > Slider", props);
-  // const [value, setValue] = useState(50);
-  // const slideChangeHandler = input => setValue(input);
-
   return (
     <StyledCloudDisplay className="cloud-display">
       <img id="moonIcon" src={moonIcon} alt="moon" />

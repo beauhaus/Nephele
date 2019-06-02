@@ -7,8 +7,6 @@ class SpreadSlider extends Component {
     this.props.sliderValUpdater(this.props.attrRef, value);
   }
   render() {
-    // console.log("p>SPRslider: ", this.props);
-
     return (
       <label
         htmlFor="num-octaves-slider"

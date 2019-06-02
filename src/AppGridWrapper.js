@@ -33,7 +33,6 @@ class AppGridWrapper extends Component {
     return bigArray;
   }
   render() {
-    // console.log("run", this.bigArr());
     const tilesArray = this.bigArr();
     return (
       <StyledWrapper id="app-grid-wrapper">
