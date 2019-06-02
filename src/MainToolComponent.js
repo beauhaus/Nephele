@@ -42,6 +42,7 @@ class MainToolComponent extends Component {
     blurVal: 5,
     spreadVal: 5,
     numOctavesVal: 5,
+    baseFrequencyVal: 5,
     scaleVal: 5,
     nightDayVal: 50
   };
@@ -57,7 +58,15 @@ class MainToolComponent extends Component {
         break;
       case "spread-radius":
         this.setState({ spreadVal: valUpdate });
-        console.log(valUpdate);
+        break;
+      case "numOctaves":
+        this.setState({ spreadVal: valUpdate });
+        break;
+      case "baseFrequency":
+        this.setState({ baseFrequencyVal: valUpdate });
+        break;
+      case "scale":
+        this.setState({ scaleVal: valUpdate });
         break;
       default:
         break;

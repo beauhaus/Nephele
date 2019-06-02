@@ -2,22 +2,43 @@ import React from "react";
 import styled from "styled-components";
 import cloudThumbIcon from "../images/cloud_thumb.svg";
 import lightningIcon from "../images/lightning.svg";
-
-// import ScaleSlider from "./ScaleSlider";
-import DataSlider from "./DataSlider";
+import DynamicSlider from "./DynamicSlider";
 
 const StyledSlidersWrapper = styled.section`
   font-size: 2rem;
   font-weight: lighter; /* TODO: is this used? */
-  /* margin-top: 0.5rem; */
   position: relative;
   z-index: 2;
   display: grid;
-  justify-content: center;
+  grid-gap: 4px;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   align-items: center;
+  & :nth-child(3),
+  & :nth-child(4),
+  & :nth-child(5) {
+    margin-top: -8vh;
+  }
+  & .lightning-container {
+    grid-row-end: 4;
+    grid-row-start: 3;
+    margin: 0;
+    height: 3vh;
+  }
+  #lightning {
+    /* justify-self: center; */
+    /* width: 8vw; */
+    height: 100%;
+    -webkit-filter: drop-shadow(1px 1px 0.5px #fff);
+    filter: drop-shadow(1px 1px 0.5px #fff);
+  }
+  .numOctaves-label {
+    /* margin: -6vh 0 0 0; */
+  }
 
   & input[type="range"] {
-    margin: auto -1rem auto auto;
+    /* margin: auto -1rem auto auto; */
+    margin: auto;
     -webkit-appearance: none;
     width: 96%;
     cursor: pointer;
@@ -94,17 +115,6 @@ const StyledSlidersWrapper = styled.section`
     text-align: left;
     text-shadow: 1px 1px 1px #e2e0dd;
   }
-  #lightning {
-    justify-self: center;
-    width: 8vw;
-    height: 3vh;
-    -webkit-filter: drop-shadow(1px 1px 0.5px #fff);
-    filter: drop-shadow(1px 1px 0.5px #fff);
-    margin-bottom: -2vh;
-  }
-  .numOctaves-label {
-    margin-top: -2vh;
-  }
 `;
 
 const SlidersContaner = props => {
@@ -112,13 +122,15 @@ const SlidersContaner = props => {
   return (
     <StyledSlidersWrapper className="sliders-container">
       {slidersArray.map(slider => (
-        <DataSlider
+        <DynamicSlider
           key={slider.name}
           slider={slider}
           sliderValUpdater={sliderValUpdater}
         />
       ))}
-      <img id="lightning" src={lightningIcon} alt="lightning Icon" />
+      <div className="lightning-container">
+        <img id="lightning" src={lightningIcon} alt="lightning Icon" />
+      </div>
     </StyledSlidersWrapper>
   );
 };

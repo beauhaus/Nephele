@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class DataSlider extends Component {
+class DynamicSlider extends Component {
   state = {
     updatingVal: ""
   };
@@ -33,4 +33,4 @@ class DataSlider extends Component {
   }
 }
 
-export default DataSlider;
+export default DynamicSlider;
