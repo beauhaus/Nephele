@@ -1,12 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
 import cloudThumbIcon from "../images/cloud_thumb.svg";
 import lightningIcon from "../images/lightning.svg";
-import BlurRadiusSlider from "./BlurRadiusSlider";
-import NumOctavesSlider from "./NumOctavesSlider";
-import BaseFrequencySlider from "./BaseFrequencySlider";
-import ScaleSlider from "./ScaleSlider";
-import SpreadSlider from "./SpreadSlider";
+
+// import ScaleSlider from "./ScaleSlider";
 import DataSlider from "./DataSlider";
 
 const StyledSlidersWrapper = styled.section`
@@ -112,7 +109,6 @@ const StyledSlidersWrapper = styled.section`
 
 const SlidersContaner = props => {
   const { sliderValUpdater, slidersArray } = props;
-
   return (
     <StyledSlidersWrapper className="sliders-container">
       {slidersArray.map(slider => (
@@ -122,19 +118,7 @@ const SlidersContaner = props => {
           sliderValUpdater={sliderValUpdater}
         />
       ))}
-
-      {/*
-          <DataSlider key={idx} item={item} valUpdater={props.valUpdater} />
-        <SpreadSlider
-        spreadVal={spreadVal}
-        spreadValUpdater={spreadValUpdater}
-        attrRef={"spreadVal"}
-        />
-        <img id="lightning" src={lightningIcon} alt="lightning Icon" />
-        <NumOctavesSlider attrRef={"numOctaves"} />
-        <BaseFrequencySlider attrRef={"baseFrequency"} />
-        <ScaleSlider attrRef={"scale"} />
-      */}
+      <img id="lightning" src={lightningIcon} alt="lightning Icon" />
     </StyledSlidersWrapper>
   );
 };

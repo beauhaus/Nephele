@@ -50,10 +50,13 @@ class MainToolComponent extends Component {
     // console.log("componentDidMount: ", testSlider);
   }
 
-  sliderValUpdater = (whichState, valUpdate) => {
-    switch (whichState) {
-      case "blur-val":
+  sliderValUpdater = (attrRef, valUpdate) => {
+    switch (attrRef) {
+      case "blur-radius":
         this.setState({ blurVal: valUpdate });
+        break;
+      case "spread-radius":
+        this.setState({ spreadVal: valUpdate });
         console.log(valUpdate);
         break;
       default:
@@ -62,28 +65,14 @@ class MainToolComponent extends Component {
   };
 
   render() {
-    const { blurVal, spreadVal, numOctavesVal, scaleVal } = this.state;
-
     return (
       <StyledToolComp className="main-display">
         <OuterFrame />
         <SlidersContainer
           slidersArray={slidersDB.slidersArray}
           sliderValUpdater={this.sliderValUpdater}
-          // sliderStateVal={}
         />
 
-        {/**
-          <SlidersContainer
-          blurVal={blurVal}
-          spreadVal={spreadVal}
-          numOctavesVal={numOctavesVal}
-          scaleVal={scaleVal}
-          blurValUpdater={this.blurValUpdater}
-          spreadValUpdater={this.spreadValUpdater}
-          slidersDB={slidersDB}
-          />
-        */}
         <CloudDisplay />
 
         <section className="css-code-display">CSS code display</section>
