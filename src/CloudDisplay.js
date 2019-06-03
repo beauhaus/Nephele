@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import SkySlider from "./Sliders/SkySlider";
 import moonIcon from "./images/moonIcon.svg";
@@ -33,7 +33,7 @@ const StyledCloudDisplay = styled.section`
 
 class CloudDisplay extends Component {
   state = {
-    skyVal: 50
+    skyVal: 20
   };
   skySliderValUpdate = input => {
     this.setState({ skyVal: input });

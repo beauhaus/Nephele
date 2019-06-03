@@ -3,13 +3,14 @@ import styled from "styled-components";
 
 const StyledFrame = styled.svg`
   /* box-shadow: 2px 2px 4px 0px #dddbd6; */
-  drop-shadow: 
-  opacity: 0.4;
+  /* drop-shadow:  */
+  opacity: 1;
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   & #outer-frame-bg {
     fill: #bbae99;
     stroke: #442124;
@@ -25,7 +26,6 @@ const StyledFrame = styled.svg`
     stroke-width: 0;
   }
   /* border: 2px solid black; */
-  
 `;
 
 const OuterFrame = () => {

@@ -52,11 +52,12 @@ const StyledSkyLabel = styled.label`
   & input[type="range"]:focus {
     outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
   }
+  z-index: 2;
 `;
 /* ${props => stylesStore(props)}; */
 class SkySlider extends Component {
   state = {
-    skyValue: 50,
+    skyValue: 20,
     updatingVal: ""
   };
 
@@ -78,8 +79,8 @@ class SkySlider extends Component {
           // onBlur={e => this.slideChangeHandler(e)}
           type="range"
           min={1}
-          max={10}
-          value={this.props.skyVal || 50}
+          max={40}
+          value={this.props.skyVal || 40}
         />
       </StyledSkyLabel>
     );
