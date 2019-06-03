@@ -83,6 +83,8 @@ h3 {
   color: #ad73ad;
   color: #6dc5ab;
   color: #e2846c;
+  color: hsla(0, 63%, 44%);
+
   color: #bbae99;
   color: rgba(68, 33, 36, 0.952);
   color: rgb(245, 226, 202);
@@ -94,6 +96,12 @@ h3 {
   color: #e2e0dd;
   color: #dfddd7;
   color: #838383;
-  -moz-border-bottom-colors: #272626;
+  /* -moz-border-bottom-colors: #272626; */
+  /*These colors are used for dark sky */
+  color: hsl(0, 0%, 4%);
+  color: #95dff8;
+  background: #58c4e9;
+  color: #f5f5f5;
+
   /* border-bottom-width: 2px; */
 }

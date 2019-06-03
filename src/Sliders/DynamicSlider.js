@@ -19,7 +19,6 @@ class DynamicSlider extends Component {
         <p className="attr-reference">
           {slider.attrRef}: {this.state.updatingVal || slider.max / 2}
         </p>
-
         <input
           onChange={e => this.slideChangeHandler(e, slider.attrRef)}
           // onBlur={e => slideChangeHandler(e)}

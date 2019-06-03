@@ -3,18 +3,12 @@ import styled from "styled-components";
 
 import arrowThumbIcon from "../images/arrow_thumb.svg";
 
-const stylesStore = ({ input }) => {
-  return `
-  border: 1px solid red;
-  `;
-};
-
-const StyledNightDayLabel = styled.label`
+const StyledSkyLabel = styled.label`
   grid-column: 6;
   grid-row: 1/8;
   position: relative;
   width: 4vw;
-  &#night-day input[type="range"] {
+  &#sky input[type="range"] {
     /* margin: auto -1rem auto auto; */
     transform-origin: 50% 50%;
     transform: translateX(50%) translateY(50%) rotate(270deg);
@@ -26,7 +20,7 @@ const StyledNightDayLabel = styled.label`
     cursor: pointer;
     background: transparent;
   }
-  &#night-day input[type="range"]::-webkit-slider-thumb {
+  &#sky input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     /* border-width: 0px; */
     height: 50px;
@@ -43,7 +37,7 @@ const StyledNightDayLabel = styled.label`
     transform: translateX(70%) translateY(20%) rotate(90deg);
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
   }
-  &#night-day input[type="range"]::-moz-range-thumb {
+  &#sky input[type="range"]::-moz-range-thumb {
     border-width: 0px;
     height: 50px;
     width: 50px;
@@ -51,7 +45,6 @@ const StyledNightDayLabel = styled.label`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center top;
-    /* border: 1px solid red; */
     transform: rotate(90deg);
     cursor: pointer;
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
@@ -59,37 +52,36 @@ const StyledNightDayLabel = styled.label`
   & input[type="range"]:focus {
     outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
   }
-  ${props => stylesStore(props)};
 `;
+/* ${props => stylesStore(props)}; */
 class SkySlider extends Component {
   state = {
-    nightDayValue: 5
+    skyValue: 50,
+    updatingVal: ""
   };
 
   slideChangeHandler(e) {
-    // console.log("e.tgt", e.target);
     const { value } = e.target;
-    // console.log("val: ", value);
-    // console.log("props: ", this.props);
-    this.setState({ nightDayValue: value });
-    this.props.skySliderValUpdate(this.props.attrRef, value);
+    this.setState({ updatingVal: value });
+    this.props.skySliderValUpdate(value);
   }
+
   render() {
     return (
-      <StyledNightDayLabel
-        id="night-day"
-        htmlFor="night-day-slider"
-        className={`${this.props.attrRef}-label slider-label`}
+      <StyledSkyLabel
+        id="sky"
+        htmlFor="sky-slider"
+        className={"sky-label slider-label"}
       >
         <input
           onChange={e => this.slideChangeHandler(e)}
           // onBlur={e => this.slideChangeHandler(e)}
           type="range"
           min={1}
-          max={100}
-          value={this.state.nightDayValue}
+          max={10}
+          value={this.props.skyVal || 50}
         />
-      </StyledNightDayLabel>
+      </StyledSkyLabel>
     );
   }
 }
