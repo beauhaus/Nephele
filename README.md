@@ -38,8 +38,8 @@ User will be able to experiment and observe effects of adjustments to several re
 ![Eleventh page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot11.jpg?raw=true "Eleventh page screenshot")
 #### Day/Night Slider works
 
-
-
+![Twelfth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot12.jpg?raw=true "Twelfth page screenshot")
+#### Added Cloud Model
 
 ## Attributions
 

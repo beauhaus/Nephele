@@ -4,6 +4,7 @@ import SkySlider from "./Sliders/SkySlider";
 import moonIcon from "./images/moonIcon.svg";
 import sunIcon from "./images/sunIcon.svg";
 import DayLayerOverlay from "./DayLayerOverlay";
+import CloudModel from "./CloudModel";
 
 // const sliderThumbStyles = props => props;
 const StyledCloudDisplay = styled.section`
@@ -15,6 +16,14 @@ const StyledCloudDisplay = styled.section`
   background: linear-gradient(165deg, #090909 0%, #527785 100%);
   box-shadow: inset 2px 2px 15px 4px rgba(0, 0, 0, 0.5);
   /* z-index: 1; */
+  & #cloud-model {
+    /* border: 2px solid brown; */
+    z-index: 1;
+    justify-self: center;
+    width: 100%;
+    grid-column: 1/-1;
+    grid-row: 1 / end;
+  }
   & img {
     width: 3vw;
     margin: 0.5vw;
@@ -49,6 +58,7 @@ class CloudDisplay extends Component {
           skySliderValUpdate={this.skySliderValUpdate}
           skyVal={this.state.skyVal}
         />
+        <CloudModel />
       </StyledCloudDisplay>
     );
   }

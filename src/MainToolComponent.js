@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import SlidersContainer from "./Sliders/SlidersContainer";
 
+import CloudSVGFilter from "./CloudSVGFilter";
 import CloudDisplay from "./CloudDisplay";
 import OuterFrame from "./OuterFrame";
 // import zeusCoding from "./images/zeuscoding.svg";
@@ -81,7 +82,7 @@ class MainToolComponent extends Component {
           slidersArray={slidersDB.slidersArray}
           sliderValUpdater={this.sliderValUpdater}
         />
-
+        <CloudSVGFilter />
         <CloudDisplay />
 
         <section className="css-code-display">CSS code display</section>
