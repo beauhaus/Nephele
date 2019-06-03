@@ -16,13 +16,22 @@ const StyledCloudDisplay = styled.section`
   background: linear-gradient(165deg, #090909 0%, #527785 100%);
   box-shadow: inset 2px 2px 15px 4px rgba(0, 0, 0, 0.5);
   /* z-index: 1; */
-  & #cloud-model {
-    /* border: 2px solid brown; */
+
+  & .cloud-model-container {
+    /* border: 20px solid brown; */
     z-index: 1;
     justify-self: center;
     width: 100%;
     grid-column: 1/-1;
     grid-row: 1 / end;
+    overflow: hidden;
+    & #cloud-model {
+      /* border: 2px solid brown; */
+      z-index: 1;
+      width: 70%;
+      height: 50%;
+      background: transparent;
+    }
   }
   & img {
     width: 3vw;
@@ -46,7 +55,7 @@ class CloudDisplay extends Component {
   };
   skySliderValUpdate = input => {
     this.setState({ skyVal: input });
-    console.log("updated!", input);
+    // console.log("updated!", input);
   };
   render() {
     return (
@@ -58,7 +67,9 @@ class CloudDisplay extends Component {
           skySliderValUpdate={this.skySliderValUpdate}
           skyVal={this.state.skyVal}
         />
-        <CloudModel />
+        <div className="cloud-model-container">
+          <CloudModel />
+        </div>
       </StyledCloudDisplay>
     );
   }

@@ -14,8 +14,8 @@ const CloudSVGFilter = props => {
       <filter id="cloud-filter">
         <feTurbulence
           type="fractalNoise"
-          baseFrequency="0.012"
-          numOctaves="4"
+          baseFrequency="0.015"
+          numOctaves="6"
         />
         <feDisplacementMap in="SourceGraphic" scale="170" />
       </filter>
