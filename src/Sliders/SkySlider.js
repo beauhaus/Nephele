@@ -57,7 +57,7 @@ const StyledSkyLabel = styled.label`
 /* ${props => stylesStore(props)}; */
 class SkySlider extends Component {
   state = {
-    skyValue: 20,
+    skyValue: 25,
     updatingVal: ""
   };
 
@@ -79,8 +79,8 @@ class SkySlider extends Component {
           // onBlur={e => this.slideChangeHandler(e)}
           type="range"
           min={1}
-          max={40}
-          value={this.props.skyVal || 40}
+          max={50}
+          value={this.props.skyVal || 25}
         />
       </StyledSkyLabel>
     );

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const cloudStylesStore = props => `opacity: ${props.opacityVal / 40}`;
+const cloudStylesStore = props => `opacity: ${props.opacityVal / 50}`;
 
 const StyledCloudModel = styled.div`
   background: transparent;

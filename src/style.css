@@ -85,25 +85,35 @@ h3 {
   color: #e2846c;
   color: hsla(0, 63%, 44%);
 
-  color: #2a2c31;
+  color: rgba(8, 28, 54, 0.555);
   color: #503e3e;
   color: rgba(255, 220, 188, 0.959);
   color: rgb(245, 226, 202);
   color: #c0c2c5;
   color: rgba(236, 230, 219, 0.904);
   color: #bdb7ac;
-  color: rgba(192, 194, 197, 1);
+  color: rgb(192, 194, 197);
   color: #424040;
   color: #e2e0dd;
   color: #dfddd7;
   color: #1c1c24;
   /* -moz-border-bottom-colors: #272626; */
   /*These colors are used for dark sky */
+  background: linear-gradient(0deg, #071528 20%, rgba(32, 35, 41, 0.5) 120%);
   color: hsl(258, 58%, 16%);
   color: #95dff8;
   background: #58c4e9;
   color: #f5f5f5;
   background: linear-gradient(0deg, rgb(61, 61, 61) 90%, hsl(0, 0%, 33%) 100%);
   /* border-bottom-width: 2px; */
-  background: linear-gradient(0deg, #101113 90%, #2a2525 100%);
+  background: linear-gradient(0deg, #171718 90%, #1a1919 100%);
+  background: linear-gradient(0deg, #17171a 90%, #141313 100%);
+  background: -webkit-radial-gradient(
+    100% 90%,
+    150vw 55vh,
+    #c78239 15%,
+    #10263d 65%,
+    #081c36 75%,
+    transparent 150%
+  );
 }

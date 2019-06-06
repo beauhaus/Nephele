@@ -40,11 +40,11 @@ const StyledToolComp = styled.main`
 class MainToolComponent extends Component {
   //default vals for sliders
   state = {
-    blurVal: 5,
-    spreadVal: 5,
-    numOctavesVal: 5,
-    baseFrequencyVal: 5,
-    scaleVal: 5,
+    blurVal: 50,
+    spreadVal: 50,
+    numOctavesVal: 50,
+    baseFrequencyVal: 50,
+    scaleVal: 170,
     skyVal: 50
   };
   componentDidMount() {
@@ -53,6 +53,10 @@ class MainToolComponent extends Component {
   }
 
   sliderValUpdater = (attrRef, valUpdate) => {
+    // console.log(`FROM MAINTOOL COMP:
+    // attrRef: ${attrRef}
+    // valUpdate: ${valUpdate}
+    // `);
     switch (attrRef) {
       case "blur-radius":
         this.setState({ blurVal: valUpdate });
@@ -61,7 +65,7 @@ class MainToolComponent extends Component {
         this.setState({ spreadVal: valUpdate });
         break;
       case "numOctaves":
-        this.setState({ spreadVal: valUpdate });
+        this.setState({ numOctavesVal: valUpdate });
         break;
       case "baseFrequency":
         this.setState({ baseFrequencyVal: valUpdate });
@@ -75,6 +79,13 @@ class MainToolComponent extends Component {
   };
 
   render() {
+    const {
+      blurVal,
+      spreadVal,
+      numOctavesVal,
+      baseFrequencyVal,
+      scaleVal
+    } = this.state;
     return (
       <StyledToolComp className="main-display">
         <OuterFrame />
@@ -82,7 +93,7 @@ class MainToolComponent extends Component {
           slidersArray={slidersDB.slidersArray}
           sliderValUpdater={this.sliderValUpdater}
         />
-        <CloudSVGFilter />
+        <CloudSVGFilter scaleVal={scaleVal} />
         <CloudDisplay />
 
         <section className="css-code-display">CSS code display</section>

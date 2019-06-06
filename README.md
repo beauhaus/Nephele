@@ -41,6 +41,9 @@ User will be able to experiment and observe effects of adjustments to several re
 ![Twelfth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot12.jpg?raw=true "Twelfth page screenshot")
 #### Added Cloud Model
 
+![Thirteenth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot13.jpg?raw=true "Thirteenth page screenshot")
+#### Removed Decorative Tiles with significant gains in FirstMeaningfulPaint (while still substantial, improves things a great deal). This detail shows the first proof of this tool's utility. Inputs from sliders are delivered into the SVGFilter component & then changes are rendered in the CloudDisplay>CloudModel component.
+
 ## Attributions
 
 React scaffolding using the recommendations Brian Holt's excellent react <a href="https://frontendmasters.com/teachers/brian-holt/" target="_blank" title="Click to visit this class">course on FrontEndMasters</a>

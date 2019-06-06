@@ -5,40 +5,40 @@
       "labelClassName": "blur-radius-label",
       "htmlFor": "blur-radius-slider",
       "attrRef": "blur-radius",
-      "min": 0,
-      "max": 10
+      "min": 1,
+      "max": 100
     },
     {
       "name": "spreadRadius",
       "labelClassName": "spread-radius-label",
       "htmlFor": "spread-radius-slider",
       "attrRef": "spread-radius",
-      "min": 0,
-      "max": 10
+      "min": 1,
+      "max": 100
     },
     {
       "name": "numOctaves",
       "labelClassName": "numOctaves-label",
       "htmlFor": "numOctaves-slider",
       "attrRef": "numOctaves",
-      "min": 0,
-      "max": 10
+      "min": 1,
+      "max": 100
     },
     {
       "name": "baseFrequency",
       "labelClassName": "baseFrequency-label",
       "htmlFor": "baseFrequency-slider",
       "attrRef": "baseFrequency",
-      "min": 0,
-      "max": 10
+      "min": 1,
+      "max": 100
     },
     {
       "name": "scale",
       "labelClassName": "scale-label",
       "htmlFor": "scale-slider",
       "attrRef": "scale",
-      "min": 0,
-      "max": 10
+      "min": 1,
+      "max": 1000
     }
   ]
 }

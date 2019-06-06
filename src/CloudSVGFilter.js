@@ -9,6 +9,9 @@ const StyledSVGFilter = styled.svg`
 `;
 
 const CloudSVGFilter = props => {
+  const { scaleVal } = props;
+  console.log(`p>SVGFILTER
+  scaleVal: ${props.scaleVal}`);
   return (
     <StyledSVGFilter id="cloud-filter-container" width="0" height="0">
       <filter id="cloud-filter">
@@ -17,7 +20,7 @@ const CloudSVGFilter = props => {
           baseFrequency="0.015"
           numOctaves="6"
         />
-        <feDisplacementMap in="SourceGraphic" scale="170" />
+        <feDisplacementMap in="SourceGraphic" scale={scaleVal} />
       </filter>
     </StyledSVGFilter>
   );
