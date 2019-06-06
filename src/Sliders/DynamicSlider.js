@@ -20,9 +20,12 @@ class DynamicSlider extends Component {
           {slider.attrRef}: {this.state.updatingVal || slider.max / 2}
         </p>
         <input
+          //NOTE: The p above sould be an <output/>}
           onChange={e => this.slideChangeHandler(e, slider.attrRef)}
           // onBlur={e => slideChangeHandler(e)}
           type="range"
+          step="0.001"
+          // step={slider.attrRef !== "baseFrequency" ? "0.001" : ""}
           min={slider.min}
           max={slider.max}
           value={this.state.updatingVal}

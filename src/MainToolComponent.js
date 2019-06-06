@@ -42,8 +42,8 @@ class MainToolComponent extends Component {
   state = {
     blurVal: 50,
     spreadVal: 50,
-    numOctavesVal: 50,
-    baseFrequencyVal: 50,
+    numOctavesVal: 5,
+    baseFrequencyVal: 500,
     scaleVal: 170,
     skyVal: 50
   };
@@ -93,7 +93,11 @@ class MainToolComponent extends Component {
           slidersArray={slidersDB.slidersArray}
           sliderValUpdater={this.sliderValUpdater}
         />
-        <CloudSVGFilter scaleVal={scaleVal} />
+        <CloudSVGFilter
+          scaleVal={scaleVal}
+          numOctavesVal={numOctavesVal}
+          baseFrequencyVal={baseFrequencyVal}
+        />
         <CloudDisplay />
 
         <section className="css-code-display">CSS code display</section>

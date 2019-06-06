@@ -22,15 +22,15 @@
       "htmlFor": "numOctaves-slider",
       "attrRef": "numOctaves",
       "min": 1,
-      "max": 100
+      "max": 10
     },
     {
       "name": "baseFrequency",
       "labelClassName": "baseFrequency-label",
       "htmlFor": "baseFrequency-slider",
       "attrRef": "baseFrequency",
-      "min": 1,
-      "max": 100
+      "min": 0,
+      "max": 1000
     },
     {
       "name": "scale",

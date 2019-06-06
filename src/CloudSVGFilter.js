@@ -8,17 +8,17 @@ const StyledSVGFilter = styled.svg`
   ${props => cloudSVGStylesStore(props)}
 `;
 
-const CloudSVGFilter = props => {
-  const { scaleVal } = props;
-  console.log(`p>SVGFILTER
-  scaleVal: ${props.scaleVal}`);
+const CloudSVGFilter = ({ scaleVal, numOctavesVal, baseFrequencyVal }) => {
+  // const ({ scaleVal }) = props;
+  // console.log(`p>SVGFILTER
+  // scaleVal: ${props.scaleVal}`);
   return (
     <StyledSVGFilter id="cloud-filter-container" width="0" height="0">
       <filter id="cloud-filter">
         <feTurbulence
           type="fractalNoise"
-          baseFrequency="0.015"
-          numOctaves="6"
+          baseFrequency={baseFrequencyVal * 0.0001}
+          numOctaves={numOctavesVal}
         />
         <feDisplacementMap in="SourceGraphic" scale={scaleVal} />
       </filter>
