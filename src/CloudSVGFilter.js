@@ -5,7 +5,7 @@ const cloudSVGStylesStore = props => `opacity: ${props.opacityVal / 40}`;
 
 const StyledSVGFilter = styled.svg`
   /* filter: url(#filter-back); */
-  ${props => cloudSVGStylesStore(props)};
+  ${props => cloudSVGStylesStore(props)}
 `;
 
 const CloudSVGFilter = props => {

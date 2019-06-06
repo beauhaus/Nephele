@@ -85,8 +85,9 @@ h3 {
   color: #e2846c;
   color: hsla(0, 63%, 44%);
 
-  color: #bbae99;
-  color: rgba(68, 33, 36, 0.952);
+  color: #2a2c31;
+  color: #503e3e;
+  color: rgba(255, 220, 188, 0.959);
   color: rgb(245, 226, 202);
   color: #c0c2c5;
   color: rgba(236, 230, 219, 0.904);
@@ -95,13 +96,14 @@ h3 {
   color: #424040;
   color: #e2e0dd;
   color: #dfddd7;
-  color: #838383;
+  color: #1c1c24;
   /* -moz-border-bottom-colors: #272626; */
   /*These colors are used for dark sky */
-  color: hsl(0, 0%, 4%);
+  color: hsl(258, 58%, 16%);
   color: #95dff8;
   background: #58c4e9;
   color: #f5f5f5;
-
+  background: linear-gradient(0deg, rgb(61, 61, 61) 90%, hsl(0, 0%, 33%) 100%);
   /* border-bottom-width: 2px; */
+  background: linear-gradient(0deg, #101113 90%, #2a2525 100%);
 }
