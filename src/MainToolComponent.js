@@ -3,8 +3,9 @@ import styled from "styled-components";
 import SlidersContainer from "./Sliders/SlidersContainer";
 
 import CloudSVGFilter from "./CloudSVGFilter";
-import CloudDisplay from "./CloudDisplay";
+import CloudDisplay from "./output/CloudDisplay";
 import OuterFrame from "./OuterFrame";
+import CodeModal from "./output/CodeModal";
 // import zeusCoding from "./images/zeuscoding.svg";
 import slidersDB from "./Sliders/slidersDB.JSON";
 
@@ -46,7 +47,8 @@ class MainToolComponent extends Component {
     baseFrequencyVal: 0.05,
     scaleVal: 250,
     skyVal: 50,
-    seedVal: 1
+    seedVal: 1,
+    showModal: false
   };
   componentDidMount() {
     // const testSlider = slidersDB;
@@ -81,7 +83,7 @@ class MainToolComponent extends Component {
         break;
     }
   };
-
+  toggleModal = () => this.setState({ showModal: !this.state.showModal });
   render() {
     const {
       blurVal,
@@ -107,7 +109,9 @@ class MainToolComponent extends Component {
         <CloudDisplay blurVal={blurVal} spreadVal={spreadVal} />
 
         <section className="css-code-display">CSS code display</section>
-        <section className="svg-code-display">SVG code display</section>
+        <section className="svg-code-display">
+          <button>Show Code</button>
+        </section>
       </StyledToolComp>
     );
   }

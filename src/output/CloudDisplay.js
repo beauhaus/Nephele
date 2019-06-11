@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import SkySlider from "./Sliders/SkySlider";
-import moonIcon from "./images/moonIcon.svg";
-import sunIcon from "./images/sunIcon.svg";
-import DayLayerOverlay from "./DayLayerOverlay";
-import CloudModel from "./CloudModel";
+import SkySlider from "../Sliders/SkySlider";
+import moonIcon from "../images/moonIcon.svg";
+import sunIcon from "../images/sunIcon.svg";
+import DayLayerOverlay from "../DayLayerOverlay";
+import CloudModel from "../CloudModel";
 
 // const sliderThumbStyles = props => props;
 const StyledCloudDisplay = styled.section`

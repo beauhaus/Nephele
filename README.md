@@ -48,7 +48,7 @@ User will be able to experiment and observe effects of adjustments to several re
 
 #### Every slider works, now. There are decisions to make about ranges. Considering 5 or six buttons at bottom to call each setState to a pre-configured type of cloud configuration.
 
-###TODO: start working on widening the display screen and implementing the modal to display code and a "copy-to-clipboard" button
+### TODO: start working on widening the display screen and implementing the modal to display code and a "copy-to-clipboard" button
 
 ## Attributions
 
