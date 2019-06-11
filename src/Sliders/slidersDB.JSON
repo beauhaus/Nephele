@@ -6,7 +6,8 @@
       "htmlFor": "blur-radius-slider",
       "attrRef": "blur-radius",
       "min": 1,
-      "max": 100
+      "max": 100,
+      "step": 0.001
     },
     {
       "name": "spreadRadius",
@@ -14,7 +15,8 @@
       "htmlFor": "spread-radius-slider",
       "attrRef": "spread-radius",
       "min": 1,
-      "max": 100
+      "max": 100,
+      "step": 0.01
     },
     {
       "name": "numOctaves",
@@ -22,7 +24,8 @@
       "htmlFor": "numOctaves-slider",
       "attrRef": "numOctaves",
       "min": 1,
-      "max": 10
+      "max": 6,
+      "step": 1
     },
     {
       "name": "baseFrequency",
@@ -30,7 +33,8 @@
       "htmlFor": "baseFrequency-slider",
       "attrRef": "baseFrequency",
       "min": 0,
-      "max": 1000
+      "max": 1000,
+      "step": 0.001
     },
     {
       "name": "scale",
@@ -38,7 +42,8 @@
       "htmlFor": "scale-slider",
       "attrRef": "scale",
       "min": 1,
-      "max": 1000
+      "max": 1000,
+      "step": 0.001
     }
   ]
 }

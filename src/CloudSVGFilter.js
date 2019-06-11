@@ -9,9 +9,6 @@ const StyledSVGFilter = styled.svg`
 `;
 
 const CloudSVGFilter = ({ scaleVal, numOctavesVal, baseFrequencyVal }) => {
-  // const ({ scaleVal }) = props;
-  // console.log(`p>SVGFILTER
-  // scaleVal: ${props.scaleVal}`);
   return (
     <StyledSVGFilter id="cloud-filter-container" width="0" height="0">
       <filter id="cloud-filter">
