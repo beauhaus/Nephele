@@ -58,6 +58,7 @@ class CloudDisplay extends Component {
     // console.log("updated!", input);
   };
   render() {
+    const { blurVal, spreadVal } = this.props;
     return (
       <StyledCloudDisplay className="cloud-display">
         <DayLayerOverlay opacityVal={this.state.skyVal} />
@@ -68,7 +69,7 @@ class CloudDisplay extends Component {
           skyVal={this.state.skyVal}
         />
         <div className="cloud-model-container">
-          <CloudModel />
+          <CloudModel blurVal={blurVal} spreadVal={spreadVal} />
         </div>
       </StyledCloudDisplay>
     );

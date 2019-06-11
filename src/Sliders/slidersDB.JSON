@@ -5,18 +5,18 @@
       "labelClassName": "blur-radius-label",
       "htmlFor": "blur-radius-slider",
       "attrRef": "blur-radius",
-      "min": 1,
+      "min": 0,
       "max": 100,
-      "step": 0.001
+      "step": 1
     },
     {
       "name": "spreadRadius",
       "labelClassName": "spread-radius-label",
       "htmlFor": "spread-radius-slider",
       "attrRef": "spread-radius",
-      "min": 1,
-      "max": 100,
-      "step": 0.01
+      "min": 0,
+      "max": 50,
+      "step": 1
     },
     {
       "name": "numOctaves",
@@ -24,7 +24,7 @@
       "htmlFor": "numOctaves-slider",
       "attrRef": "numOctaves",
       "min": 1,
-      "max": 6,
+      "max": 10,
       "step": 1
     },
     {
@@ -32,8 +32,8 @@
       "labelClassName": "baseFrequency-label",
       "htmlFor": "baseFrequency-slider",
       "attrRef": "baseFrequency",
-      "min": 0,
-      "max": 1000,
+      "min": 0.001,
+      "max": 0.1,
       "step": 0.001
     },
     {
@@ -42,8 +42,17 @@
       "htmlFor": "scale-slider",
       "attrRef": "scale",
       "min": 1,
+      "max": 500,
+      "step": 1
+    },
+    {
+      "name": "seed",
+      "labelClassName": "seed-label",
+      "htmlFor": "seed-radius-slider",
+      "attrRef": "seed",
+      "min": 0,
       "max": 1000,
-      "step": 0.001
+      "step": 1
     }
   ]
 }

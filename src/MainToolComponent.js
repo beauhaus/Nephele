@@ -40,12 +40,13 @@ const StyledToolComp = styled.main`
 class MainToolComponent extends Component {
   //default vals for sliders
   state = {
-    blurVal: 50,
-    spreadVal: 50,
+    blurVal: 25,
+    spreadVal: 20,
     numOctavesVal: 5,
-    baseFrequencyVal: 500,
-    scaleVal: 170,
-    skyVal: 50
+    baseFrequencyVal: 0.05,
+    scaleVal: 250,
+    skyVal: 50,
+    seedVal: 1
   };
   componentDidMount() {
     // const testSlider = slidersDB;
@@ -73,6 +74,9 @@ class MainToolComponent extends Component {
       case "scale":
         this.setState({ scaleVal: valUpdate });
         break;
+      case "seed":
+        this.setState({ seedVal: valUpdate });
+        break;
       default:
         break;
     }
@@ -84,7 +88,8 @@ class MainToolComponent extends Component {
       spreadVal,
       numOctavesVal,
       baseFrequencyVal,
-      scaleVal
+      scaleVal,
+      seedVal
     } = this.state;
     return (
       <StyledToolComp className="main-display">
@@ -97,8 +102,9 @@ class MainToolComponent extends Component {
           scaleVal={scaleVal}
           numOctavesVal={numOctavesVal}
           baseFrequencyVal={baseFrequencyVal}
+          seedVal={seedVal}
         />
-        <CloudDisplay />
+        <CloudDisplay blurVal={blurVal} spreadVal={spreadVal} />
 
         <section className="css-code-display">CSS code display</section>
         <section className="svg-code-display">SVG code display</section>
