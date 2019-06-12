@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "parcel src/index.html",
     "format": "prettier \"src/**/*.{js,html}\" --write",
-    "eslint": "eslint \"src/**/*.{js,jsx}\" --quiet"
+    "eslint": "eslint \"src/**/*.{js,jsx}\" --quiet",
+    "build": "parcel build src/index.html"
   },
   "dependencies": {
     "copy-to-clipboard": "^3.2.0",
