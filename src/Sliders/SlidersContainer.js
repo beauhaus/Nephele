@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import cloudThumbIcon from "../images/cloud_thumb.svg";
-import lightningIcon from "../images/lightning.svg";
 import DynamicSlider from "./DynamicSlider";
 
 const StyledSlidersWrapper = styled.section`

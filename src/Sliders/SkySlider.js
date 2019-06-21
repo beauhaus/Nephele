@@ -21,6 +21,7 @@ const StyledSkyLabel = styled.label`
   }
   &#sky input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
+    background: transparent;
     /* border-width: 0px; */
     height: 50px;
     width: 50px;
@@ -38,6 +39,7 @@ const StyledSkyLabel = styled.label`
   }
   &#sky input[type="range"]::-moz-range-thumb {
     border-width: 0px;
+    background: transparent;
     height: 60px;
     width: 60px;
     background: url(${arrowThumbIcon});

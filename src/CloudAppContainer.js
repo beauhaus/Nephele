@@ -3,7 +3,7 @@ import CloudSVGFilter from "./CloudSVGFilter";
 import slidersDB from "./Sliders/slidersDB.JSON";
 import CloudCodeBtn from "./CloudCodeBtn";
 
-import SliderTest from "./SliderTest";
+import SlidersPanel from "./SlidersPanel";
 
 import CloudDisplay from "./output/CloudDisplay";
 import styled from "styled-components";
@@ -42,7 +42,7 @@ class CloudAppContainer extends Component {
     skyVal: 50,
     seedVal: 633,
     mouseOn: false,
-    sliderMode: false
+    sliderMode: true
   };
   // componentDidMount() {
   //   console.log("mount");
@@ -116,7 +116,7 @@ class CloudAppContainer extends Component {
           <CloudCodeBtn sliderMode={sliderMode} />
         </button>
         {sliderMode ? (
-          <SliderTest
+          <SlidersPanel
             slidersArray={slidersDB.slidersArray}
             sliderValUpdater={this.sliderValUpdater}
           />
