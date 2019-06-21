@@ -5,14 +5,21 @@ const cloudStylesStore = ({ blurVal, spreadVal }) => {
   // console.log("p> CloudModel: ", props);
   return `
   box-shadow: 60vw 65vh ${blurVal}px ${spreadVal}px #fff;
+
 `;
 };
 
 const StyledCloudModel = styled.div`
-  background: transparent;
   border-radius: 50%;
-  transform: translate(-50vw, -50vh);
+  transform: translate(-40vw, -45vh);
+  background: transparent;
   filter: url(#cloud-filter);
+  /* width: 100%; */
+  /* overflow: hidden; */
+  z-index: 1;
+  width: 50%;
+  height: 40%;
+  background: transparent;
   ${props => cloudStylesStore(props)};
 `;
 

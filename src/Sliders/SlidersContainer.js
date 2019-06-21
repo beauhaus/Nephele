@@ -5,42 +5,38 @@ import lightningIcon from "../images/lightning.svg";
 import DynamicSlider from "./DynamicSlider";
 
 const StyledSlidersWrapper = styled.section`
+  /* border: 2px dashed goldenrod; */
   font-size: 2rem;
   font-weight: lighter; /* TODO: is this used? */
   position: relative;
   z-index: 2;
   display: grid;
   grid-gap: 4px;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  align-items: center;
-  & :nth-child(3),
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 7vh);
+  & .attr-reference {
+    font-family: "Source Sans Pro", serif;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    color: #eee;
+    text-align: left;
+    text-shadow: 1px 1px 1px #1d334e;
+    margin: 0vh 2vw 0 2vw;
+  }
+  & :nth-child(2),
   & :nth-child(4),
-  & :nth-child(5) {
-    margin-top: -8vh;
+  & :nth-child(6) {
+      & .attr-reference {
+      text-align: right;
+    }
   }
-  & .lightning-container {
-    grid-row-end: 4;
-    grid-row-start: 3;
-    margin: 0;
-    height: 3vh;
-  }
-  #lightning {
-    /* justify-self: center; */
-    /* width: 8vw; */
-    height: 100%;
-    -webkit-filter: drop-shadow(1px 1px 0.5px #fff);
-    filter: drop-shadow(1px 1px 0.5px #fff);
-  }
-  .numOctaves-label {
-    /* margin: -6vh 0 0 0; */
-  }
-
+  & label {
+   width: 100%;
+  } 
   & input[type="range"] {
-    /* margin: auto -1rem auto auto; */
     margin: auto;
     -webkit-appearance: none;
-    width: 96%;
+    width: 90%;
     cursor: pointer;
     background: transparent;
   }
@@ -72,7 +68,7 @@ const StyledSlidersWrapper = styled.section`
     background-repeat: no-repeat;
     background-position: center top;
     cursor: pointer;
-    filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(1px 1px #1d334e));
   }
   /* All the same stuff for IE */
   input[type="range"]::-ms-thumb {
@@ -87,34 +83,26 @@ const StyledSlidersWrapper = styled.section`
   }
   input[type="range"]::-webkit-slider-runnable-track {
     width: 100%;
-    height: 0.4rem;
+    height: 0.1rem;
     cursor: pointer;
-    box-shadow: inset 1px 1px 1px #000000, inset 0px 0px 1px #0d0d0d;
-    background: #acacac;
+    box-shadow: inset 1px 1px 1px #fff;
+    background: #fff;
     border-radius: 0.1rem;
-    border: 0.2px solid #010101;
   }
 
   input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: #367ebd;
+    background: orange;
   }
 
   input[type="range"]::-moz-range-track {
-    height: 0.4rem;
+    height: 0.1rem;
     cursor: pointer;
-    box-shadow: inset 1px 1px 1px #000000, inset 0px 0px 1px #0d0d0d;
-    background: #acacac;
+    box-shadow: inset 1px 1px 1px #1d334e;
+    background: #fff;
     border-radius: 0.1rem;
-    border: 0.2px solid #010101;
+    /* border: 0.2px solid #010101; */
   }
 
-  & .attr-reference {
-    font-family: "IM Fell Double Pica", serif;
-    color: black;
-    margin-left: 1vw;
-    text-align: left;
-    text-shadow: 1px 1px 1px #e2e0dd;
-  }
 `;
 
 const SlidersContaner = props => {
@@ -128,9 +116,11 @@ const SlidersContaner = props => {
           sliderValUpdater={sliderValUpdater}
         />
       ))}
-      <div className="lightning-container">
+      {/**
+        <div className="lightning-container">
         <img id="lightning" src={lightningIcon} alt="lightning Icon" />
-      </div>
+        </div>
+      */}
     </StyledSlidersWrapper>
   );
 };

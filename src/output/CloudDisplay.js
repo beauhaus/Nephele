@@ -3,49 +3,54 @@ import styled from "styled-components";
 import SkySlider from "../Sliders/SkySlider";
 import moonIcon from "../images/moonIcon.svg";
 import sunIcon from "../images/sunIcon.svg";
-import DayLayerOverlay from "../DayLayerOverlay";
+import DayLayerOverlay from "./DayLayerOverlay";
 import CloudModel from "../CloudModel";
+import NightSky from "./NightSky";
 
 // const sliderThumbStyles = props => props;
 const StyledCloudDisplay = styled.section`
+  grid-column: 1;
+  grid-row: 1/-1;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-columns: 1fr;
+  grid-template-rows: 46vh 32vh;
   position: relative;
   justify-items: end;
-  background: linear-gradient(165deg, #090909 0%, #527785 100%);
-  box-shadow: inset 2px 2px 15px 4px rgba(0, 0, 0, 0.5);
   /* z-index: 1; */
+  /* overflow: hidden; */
 
+  & img {
+    width: 8vh;
+    margin: 0.5vh;
+    z-index: 2;
+    position: absolute;
+    filter: grayscale(50%);
+    &#sunIcon {
+      top: 4px;
+      right: 4px;
+    }
+    &#moonIcon {
+      bottom: 4px;
+      right: 4px;
+      margin-bottom: 0.5vw;
+    }
+  }
   & .cloud-model-container {
-    /* border: 20px solid brown; */
     z-index: 1;
     justify-self: center;
     width: 100%;
-    grid-column: 1/-1;
-    grid-row: 1 / end;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
     overflow: hidden;
-    & #cloud-model {
-      /* border: 2px solid brown; */
-      z-index: 1;
-      width: 70%;
-      height: 50%;
-      background: transparent;
-    }
   }
-  & img {
-    width: 3vw;
-    margin: 0.5vw;
-    z-index: 1;
-    &#sunIcon {
-      grid-column: 6;
-      grid-row: 1;
-    }
-    &#moonIcon {
-      grid-column: 6;
-      grid-row: 7;
-      margin-bottom: 0.5vw;
-    }
+  & #cloud-model {
+    /* z-index: 1;
+    width: 70%;
+    height: 50%;
+    background: transparent; */
   }
 `;
 
@@ -55,12 +60,12 @@ class CloudDisplay extends Component {
   };
   skySliderValUpdate = input => {
     this.setState({ skyVal: input });
-    // console.log("updated!", input);
   };
   render() {
     const { blurVal, spreadVal } = this.props;
     return (
       <StyledCloudDisplay className="cloud-display">
+        <NightSky />
         <DayLayerOverlay opacityVal={this.state.skyVal} />
         <img id="moonIcon" src={moonIcon} alt="moon" />
         <img id="sunIcon" src={sunIcon} alt="sun" />
@@ -76,4 +81,3 @@ class CloudDisplay extends Component {
   }
 }
 export default CloudDisplay;
-// <img src="http://placebear.com/800/000" alt="bear" />;

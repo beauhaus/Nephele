@@ -4,21 +4,20 @@ import styled from "styled-components";
 import arrowThumbIcon from "../images/arrow_thumb.svg";
 
 const StyledSkyLabel = styled.label`
-  grid-column: 6;
-  grid-row: 1/8;
-  position: relative;
   width: 4vw;
+  height: 78vh;
+  z-index: 2;
   &#sky input[type="range"] {
-    /* margin: auto -1rem auto auto; */
     transform-origin: 50% 50%;
-    transform: translateX(50%) translateY(50%) rotate(270deg);
+    transform: translateX(50%) translateY(70%) rotate(270deg);
     position: absolute;
     right: 0;
-    top: 25vh;
+    top: 35.5vh;
     -webkit-appearance: none;
-    width: 50vh;
+    width: 75vh;
     cursor: pointer;
     background: transparent;
+    filter: grayscale(40%);
   }
   &#sky input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -39,20 +38,19 @@ const StyledSkyLabel = styled.label`
   }
   &#sky input[type="range"]::-moz-range-thumb {
     border-width: 0px;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
     background: url(${arrowThumbIcon});
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center top;
     transform: rotate(90deg);
-    cursor: pointer;
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
+    cursor: pointer;
   }
   & input[type="range"]:focus {
     outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
   }
-  z-index: 2;
 `;
 /* ${props => stylesStore(props)}; */
 class SkySlider extends Component {
@@ -88,32 +86,3 @@ class SkySlider extends Component {
 }
 
 export default SkySlider;
-
-/* REFERENCE for dynamic styles into styled-components */
-/*
-
-const tileColors=["red", "green", "blue"];
-
-const stylesStore(input)({ randoDirection, randoColors }) => {
-  return `
-  transform: rotate(${randoDirection}deg);
-  background-color:${tileColors[randoColors]};
-  `;
-};
-
-const StyledTile = styled.div`
-height: ---;
-weight: ---;
-  ${props => stylesStore(props)};
-`;
-
-
-------
-
-<StyledTile
-      className="tile-elem"
-      randoDirection={props.randoDirection}
-      randoColors={props.randoColors}
-    />
-
-    */
