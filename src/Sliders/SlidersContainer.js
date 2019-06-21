@@ -116,11 +116,6 @@ const SlidersContaner = props => {
           sliderValUpdater={sliderValUpdater}
         />
       ))}
-      {/**
-        <div className="lightning-container">
-        <img id="lightning" src={lightningIcon} alt="lightning Icon" />
-        </div>
-      */}
     </StyledSlidersWrapper>
   );
 };

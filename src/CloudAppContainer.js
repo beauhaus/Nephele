@@ -18,7 +18,6 @@ const StyledAppContainer = styled.main`
   grid-template-columns: 1fr;
   grid-template-rows: 46vh 26vh 6vh;
   outline: 0.5px solid black;
-  /* position: relative; */
   & #slider-toggle {
     outline: 0;
     background: transparent;
@@ -29,7 +28,6 @@ const StyledAppContainer = styled.main`
     min-width: 100px;
     height: 5vh;
     margin: 0 auto;
-    /* position: absolute; */
     z-index: 4;
   }
 `;
@@ -46,11 +44,15 @@ class CloudAppContainer extends Component {
     mouseOn: false,
     sliderMode: false
   };
+  // componentDidMount() {
+  //   console.log("mount");
+  //   this.sliderValUpdater();
+  // }
   sliderValUpdater = (attrRef, valUpdate) => {
-    // console.log(`FROM MAINTOOL COMP:
-    // attrRef: ${attrRef}
-    // valUpdate: ${valUpdate}
-    // `);
+    console.log(`FROM MAINTOOL COMP:
+    attrRef: ${attrRef}
+    valUpdate: ${valUpdate}
+    `);
     switch (attrRef) {
       case "blur-radius":
         this.setState({ blurVal: valUpdate });
@@ -94,8 +96,7 @@ class CloudAppContainer extends Component {
       baseFrequencyVal,
       scaleVal,
       seedVal,
-      sliderMode,
-      uiOpen
+      sliderMode
     } = this.state;
     return (
       <StyledAppContainer id="cloud-app-container">

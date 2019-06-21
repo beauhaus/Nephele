@@ -54,9 +54,7 @@ const StyledTileFrameSVG = styled.svg`
     font-size: 7rem;
     letter-spacing: 4rem;
     font-weight: 800;
-    /* stroke: #000;
-    stroke-width: 1; */
-    mix-blend-mode: color-burn; /*√*/
+    mix-blend-mode: color-burn;
   }
   & #txt-shad {
     stroke: #b2cceb;
@@ -83,8 +81,8 @@ const TileFrameSVG = () => {
           y2="100%"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#fff" offset="-20%" />
-          <stop stopColor="#1d334e" offset="50%" />
+          <stop stopColor="#fff" offset="-30%" />
+          <stop stopColor="#1d3450" offset="50%" />
         </linearGradient>
       </defs>
       <g id="topSide">
