@@ -8,47 +8,72 @@ const StyledTileFrameSVG = styled.svg`
   height: 98vh;
   margin: auto;
   opacity: 1;
-
+  .none {
+    display: none;
+  }
   --meander-color: #6f7883;
   --trim-color: #af8769;
-  --frame-white: #deddd8;
+  --frame-base: #deddd8;
+  --frame-base2: #cac8c2;
+  --frame-base3: #dddcd7;
+  --frame-base4: #e0e1da;
+  --frame-base5: #e3e0dc;
+  --frame-base6: #dddcd8;
+  --frame-base7: #e0e0d9;
+  --frame-base8: #c0c0c0;
+  --frame-base9: transparent;
+  var(--frame-base);
   & #top_3_ {
     /* display: none; */
   }
   & .meander {
     fill: var(--meander-color);
-    /* background-color: var(--main-bg-color); */
+    &.t6 path {
+      fill: var(--frame-base4);
+    }  
+    &.t7 path {
+      fill: var(--frame-base4);
+    }  
   }
   & .trim {
     fill: var(--trim-color);
   }
-  & .frame-white {
-    /* fill: $frame-white; */
-    fill: var(--frame-white);
+  & .frame-base {
+    /* fill: $frame-base; */
+    fill: var(--frame-base);
     & :nth-child(3) {
-      fill: #cac8c2;
+      fill: var(--frame-base2);
     }
     & :nth-child(9) {
-      fill: #dddcd7;
+      fill: var(--frame-base3);
     }
     & :nth-child(15) {
-      fill: #e0e1da;
+      fill: var(--frame-base4);
+    }
+    & :nth-child(19) {
+      fill: var(--frame-base8);
     }
     & :nth-child(22) {
-      fill: #e3e0dc;
+      fill: var(--frame-base5);
     }
     & :nth-child(29) {
-      fill: #dddcd8;
+      fill: var(--frame-base6);
+    }
+
+    & :nth-child(32) {
+      fill: transparent;
     }
     & :nth-child(37) {
-      fill: #e0e0d9;
+      fill: var(--frame-base7);
     }
     & :nth-child(41) {
-      fill: #c0c0c0;
+      fill: var(--frame-base8);
+    }
+    & :nth-child(49) {
+      fill: var(--frame-base9);
     }
   }
   & text {
-    /* fill: var(--trim-color); */
     fill: url(#txt-grad);
     font-family: "Spectral SC", "Times New Roman", Times, serif;
     font-size: 7rem;
@@ -60,7 +85,6 @@ const StyledTileFrameSVG = styled.svg`
     stroke: #b2cceb;
     stroke-width: 1;
     fill: transparent;
-    /* display: none; */
     text-shadow: 1px 1px 2px #b2cceb;
   }
 `;
@@ -104,7 +128,7 @@ const TileFrameSVG = () => {
             />
             <path d="M152 1h10v10h-10zM162 1h10v10h-10zM122 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M82 11h10v10H82z" />
             <path d="M92 11h10v10H92z" />
             <path d="M102 11h10v10h-10z" />
@@ -155,7 +179,7 @@ const TileFrameSVG = () => {
             <path d="M172 71h10v10h-10z" />
             <path d="M132 71h11v10h-11z" />
           </g>
-          <g className="meander">
+          <g className="meander t1">
             <path d="M172 21h10v10h-10zM82 21h10v10H82zM101 21h10v10h-10zM112 21h10v10h-10zM132 21h10v10h-10zM142 21h10v10h-10z" />
             <path
               d="M152.9 21.8h10v10h-10z"
@@ -218,7 +242,7 @@ const TileFrameSVG = () => {
             />
             <path d="M252 1h10v10h-10zM262 1h10v10h-10zM222 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M182 11h10v10h-10z" />
             <path d="M192 11h10v10h-10z" />
             <path d="M202 11h10v10h-10z" />
@@ -270,7 +294,7 @@ const TileFrameSVG = () => {
             <path d="M232 71h11v10h-11z" />
           </g>
 
-          <g className="meander">
+          <g className="meander t2">
             <path d="M272 21h10v10h-10zM182 21h10v10h-10zM201 21h10v10h-10zM212 21h10v10h-10zM232 21h10v10h-10zM242 21h10v10h-10z" />
             <path
               d="M252.9 21.8h10v10h-10z"
@@ -333,7 +357,7 @@ const TileFrameSVG = () => {
             />
             <path d="M352 1h10v10h-10zM362 1h10v10h-10zM322 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M282 11h10v10h-10z" />
             <path d="M292 11h10v10h-10z" />
             <path d="M302 11h10v10h-10z" />
@@ -384,7 +408,7 @@ const TileFrameSVG = () => {
             <path d="M372 71h10v10h-10z" />
             <path d="M332 71h11v10h-11z" />
           </g>
-          <g className="meander">
+          <g className="meander t3">
             <path d="M372 21h10v10h-10zM282 21h10v10h-10zM301 21h10v10h-10zM312 21h10v10h-10zM332 21h10v10h-10zM342 21h10v10h-10z" />
             <path
               d="M352.9 21.8h10v10h-10z"
@@ -447,7 +471,7 @@ const TileFrameSVG = () => {
             />
             <path d="M452 1h10v10h-10zM462 1h10v10h-10zM422 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M472 21h10v10h-10zM382 21h10v10h-10zM401 21h10v10h-10zM412 21h10v10h-10zM432 21h10v10h-10zM442 21h10v10h-10z" />
             <path
               d="M452.9 21.8h10v10h-10z"
@@ -559,7 +583,7 @@ const TileFrameSVG = () => {
             />
             <path d="M552 1h10v10h-10zM562 1h10v10h-10zM522 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M482 11h10v10h-10z" />
             <path d="M492 11h10v10h-10z" />
             <path d="M502 11h10v10h-10z" />
@@ -610,7 +634,7 @@ const TileFrameSVG = () => {
             <path d="M572 71h10v10h-10z" />
             <path d="M532 71h11v10h-11z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M572 21h10v10h-10zM482 21h10v10h-10zM501 21h10v10h-10zM512 21h10v10h-10zM532 21h10v10h-10zM542 21h10v10h-10z" />
             <path
               d="M552.9 21.8h10v10h-10z"
@@ -673,7 +697,7 @@ const TileFrameSVG = () => {
             />
             <path d="M652 1h10v10h-10zM662 1h10v10h-10zM622 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M582 11h10v10h-10z" />
             <path d="M592 11h10v10h-10z" />
             <path d="M602 11h10v10h-10z" />
@@ -724,7 +748,7 @@ const TileFrameSVG = () => {
             <path d="M672 71h10v10h-10z" />
             <path d="M632 71h11v10h-11z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M672 21h10v10h-10zM582 21h10v10h-10zM601 21h10v10h-10zM612 21h10v10h-10zM632 21h10v10h-10zM642 21h10v10h-10z" />
             <path
               d="M652.9 21.8h10v10h-10z"
@@ -787,7 +811,7 @@ const TileFrameSVG = () => {
             />
             <path d="M752 1h10v10h-10zM762 1h10v10h-10zM722 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M682 11h10v10h-10z" />
             <path d="M692 11h10v10h-10z" />
             <path d="M702 11h10v10h-10z" />
@@ -838,7 +862,7 @@ const TileFrameSVG = () => {
             <path d="M772 71h10v10h-10z" />
             <path d="M732 71h11v10h-11z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M772 21h10v10h-10zM682 21h10v10h-10zM701 21h10v10h-10zM712 21h10v10h-10zM732 21h10v10h-10zM742 21h10v10h-10z" />
             <path
               d="M752.9 21.8h10v10h-10z"
@@ -901,7 +925,7 @@ const TileFrameSVG = () => {
             />
             <path d="M853 1h10v10h-10zM863 1h10v10h-10zM823 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M783 11h10v10h-10z" />
             <path d="M793 11h10v10h-10z" />
             <path d="M803 11h10v10h-10z" fill="transparent" />
@@ -952,7 +976,7 @@ const TileFrameSVG = () => {
             <path d="M873 71h10v10h-10z" />
             <path d="M833 71h11v10h-11z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M873 21h10v10h-10zM783 21h10v10h-10zM802 21h10v10h-10zM813 21h10v10h-10zM833 21h10v10h-10zM843 21h10v10h-10z" />
             <path
               d="M853.9 21.8h10v10h-10z"
@@ -1015,7 +1039,7 @@ const TileFrameSVG = () => {
             />
             <path d="M953 1h10v10h-10zM963 1h10v10h-10zM923 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M883 11h10v10h-10z" />
             <path d="M893 11h10v10h-10z" fill="transparent" />
             <path d="M903 11h10v10h-10z" />
@@ -1066,7 +1090,7 @@ const TileFrameSVG = () => {
             <path d="M973 71h10v10h-10z" />
             <path d="M933 71h11v10h-11z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M973 21h10v10h-10zM883 21h10v10h-10zM902 21h10v10h-10zM913 21h10v10h-10zM933 21h10v10h-10zM943 21h10v10h-10z" />
             <path
               d="M953.9 21.8h10v10h-10z"
@@ -1129,7 +1153,7 @@ const TileFrameSVG = () => {
             />
             <path d="M1053 1h10v10h-10zM1063 1h10v10h-10zM1023 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M983 11h10v10h-10z" />
             <path d="M993 11h10v10h-10z" />
             <path d="M1003 11h10v10h-10z" />
@@ -1181,7 +1205,7 @@ const TileFrameSVG = () => {
             <path d="M1033 71h11v10h-11z" />
           </g>
 
-          <g className="meander">
+          <g className="meander t10">
             <path d="M1073 21h10v10h-10zM983 21h10v10h-10zM1002 21h10v10h-10zM1013 21h10v10h-10zM1033 21h10v10h-10zM1043 21h10v10h-10z" />
             <path
               d="M1053.9 21.8h10v10h-10z"
@@ -1244,7 +1268,7 @@ const TileFrameSVG = () => {
             />
             <path d="M1153 1h10v10h-10zM1163 1h10v10h-10zM1123 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1083 11h10v10h-10z" />
             <path d="M1093 11h10v10h-10z" />
             <path d="M1103 11h10v10h-10z" />
@@ -1295,7 +1319,7 @@ const TileFrameSVG = () => {
             <path d="M1173 71h10v10h-10z" />
             <path d="M1133 71h11v10h-11z" />
           </g>
-          <g className="meander">
+          <g className="meander t11">
             <path d="M1173 21h10v10h-10zM1083 21h10v10h-10zM1102 21h10v10h-10zM1113 21h10v10h-10zM1133 21h10v10h-10zM1143 21h10v10h-10z" />
             <path
               d="M1153.9 21.8h10v10h-10z"
@@ -1358,7 +1382,7 @@ const TileFrameSVG = () => {
             />
             <path d="M1253 1h10v10h-10zM1263 1h10v10h-10zM1223 1h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1183 11h10v10h-10z" />
             <path d="M1193 11h10v10h-10z" />
             <path d="M1203 11h10v10h-10z" />
@@ -1409,7 +1433,7 @@ const TileFrameSVG = () => {
             <path d="M1273 71h10v10h-10z" />
             <path d="M1233 71h11v10h-11z" />
           </g>
-          <g className="meander">
+          <g className="meander t12">
             <path d="M1273 21h10v10h-10zM1183 21h10v10h-10zM1202 21h10v10h-10zM1213 21h10v10h-10zM1233 21h10v10h-10zM1243 21h10v10h-10z" />
             <path
               d="M1253.9 21.8h10v10h-10z"
@@ -1474,7 +1498,7 @@ const TileFrameSVG = () => {
             />
             <path d="M1203 889h10v10h-10zM1193 889h10v10h-10zM1233 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1273 879h10v10h-10z" />
             <path d="M1263 879h10v10h-10z" />
             <path d="M1253 879h10v10h-10z" />
@@ -1525,7 +1549,7 @@ const TileFrameSVG = () => {
             <path d="M1183 819h10v10h-10z" />
             <path d="M1222 819h11v10h-11z" />
           </g>
-          <g className="meander">
+          <g className="meander b12">
             <path d="M1183 869h10v10h-10zM1273 869h10v10h-10zM1254 869h10v10h-10zM1243 869h10v10h-10zM1223 869h10v10h-10zM1213 869h10v10h-10z" />
             <path
               d="M1201.8 868.2h10v10h-10z"
@@ -1588,7 +1612,7 @@ const TileFrameSVG = () => {
             />
             <path d="M1103 889h10v10h-10zM1093 889h10v10h-10zM1133 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1173 879h10v10h-10z" />
             <path d="M1163 879h10v10h-10z" />
             <path d="M1153 879h10v10h-10z" />
@@ -1639,7 +1663,7 @@ const TileFrameSVG = () => {
             <path d="M1083 819h10v10h-10z" />
             <path d="M1122 819h11v10h-11z" />
           </g>
-          <g className="meander">
+          <g className="meander b11">
             <path d="M1083 869h10v10h-10zM1173 869h10v10h-10zM1154 869h10v10h-10zM1143 869h10v10h-10zM1123 869h10v10h-10zM1113 869h10v10h-10z" />
             <path
               d="M1101.8 868.2h10v10h-10z"
@@ -1702,7 +1726,7 @@ const TileFrameSVG = () => {
             />
             <path d="M1003 889h10v10h-10zM993 889h10v10h-10zM1033 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1073 879h10v10h-10z" />
             <path d="M1063 879h10v10h-10z" />
             <path d="M1053 879h10v10h-10z" />
@@ -1753,10 +1777,9 @@ const TileFrameSVG = () => {
             <path d="M983 819h10v10h-10z" />
             <path d="M1022 819h11v10h-11z" />
           </g>
-          <g className="meander">
+          <g className="meander b10">
             <path d="M983 869h10v10h-10zM1073 869h10v10h-10zM1054 869h10v10h-10zM1043 869h10v10h-10zM1023 869h10v10h-10zM1013 869h10v10h-10z" />
             <path
-              className="meander"
               d="M1001.8 868.2h10v10h-10z"
               transform="matrix(-.9986 -.05254 .05254 -.9986 1966.2505 1798.168)"
             />
@@ -1817,7 +1840,7 @@ const TileFrameSVG = () => {
             />
             <path d="M903 889h10v10h-10zM893 889h10v10h-10zM933 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M973 879h10v10h-10z" />
             <path d="M963 879h10v10h-10z" />
             <path d="M953 879h10v10h-10z" />
@@ -1869,13 +1892,13 @@ const TileFrameSVG = () => {
             <path d="M922 819h11v10h-11z" />
           </g>
 
-          <g className="meander">
+          <g className="meander t9">
             <path d="M883 869h10v10h-10zM973 869h10v10h-10zM954 869h10v10h-10zM943 869h10v10h-10zM923 869h10v10h-10zM913 869h10v10h-10z" />
             <path
               d="M901.8 868.2h10v10h-10z"
               transform="rotate(-176.9895496 906.759691 873.23926) scale(.99998)"
             />
-            <path d="M893 869h10v10h-10z" />
+            <path d="M893 869h10v10h-10z" fill="transparent" />
             <path
               d="M931.8 870.2h10v10h-10z"
               transform="matrix(-.9979 -.06503 .06503 -.9979 1814.6152 1809.5497)"
@@ -1932,7 +1955,7 @@ const TileFrameSVG = () => {
             />
             <path d="M803 889h10v10h-10zM793 889h10v10h-10zM833 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M873 879h10v10h-10z" />
             <path d="M863 879h10v10h-10z" />
             <path d="M853 879h10v10h-10z" />
@@ -1983,7 +2006,7 @@ const TileFrameSVG = () => {
             <path d="M783 819h10v10h-10z" />
             <path d="M822 819h11v10h-11z" />
           </g>
-          <g className="meander">
+          <g className="meander t8">
             <path d="M783 869h10v10h-10zM873 869h10v10h-10zM854 869h10v10h-10zM843 869h10v10h-10zM823 869h10v10h-10zM813 869h10v10h-10z" />
             <path
               d="M801.8 868.2h10v10h-10z"
@@ -2046,7 +2069,7 @@ const TileFrameSVG = () => {
             />
             <path d="M703 889h10v10h-10zM693 889h10v10h-10zM733 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M773 879h10v10h-10z" />
             <path d="M763 879h10v10h-10z" />
             <path d="M753 879h10v10h-10z" />
@@ -2097,7 +2120,7 @@ const TileFrameSVG = () => {
             <path d="M683 819h10v10h-10z" />
             <path d="M722 819h11v10h-11z" />
           </g>
-          <g className="meander">
+          <g className="meander t7">
             <path d="M683 869h10v10h-10zM773 869h10v10h-10zM754 869h10v10h-10zM743 869h10v10h-10zM723 869h10v10h-10zM713 869h10v10h-10z" />
             <path
               d="M701.8 868.2h10v10h-10z"
@@ -2160,7 +2183,7 @@ const TileFrameSVG = () => {
             />
             <path d="M603 889h10v10h-10zM593 889h10v10h-10zM633 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M673 879h10v10h-10z" />
             <path d="M663 879h10v10h-10z" />
             <path d="M653 879h10v10h-10z" />
@@ -2210,9 +2233,6 @@ const TileFrameSVG = () => {
             />
             <path d="M583 819h10v10h-10z" />
             <path d="M622 819h11v10h-11z" />
-          </g>
-
-          <g className="meander">
             <path d="M583 869h10v10h-10zM673 869h10v10h-10zM654 869h10v10h-10zM643 869h10v10h-10zM623 869h10v10h-10zM613 869h10v10h-10z" />
             <path
               d="M601.8 868.2h10v10h-10z"
@@ -2275,7 +2295,7 @@ const TileFrameSVG = () => {
             />
             <path d="M502 889h10v10h-10zM492 889h10v10h-10zM532 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M572 879h10v10h-10z" />
             <path d="M562 879h10v10h-10z" />
             <path d="M552 879h10v10h-10z" />
@@ -2327,7 +2347,7 @@ const TileFrameSVG = () => {
             <path d="M521 819h11v10h-11z" />
           </g>
 
-          <g className="meander">
+          <g className="meander t5">
             <path d="M482 869h10v10h-10zM572 869h10v10h-10zM553 869h10v10h-10zM542 869h10v10h-10zM522 869h10v10h-10zM512 869h10v10h-10z" />
             <path
               d="M500.8 868.2h10v10h-10z"
@@ -2390,7 +2410,7 @@ const TileFrameSVG = () => {
             />
             <path d="M402 889h10v10h-10zM392 889h10v10h-10zM432 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M472 879h10v10h-10z" />
             <path d="M462 879h10v10h-10z" />
             <path d="M452 879h10v10h-10z" />
@@ -2505,7 +2525,7 @@ const TileFrameSVG = () => {
             />
             <path d="M302 889h10v10h-10zM292 889h10v10h-10zM332 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M372 879h10v10h-10z" />
             <path d="M362 879h10v10h-10z" />
             <path d="M352 879h10v10h-10z" />
@@ -2621,7 +2641,7 @@ const TileFrameSVG = () => {
             <path d="M202 889h10v10h-10zM192 889h10v10h-10zM232 889h10v10h-10z" />
           </g>
 
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M272 879h10v10h-10z" />
             <path d="M262 879h10v10h-10z" />
             <path d="M252 879h10v10h-10z" />
@@ -2736,7 +2756,7 @@ const TileFrameSVG = () => {
             />
             <path d="M102 889h10v10h-10zM92 889h10v10H92zM132 889h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M172 879h10v10h-10z" />
             <path d="M162 879h10v10h-10z" />
             <path d="M152 879h10v10h-10z" />
@@ -2840,7 +2860,7 @@ const TileFrameSVG = () => {
             <path d="M10 606.4l1.7 10.4-10 1.7L0 608.1zM1 703h10v11H1zM1 693h10v10H1zM1 682h10v11H1zM11.3 670.7l-.8 10.5-10.1-.9.8-10.4zM1 651h10v10H1zM11.3 639.1l-.8 10.5-10.1-.8.8-10.5z" />
             <path d="M1 630h10v10H1zM1 619h10v11H1zM1 661h10v11H1z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M11 703h10v11H11z" />
             <path d="M11 693h10v10H11z" />
             <path d="M11 682h10v11H11z" />
@@ -2903,7 +2923,7 @@ const TileFrameSVG = () => {
             <path d="M10 501.3l1.7 10.4-10 1.7L0 503.1zM1 598h10v11H1zM1 588h10v10H1zM1 577h10v11H1zM11.3 565.6l-.8 10.5-10.1-.8.8-10.5zM1 546h10v10H1zM11.3 534.1l-.8 10.4-10.1-.8.8-10.5z" />
             <path d="M1 525h10v10H1zM1 514h10v11H1zM1 556h10v11H1z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M11 598h10v11H11z" />
             <path d="M11 588h10v10H11z" />
             <path d="M11 577h10v11H11z" />
@@ -2964,7 +2984,7 @@ const TileFrameSVG = () => {
             <path d="M10 396.2l1.7 10.4-10 1.7L0 398zM1 493h10v11H1zM1 483h10v10H1zM1 472h10v11H1zM11.3 460.5l-.8 10.5-10.1-.8.8-10.5zM1 440h10v11H1zM11.3 429l-.8 10.4-10.1-.8.8-10.4z" />
             <path d="M1 419h10v10H1zM1 408h10v11H1zM1 451h10v11H1z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M11 493h10v11H11z" />
             <path d="M11 483h10v10H11z" />
             <path d="M11 472h10v11H11z" />
@@ -3025,7 +3045,7 @@ const TileFrameSVG = () => {
             <path d="M1 314h10v10H1zM1 303h10v11H1zM1 345h10v11H1z" />
           </g>
 
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M11 387h10v11H11z" />
             <path d="M11 377h10v10H11z" />
             <path d="M11 366h10v11H11z" />
@@ -3086,7 +3106,7 @@ const TileFrameSVG = () => {
             <path d="M10 186l1.7 10.4-10 1.7L0 187.8zM1 283h10v10H1zM1 272h10v11H1zM1 262h10v10H1zM11.3 250.3l-.8 10.5L.4 260l.8-10.5zM1 230h10v11H1zM11.3 218.8l-.8 10.5-10.1-.8.8-10.5z" />
             <path d="M1 209h10v11H1zM1 199h10v10H1zM1 241h10v10H1z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M11 283h10v10H11z" />
             <path d="M11 272h10v11H11z" />
             <path d="M11 262h10v10H11z" />
@@ -3147,7 +3167,7 @@ const TileFrameSVG = () => {
             <path d="M10 79.9l1.7 10.5-10 1.8L0 81.7zM1 178h10v10H1zM1 167h10v11H1zM1 157h10v10H1zM11.3 144.8l-.8 10.6-10.1-.8.8-10.6zM1 124h10v12H1zM11.3 113l-.8 10.6-10.1-.8.8-10.6z" />
             <path d="M1 103h10v11H1zM1 93h10v10H1zM1 136h10v10H1z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M11 178h10v10H11z" />
             <path d="M11 167h10v11H11z" />
             <path d="M11 157h10v10H11z" />
@@ -3208,7 +3228,7 @@ const TileFrameSVG = () => {
             <path d="M10 710.4l1.7 10.4-10 1.7L0 712.2zM1 807h10v11H1zM1 797h10v10H1zM1 786h10v11H1zM11.3 774.7l-.8 10.5-10.1-.8.8-10.5zM1 755h10v10H1zM11.3 743.2l-.8 10.5-10.1-.8.8-10.5z" />
             <path d="M1 734h10v10H1zM1 723h10v11H1zM1 765h10v11H1z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M11 807h10v11H11z" fill="transparent" />
             <path d="M11 797h10v10H11z" />
             <path d="M11 786h10v11H11z" />
@@ -3271,7 +3291,7 @@ const TileFrameSVG = () => {
             <path d="M1355.6 291.5l-1.7-10.3 9.9-1.8 1.7 10.4zM1355 184h10v11h-10zM1355 195h10v10h-10zM1355 205h10v11h-10zM1354.3 227.3l.8-10.5 10 .8-.8 10.5zM1355 237h10v10h-10zM1354.3 258.8l.8-10.5 10 .8-.8 10.5z" />
             <path d="M1355 258h10v10h-10zM1355 268h10v11h-10zM1355 226h10v11h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1345 184h10v11h-10z" />
             <path d="M1345 195h10v10h-10z" />
             <path d="M1345 205h10v11h-10z" />
@@ -3332,7 +3352,7 @@ const TileFrameSVG = () => {
             <path d="M1355.6 396.6l-1.7-10.3 9.9-1.8 1.7 10.4zM1355 289h10v11h-10zM1355 300h10v10h-10zM1355 310h10v11h-10zM1354.3 332.4l.8-10.5 10 .8-.8 10.5zM1355 342h10v10h-10zM1354.3 363.9l.8-10.5 10 .8-.8 10.5z" />
             <path d="M1355 363h10v10h-10zM1355 373h10v11h-10zM1355 331h10v11h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1345 289h10v11h-10z" />
             <path d="M1345 300h10v10h-10z" />
             <path d="M1345 310h10v11h-10z" />
@@ -3392,7 +3412,7 @@ const TileFrameSVG = () => {
             <path d="M1355.6 501.7l-1.7-10.3 9.9-1.8 1.7 10.4zM1355 394h10v11h-10zM1355 405h10v10h-10zM1355 415h10v11h-10zM1354.3 437.5l.8-10.5 10 .8-.8 10.5zM1355 447h10v11h-10zM1354.3 469l.8-10.5 10 .8-.8 10.5z" />
             <path d="M1355 469h10v10h-10zM1355 479h10v11h-10zM1355 436h10v11h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1345 394h10v11h-10z" />
             <path d="M1345 405h10v10h-10z" />
             <path d="M1345 415h10v11h-10z" />
@@ -3452,7 +3472,7 @@ const TileFrameSVG = () => {
             <path d="M1355.6 606.8l-1.7-10.3 9.9-1.8 1.7 10.4zM1355 500h10v11h-10zM1355 511h10v10h-10zM1355 521h10v11h-10zM1354.3 542.5l.8-10.4 10 .8-.8 10.4zM1355 553h10v10h-10zM1354.3 574.1l.8-10.5 10 .8-.8 10.5z" />
             <path d="M1355 574h10v10h-10zM1355 584h10v11h-10zM1355 542h10v11h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1345 500h10v11h-10z" />
             <path d="M1345 511h10v10h-10z" />
             <path d="M1345 521h10v11h-10z" />
@@ -3512,7 +3532,7 @@ const TileFrameSVG = () => {
             <path d="M1355.6 711.9l-1.7-10.4 9.9-1.7 1.7 10.4zM1355 605h10v10h-10zM1355 615h10v11h-10zM1355 626h10v10h-10zM1354.3 647.6l.8-10.4 10 .8-.8 10.4zM1355 657h10v11h-10zM1354.3 679.2l.8-10.5 10 .8-.8 10.5z" />
             <path d="M1355 678h10v11h-10zM1355 689h10v10h-10zM1355 647h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1345 605h10v10h-10z" />
             <path d="M1345 615h10v11h-10z" />
             <path d="M1345 626h10v10h-10z" />
@@ -3573,7 +3593,7 @@ const TileFrameSVG = () => {
             <path d="M1354.2 786.3l.8-10.7 10.1.8-.8 10.8z" />
             <path d="M1355 786h10v11h-10zM1355 797h10v10h-10zM1355 752h10v10h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1345 710h10v10h-10z" />
             <path d="M1345 720h10v11h-10z" />
             <path d="M1345 731h10v10h-10z" />
@@ -3633,7 +3653,7 @@ const TileFrameSVG = () => {
             <path d="M1355.6 187.5l-1.7-10.4 9.9-1.7 1.7 10.4zM1355 80h10v11h-10zM1355 91h10v10h-10zM1355 101h10v11h-10zM1354.3 123.2l.8-10.4 10 .8-.8 10.4zM1355 133h10v10h-10zM1354.3 154.8l.8-10.5 10 .8-.8 10.5z" />
             <path d="M1355 154h10v10h-10zM1355 164h10v11h-10zM1355 122h10v11h-10z" />
           </g>
-          <g className="frame-white">
+          <g className="frame-base">
             <path d="M1345 80h10v11h-10z" />
             <path d="M1345 91h10v10h-10z" />
             <path d="M1345 101h10v11h-10z" />
@@ -3712,7 +3732,7 @@ const TileFrameSVG = () => {
           />
           <path d="M1313 31h10v10h-10zM1313 21h10v10h-10zM1303 21h10v10h-10zM1293 21h10v10h-10zM1283 21h10v10h-10z" />
         </g>
-        <g className="frame-white">
+        <g className="frame-base">
           <path d="M1283 31h10v10h-10z" />
           <path d="M1284.2 51.9l-1.3-10.2 9.9-1.4 1.3 10.2z" />
           <path d="M1283 51h10v10h-10z" />
@@ -3790,7 +3810,7 @@ const TileFrameSVG = () => {
           />
           <path d="M31 42h10v10H31zM21 42h10v10H21zM21 52h10v10H21zM21 62h10v10H21zM21 72h10v10H21z" />
         </g>
-        <g className="frame-white">
+        <g className="frame-base">
           <path d="M31 72h10v10H31z" />
           <path d="M51.8 80.9l-10.2 1.4-1.5-9.9L50.3 71z" />
           <path d="M51 72h10v10H51z" />
@@ -3868,7 +3888,7 @@ const TileFrameSVG = () => {
           />
           <path d="M43 859h10v10H43zM43 869h10v10H43zM53 869h10v10H53zM63 869h10v10H63zM73 869h10v10H73z" />
         </g>
-        <g className="frame-white">
+        <g className="frame-base">
           <path d="M73 859h10v10H73z" />
           <path d="M81.9 848.4l1.4 10.2-9.9 1.4-1.4-10.2z" />
           <path d="M73 839h10v10H73z" />
@@ -3945,7 +3965,7 @@ const TileFrameSVG = () => {
           />
           <path d="M1324 848h10v10h-10zM1334 848h10v10h-10zM1334 838h10v10h-10zM1334 828h10v10h-10zM1334 818h10v10h-10z" />
         </g>
-        <g className="frame-white">
+        <g className="frame-base">
           <path d="M1324 818h10v10h-10z" />
           <path d="M1313.2 819.1l10.2-1.4 1.5 9.9-10.2 1.4z" />
           <path d="M1304 818h10v10h-10z" />

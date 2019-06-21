@@ -49,6 +49,7 @@ const StyledSkyLabel = styled.label`
     transform: rotate(90deg);
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
     cursor: pointer;
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
   }
   & input[type="range"]:focus {
     outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */

@@ -18,16 +18,17 @@ const StyledAppContainer = styled.main`
   grid-template-columns: 1fr;
   grid-template-rows: 46vh 26vh 6vh;
   outline: 0.5px solid black;
+  position: relative;
   & #slider-toggle {
     outline: 0;
     background: transparent;
     border-width: 0;
-    grid-column: 1;
-    grid-row: 3;
-    width: 10vw;
+    position: absolute;
+    width: 12vw;
+    left: 36vw;
+    bottom: -55px;
     min-width: 100px;
     height: 5vh;
-    margin: 0 auto;
     z-index: 4;
   }
 `;
