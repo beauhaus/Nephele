@@ -50,7 +50,7 @@ User will be able to experiment and observe effects of adjustments to several re
 
 ### TODO: start working on widening the display screen and implementing the modal to display code and a "copy-to-clipboard" button
 
-![Fifteenth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot14.jpg?raw=true "Fifteenth page screenshot")
+![Fifteenth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot15.jpg?raw=true "Fifteenth page screenshot")
 
 
 ## Attributions

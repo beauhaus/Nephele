@@ -10,7 +10,7 @@ const StyledTileFrameSVG = styled.svg`
   opacity: 1;
 
   --meander-color: #6f7883;
-  --trim-color: #41220b;
+  --trim-color: #af8769;
   --frame-white: #deddd8;
   & #top_3_ {
     /* display: none; */
