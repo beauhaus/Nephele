@@ -11,9 +11,6 @@ class App extends Component {
         <TileFrameSVG />
         <TextureBG />
         <CloudAppContainer />
-        {/**
-      <AppGridWrapper />
-  */}
       </div>
     );
   }

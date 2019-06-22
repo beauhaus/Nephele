@@ -86,7 +86,7 @@ h3 {
   color: #304053;
   color: #1d3450;
   /*trim color*/
-  color: #1d3450;
+  fill: rgba(29, 52, 80, 0.678);
   fill: rgba(59, 67, 102, 0.5);
 
   mix-blend-mode: multiply;

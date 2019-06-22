@@ -30,11 +30,9 @@ const StyledSkyLabel = styled.label`
     background-position: center center;
     background-image: url(${arrowThumbIcon});
     cursor: pointer;
-    /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
     margin-top: 0;
     margin-left: 0;
-    /*this transform may need a relook after repositioning it's parent*/
-    transform: translateX(70%) translateY(20%) rotate(90deg);
+    transform: translateX(70%) translateY(0%) rotate(90deg);
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
   }
   &#sky input[type="range"]::-moz-range-thumb {
@@ -49,10 +47,10 @@ const StyledSkyLabel = styled.label`
     transform: rotate(90deg);
     filter: drop-shadow(4px 4px 2px rgba(0, 0, 0, 0.7));
     cursor: pointer;
-    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    outline: none;
   }
   & input[type="range"]:focus {
-    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    outline: none;
   }
 `;
 /* ${props => stylesStore(props)}; */

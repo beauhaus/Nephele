@@ -4,15 +4,15 @@ import cloudThumbIcon from "../images/cloud_thumb.svg";
 import DynamicSlider from "./DynamicSlider";
 
 const StyledSlidersWrapper = styled.section`
-  /* border: 2px dashed goldenrod; */
+  /* font-size: 2rem; */
   font-size: 2rem;
-  font-weight: lighter; /* TODO: is this used? */
   position: relative;
   z-index: 2;
   display: grid;
   grid-gap: 4px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 7vh);
+  
   & .attr-reference {
     font-family: "Source Sans Pro", serif;
     font-weight: 300;
@@ -92,16 +92,25 @@ const StyledSlidersWrapper = styled.section`
   input[type="range"]:focus::-webkit-slider-runnable-track {
     background: orange;
   }
-
   input[type="range"]::-moz-range-track {
     height: 0.1rem;
     cursor: pointer;
     box-shadow: inset 1px 1px 1px #1d334e;
     background: #fff;
     border-radius: 0.1rem;
-    /* border: 0.2px solid #010101; */
   }
-
+    /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+    @media screen and (min-width: 601px) {
+  & .attr-reference {
+    font-size: 2rem;
+  }
+}
+/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+@media screen and (max-width: 600px) {
+  & .attr-reference {
+    font-size: 1.4rem;
+  }
+}
 `;
 
 const SlidersContaner = props => {
