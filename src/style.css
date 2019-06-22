@@ -74,7 +74,7 @@ h3 {
   background: linear-gradient(0deg, #071528 20%, rgba(32, 35, 41, 0.5) 120%);
   color: rgba(168, 111, 68, 0.596);
   color: #af8e74;
-  color: #e7e7e7af;
+  color: #dfd9d9;
   color: #e7ccc1;
   color: #cfcfcfdb;
   background-color: #7c7a77;
@@ -86,7 +86,9 @@ h3 {
   color: #304053;
   color: #1d3450;
   /*trim color*/
-  color: #af8769;
+  color: #1d3450;
+  fill: rgba(59, 67, 102, 0.5);
+
   mix-blend-mode: multiply;
 }
 

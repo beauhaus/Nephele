@@ -21,15 +21,16 @@ const StyledAppContainer = styled.main`
   position: relative;
   & #slider-toggle {
     outline: 0;
+    min-width: 100px;
     background: transparent;
     border-width: 0;
     position: absolute;
     width: 12vw;
-    left: 36vw;
-    bottom: -55px;
-    min-width: 100px;
     height: 5vh;
     z-index: 4;
+    bottom: -75px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 `;
 

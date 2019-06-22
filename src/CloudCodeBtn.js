@@ -22,7 +22,7 @@ const StyledBtn = styled.svg`
     g#cloud-group {
       & #outline {
         transform-origin: 50% 50%;
-        fill: rgba(168, 111, 68, 0.5);
+        fill: rgba(29, 52, 80, 0.4);
         animation: outline-un-squeeze 0.2s cubic-bezier(0.72, 0.03, 0.33, 1.97)
           forwards;
       }
