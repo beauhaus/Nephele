@@ -26,9 +26,9 @@ const StyledAppContainer = styled.main`
     border-width: 0;
     position: absolute;
     width: 12vw;
-    height: 5vh;
+    height: 8vh;
     z-index: 4;
-    bottom: -75px;
+    bottom: -100px;
     left: 50%;
     transform: translate(-50%, -50%);
   }
