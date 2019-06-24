@@ -47,10 +47,7 @@ class CloudAppContainer extends Component {
     mouseOn: false,
     sliderMode: true
   };
-  // componentDidMount() {
-  //   console.log("mount");
-  //   this.sliderValUpdater();
-  // }
+
   sliderValUpdater = (attrRef, valUpdate) => {
     console.log(`FROM MAINTOOL COMP:
     attrRef: ${attrRef}
@@ -79,14 +76,9 @@ class CloudAppContainer extends Component {
         break;
     }
   };
-  btnMouseOnHandler = () => {
-    // console.log("btnMouseOnHandler");
-    return this.setState({ mouseOn: true });
-  };
-  btnMouseOffHandler = () => {
-    // console.log("btnMouseOffHandler");
-    return this.setState({ mouseOn: false });
-  };
+  componentDidMount() {
+    console.log("mounted scaleVal", this.state.scaleVal);
+  }
   btnClickHandler = () => {
     return this.setState(() => ({ sliderMode: !this.state.sliderMode }));
   };
@@ -110,12 +102,7 @@ class CloudAppContainer extends Component {
           seedVal={seedVal}
         />
 
-        <button
-          id="slider-toggle"
-          onClick={this.btnClickHandler}
-          // onMouseEnter={this.btnMouseOnHandler}
-          // onMouseLeave={this.btnMouseOffHandler}
-        >
+        <button id="slider-toggle" onClick={this.btnClickHandler}>
           <CloudCodeBtn sliderMode={sliderMode} />
         </button>
         {sliderMode ? (

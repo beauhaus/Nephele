@@ -88,7 +88,7 @@ h3 {
   /*trim color*/
   fill: rgba(29, 52, 80, 0.678);
   fill: rgba(59, 67, 102, 0.5);
-
+  outline-width: 0;
   mix-blend-mode: multiply;
 }
 

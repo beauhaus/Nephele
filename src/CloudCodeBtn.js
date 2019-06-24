@@ -248,11 +248,6 @@ class CloudCodeBtn extends Component {
   };
 
   render() {
-    console.log("p>btn: ", this.props);
-    /* 2 states:
-      closed-ui-btn
-      open-ui-btn
-    */
     const { sliderMode } = this.props;
     return (
       <StyledBtn

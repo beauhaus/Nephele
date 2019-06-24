@@ -12,7 +12,7 @@ const StyledSlidersWrapper = styled.section`
   grid-gap: 4px;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, 7vh);
-  
+
   & .attr-reference {
     font-family: "Source Sans Pro", serif;
     font-weight: 300;
@@ -25,13 +25,13 @@ const StyledSlidersWrapper = styled.section`
   & :nth-child(2),
   & :nth-child(4),
   & :nth-child(6) {
-      & .attr-reference {
+    & .attr-reference {
       text-align: right;
     }
   }
   & label {
-   width: 100%;
-  } 
+    width: 100%;
+  }
   & input[type="range"] {
     margin: auto;
     -webkit-appearance: none;
@@ -51,7 +51,6 @@ const StyledSlidersWrapper = styled.section`
     background: url(${cloudThumbIcon});
     background-size: contain;
     background-repeat: no-repeat;
-    /* background-attachment: fixed; */
     background-position: center top;
     cursor: pointer;
     margin-top: -1.8rem; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
@@ -60,6 +59,7 @@ const StyledSlidersWrapper = styled.section`
 
   input[type="range"]::-moz-range-thumb {
     border-width: 0px;
+    outline-width: 0;
     height: 30px;
     width: 30px;
     background: url(${cloudThumbIcon});
@@ -67,7 +67,7 @@ const StyledSlidersWrapper = styled.section`
     background-repeat: no-repeat;
     background-position: center top;
     cursor: pointer;
-    filter: drop-shadow(1px 1px #1d334e));
+    filter: drop-shadow(1px 1px #1d334e);
   }
   /* All the same stuff for IE */
   input[type="range"]::-ms-thumb {
@@ -99,18 +99,18 @@ const StyledSlidersWrapper = styled.section`
     background: #fff;
     border-radius: 0.1rem;
   }
-    /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-    @media screen and (min-width: 601px) {
-  & .attr-reference {
-    font-size: 2rem;
+  /* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
+  @media screen and (min-width: 601px) {
+    & .attr-reference {
+      font-size: 2rem;
+    }
   }
-}
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
-  & .attr-reference {
-    font-size: 1.4rem;
+  /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
+  @media screen and (max-width: 600px) {
+    & .attr-reference {
+      font-size: 1.4rem;
+    }
   }
-}
 `;
 
 const SlidersContaner = props => {
