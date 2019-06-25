@@ -12,19 +12,20 @@ const StyledSliderPanel = styled.div`
   opacity: 0.5;
   width: 100%;
   grid-column: 1;
-  grid-row: 2/3;
+  grid-row: 3/-1;
   z-index: 3;
   animation: fadeIn 1s ease-out forwards;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 32vh;
 `;
-const SliderPanel = ({ slidersArray, sliderValUpdater }) => {
+const SliderPanel = ({ stateObj, slidersArray, sliderValUpdater }) => {
   return (
     <StyledSliderPanel className="slider-panel">
       <SlidersContainer
         slidersArray={slidersArray}
         sliderValUpdater={sliderValUpdater}
+        stateObj={stateObj}
       />
     </StyledSliderPanel>
   );

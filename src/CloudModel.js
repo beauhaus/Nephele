@@ -2,10 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const cloudStylesStore = ({ blurVal, spreadVal }) => {
-  // console.log("p> CloudModel: ", props);
   return `
   box-shadow: 60vw 65vh ${blurVal}px ${spreadVal}px #fff;
-
 `;
 };
 

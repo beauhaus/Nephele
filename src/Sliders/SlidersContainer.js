@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import cloudThumbIcon from "../images/cloud_thumb.svg";
 import DynamicSlider from "./DynamicSlider";
+// import SeedSlider from "./SeedSlider";
 
 const StyledSlidersWrapper = styled.section`
   /* font-size: 2rem; */
@@ -90,7 +91,8 @@ const StyledSlidersWrapper = styled.section`
   }
 
   input[type="range"]:focus::-webkit-slider-runnable-track {
-    background: orange;
+    background: red;
+    height: 1px;
   }
   input[type="range"]::-moz-range-track {
     height: 0.1rem;
@@ -114,7 +116,7 @@ const StyledSlidersWrapper = styled.section`
 `;
 
 const SlidersContaner = props => {
-  const { sliderValUpdater, slidersArray } = props;
+  const { sliderValUpdater, slidersArray, stateObj } = props;
   return (
     <StyledSlidersWrapper className="sliders-container">
       {slidersArray.map(slider => (
@@ -122,10 +124,12 @@ const SlidersContaner = props => {
           key={slider.name}
           slider={slider}
           sliderValUpdater={sliderValUpdater}
+          stateObj={stateObj}
         />
       ))}
     </StyledSlidersWrapper>
   );
 };
+// <SeedSlider sliderValUpdater={sliderValUpdater} seedVal={seedVal} />
 
 export default SlidersContaner;

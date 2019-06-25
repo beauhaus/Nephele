@@ -16,18 +16,16 @@ const StyledCloudDisplay = styled.section`
   grid-template-rows: 46vh 32vh;
   position: relative;
   justify-items: end;
-  /* z-index: 1; */
-  /* overflow: hidden; */
-
   & img {
     width: 8vh;
     margin: 0.5vh;
-    z-index: 2;
     position: absolute;
     filter: grayscale(50%);
+    z-index: 2;
     &#sunIcon {
       top: 4px;
       right: 4px;
+      z-index: 3;
     }
     &#moonIcon {
       bottom: 4px;
