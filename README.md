@@ -1,5 +1,5 @@
 # Nephele
-### Tool to be ported into Codepen as a complement to clouds article.
+### A tool to make clouds and explore the effects of CSS & a couple of SVG Filters
 
 User will be able to experiment and observe effects of adjustments to several relevant values affecting cloud image
 
