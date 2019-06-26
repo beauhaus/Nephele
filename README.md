@@ -53,6 +53,12 @@ User will be able to experiment and observe effects of adjustments to several re
 ![Fifteenth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot15.jpg?raw=true "Fifteenth page screenshot")
 
 
+![Sixteenth page screenshot](https://github.com/beauhaus/Nephele/blob/master/readmeRefImg/scrnshot16.jpg?raw=true "Fifteenth page screenshot")
+#### Final Draft
+
+#### Please feel free to contact me for comments, complaints, suggestions, or HELP! :) 
+<a href="https://twitter.com/_beauhaus">@_beauhaus on twitter</a>
+
 ## Attributions
 
 React scaffolding using the recommendations Brian Holt's excellent react <a href="https://frontendmasters.com/teachers/brian-holt/" target="_blank" title="Click to visit this class">course on FrontEndMasters</a>
