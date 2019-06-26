@@ -60,7 +60,7 @@ body {
   bottom: 0;
   margin-bottom: 18px;
   color: rgba(169, 166, 158, 0.664);
-  color: rgba(0, 67, 95, 0.698);
+  color: #e99b58;
 }
 
 @keyframes fadeIn {
@@ -69,5 +69,14 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes fadeIn-bg {
+  0% {
+    background: transparent;
+  }
+  100% {
+    background: rgba(255, 255, 255, 0.2);
   }
 }

@@ -27,16 +27,16 @@ const StyledInfoLink = styled.a`
     /* filter: drop-shadow(0px 0px 2px rgba(169, 166, 158, 1) ;); */
     &:hover {
       & > .circle {
-        animation: fillIn 0.5s ease-in-out forwards;
+        animation: fillIn 0.3s ease-in-out forwards;
       }
       & g.dot #black-dot {
-        animation: fadeIn 0.5s ease-in-out forwards reverse;
+        animation: fadeIn 0.3s ease-in-out forwards reverse;
       }
       & g#article {
-        animation: fadeIn 1.2s ease-in-out forwards;
+        animation: fadeIn 0.5s ease-in-out forwards;
       }
       & #letter-i-stroke {
-        animation: fadeIn 0.8s ease-in-out forwards;
+        animation: fadeIn 0.5s ease-in-out forwards;
       }
     }
   }
@@ -61,6 +61,7 @@ const StyledInfoLink = styled.a`
 const InfoLink = () => (
   <StyledInfoLink
     className="info-link"
+    target="_blank"
     href="https://css-tricks.com/drawing-realistic-clouds-with-svg-and-css/"
   >
     <svg viewBox="0 0 200 200">
@@ -89,10 +90,11 @@ const InfoLink = () => (
         stroke="#fff"
         d="M73.3 130.5c.5-2 1.3-4.5 2.3-7.8l13.5-43.5c.1-.5.3-1 .4-1.5.1-.5.2-1 .2-1.4 0-2.6-.9-4.2-2.8-4.8-1.9-.6-5.2-1-10.2-1.2v-5.1c4.1-.3 10.1-.8 18-1.6 7.8-.8 13.4-1.5 16.7-2l9.4-1.6-17.1 55.1c-1.4 4.7-2.4 8-2.9 9.8-1.3 4.7-1.9 7.7-1.9 9.1 0 1.4.4 2.3 1.1 2.7.7.4 1.5.6 2.4.6 2.2 0 5-1.7 8.3-5 3.3-3.3 6.2-6.8 8.7-10.5l4.8 2.7c-7.2 9.3-12.6 15.5-16.4 18.7-6.2 5.3-12.9 7.9-20 7.9-4 0-7.6-1.1-10.8-3.3-3.2-2.2-4.8-5.5-4.8-10-.2-1.4.2-3.9 1.1-7.3z"
       />
+
       <g className="dot">
         <path
           id="tricks-dot"
-          fill="#DB914F"
+          fill="#e99b58"
           stroke="#3E3F4D"
           strokeMiterlimit="10"
           d="M118.9 48.7c-.6 1.1-1.8 1.7-2.8 1.7-.4 0-.9-.1-1.3-.3l-9-6.3.8 10.5c0 1.5-1.4 2.7-3.3 2.7-1.8 0-3.3-1.2-3.3-2.6l1.1-10.8-9.5 6.6c-1.3.8-3.2.1-4.1-1.4-.9-1.6-.5-3.5.8-4.2l10.1-5-10.1-5.1c-1.3-.8-1.7-2.7-.8-4.3.9-1.6 2.7-2.2 4.1-1.4l9.4 6.7-1.2-9.8c0-1.5 1.4-2.2 3.3-2.2 1.8 0 3.3.7 3.3 2.2l-.7 10 9.2-6.4c1.3-.8 3.2-.2 4.1 1.4.3.6.5 1.2.5 1.8 0 1-.5 1.9-1.3 2.4l-9.8 4.8 9.6 4.8c1.5.7 1.8 2.6.9 4.2z"

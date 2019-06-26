@@ -14,9 +14,7 @@ const StyledAppContainer = styled.main`
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 6vh 46vh 26vh;
-  /* outline: 2px solid red; */
-  /*TODO: fix the height of this*/
+  grid-template-rows: 6vh 46vh 16vh;
   position: relative;
   & #slider-toggle {
     outline: 0;
@@ -27,21 +25,19 @@ const StyledAppContainer = styled.main`
     width: 12vw;
     /* NOTE: change above value */
     height: 8vh;
-    z-index: 1;
+    z-index: 4;
     bottom: -13vh;
     left: 50%;
     transform: translate(-50%, -50%);
   }
   & #preset-menu {
+    animation: fadeIn 0.5s ease-in-out forwards;
     grid-column: 1;
     grid-row: 1;
     z-index: 3;
     display: grid;
     grid-template-rows: 1fr;
     grid-gap: 2px;
-    &:focus {
-      background: red;
-    }
     & button {
       font-family: "Source Sans Pro", serif;
       font-size: 1.5rem;
@@ -50,6 +46,9 @@ const StyledAppContainer = styled.main`
       color: #ddd;
       font-weight: 200;
       grid-row: 1;
+      &:hover {
+        animation: fadeIn-bg 0.2s ease-in-out forwards;
+      }
     }
   }
 `;
