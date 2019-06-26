@@ -15,7 +15,8 @@ const StyledAppContainer = styled.main`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 6vh 46vh 26vh;
-  outline: 0.5px solid black;
+  /* outline: 2px solid red; */
+  /*TODO: fix the height of this*/
   position: relative;
   & #slider-toggle {
     outline: 0;
@@ -26,7 +27,7 @@ const StyledAppContainer = styled.main`
     width: 12vw;
     /* NOTE: change above value */
     height: 8vh;
-    z-index: 4;
+    z-index: 1;
     bottom: -13vh;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -44,7 +45,6 @@ const StyledAppContainer = styled.main`
     & button {
       font-family: "Source Sans Pro", serif;
       font-size: 1.5rem;
-
       background: transparent;
       border: 1px solid #bbb;
       color: #ddd;

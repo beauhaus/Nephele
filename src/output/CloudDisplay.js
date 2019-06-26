@@ -25,7 +25,7 @@ const StyledCloudDisplay = styled.section`
     &#sunIcon {
       top: 4px;
       right: 4px;
-      z-index: 3;
+      z-index: 2;
     }
     &#moonIcon {
       bottom: 4px;
