@@ -35,6 +35,9 @@ const StyledTileFrameSVG = styled.svg`
     &.bot-lt-corner path {
       fill: rgba(84, 88, 91, 0.5);
     }
+    &.top-lt-corner path {
+      fill: var(--frame-base4);
+    }
   }
   & .trim {
     fill: var(--trim-color);
@@ -3788,7 +3791,7 @@ const TileFrameSVG = () => {
         <path d="M1293 0h11v10h-11zM1283 0h10v10h-10z" />
       </g>
       <g id="topLt">
-        <g className="meander">
+        <g className="meander top-lt-corner">
           <path
             d="M41.2 21.4h10v10h-10z"
             transform="matrix(.9978 .0665 -.0665 .9978 1.8582 -3.0133)"
@@ -3943,7 +3946,7 @@ const TileFrameSVG = () => {
         </g>
       </g>
       <g id="botRt">
-        <g className="meander">
+        <g className="meander bot-rt-corner">
           <path
             d="M1313.8 868.6h10v10h-10z"
             transform="matrix(-.9978 -.0665 .0665 -.9978 2576.6057 1832.9702)"

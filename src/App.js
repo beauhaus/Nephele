@@ -5,7 +5,7 @@ import TileFrameSVG from "./TileFrameSVG";
 import CloudAppContainer from "./CloudAppContainer";
 import InfoLink from "./InfoLink";
 import GitMark from "./GitMark";
-
+import Zeus from "./Zeus";
 class App extends Component {
   render() {
     return (
@@ -14,9 +14,10 @@ class App extends Component {
         <TextureBG />
         <InfoLink />
         <GitMark />
+        <Zeus/>
         <CloudAppContainer />
-      </div>
-    );
-  }
+        </div>
+        );
+      }
 }
 render(<App />, document.getElementById("root"));

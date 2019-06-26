@@ -31,7 +31,7 @@ const StyledGitMark = styled.button`
   }
 `;
 const GitMark = () => (
-  <StyledGitMark class="git-mark-btn">
+  <StyledGitMark className="git-mark-btn">
     <a href="https://github.com/beauhaus/Nephele#readme">
       <svg viewBox="0 0 50 50">
         <path
