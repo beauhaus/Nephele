@@ -3,6 +3,7 @@ import { render } from "react-dom";
 import TextureBG from "./TextureBG";
 import TileFrameSVG from "./TileFrameSVG";
 import CloudAppContainer from "./CloudAppContainer";
+import InfoLink from "./InfoLink";
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <div id="App">
         <TileFrameSVG />
         <TextureBG />
+        <InfoLink />
         <CloudAppContainer />
       </div>
     );

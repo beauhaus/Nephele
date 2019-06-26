@@ -24,13 +24,10 @@ body {
 }
 
 #App {
-  /* width: 98vw;
-  height: 98vh; */
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 100vh;
-  /* margin: auto; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,12 +40,6 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   filter: drop-shadow(0px 0px 1px rgb(54, 44, 14));
-}
-
-/* NOTE: save this for p labels*/
-h2,
-h3 {
-  margin-bottom: 0;
 }
 
 .cloud-display {
@@ -68,28 +59,8 @@ h3 {
   right: 0;
   bottom: 0;
   margin-bottom: 18px;
-}
-
-.testing {
-  background: linear-gradient(0deg, #071528 20%, rgba(32, 35, 41, 0.5) 120%);
-  color: rgba(168, 111, 68, 0.596);
-  color: #af8e74;
-  color: #dfd9d9;
-  color: #e7ccc1;
-  color: #cfcfcfdb;
-  background-color: #7c7a77;
-}
-
-.tiles-color-test {
-  color: #20150c;
-  color: #263310;
-  color: #304053;
-  color: #1d3450;
-  /*trim color*/
-  fill: rgba(29, 52, 80, 0.678);
-  fill: rgba(59, 67, 102, 0.5);
-  outline-width: 0;
-  mix-blend-mode: multiply;
+  color: rgba(169, 166, 158, 0.664);
+  color: rgba(0, 67, 95, 0.698);
 }
 
 @keyframes fadeIn {
