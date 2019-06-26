@@ -8,7 +8,7 @@ const StyledTileFrameSVG = styled.svg`
   height: 98vh;
   margin: auto;
   opacity: 1;
-  
+
   --meander-color: #6f7883;
   --trim-color: #af8769;
   --frame-base: #deddd8;
@@ -20,20 +20,21 @@ const StyledTileFrameSVG = styled.svg`
   --frame-base7: #e0e0d9;
   --frame-base8: #c0c0c0;
   --frame-base9: transparent;
-  var(--frame-base);
-  
+
   & .meander {
     fill: var(--meander-color);
     &.t6 path {
       fill: var(--frame-base4);
-    }  
+    }
     &.t7 path {
       fill: var(--frame-base4);
     }
     &.top-rt-corner path {
-      fill: var(--frame-base2);
+      fill: rgba(84, 88, 91, 0.5);
     }
-
+    &.bot-lt-corner path {
+      fill: rgba(84, 88, 91, 0.5);
+    }
   }
   & .trim {
     fill: var(--trim-color);
@@ -3864,8 +3865,8 @@ const TileFrameSVG = () => {
         <path d="M10.3 62.6L.4 60.9l1.7-10.1 9.8 1.7z" />
         <path d="M0 61h10v11H0zM0 72h10v10H0z" />
       </g>
-      <g id="botLt">
-        <g className="meander">
+      <g id="bot-Lt">
+        <g className="meander bot-lt-corner">
           <path
             d="M22.4 849h10v10h-10z"
             transform="matrix(.0665 -.9978 .9978 .0665 -826.485 824.5049)"
