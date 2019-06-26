@@ -4,6 +4,7 @@ import TextureBG from "./TextureBG";
 import TileFrameSVG from "./TileFrameSVG";
 import CloudAppContainer from "./CloudAppContainer";
 import InfoLink from "./InfoLink";
+import GitMark from "./GitMark";
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <TileFrameSVG />
         <TextureBG />
         <InfoLink />
+        <GitMark />
         <CloudAppContainer />
       </div>
     );

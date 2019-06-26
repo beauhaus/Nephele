@@ -24,7 +24,6 @@ const StyledInfoLink = styled.a`
       stroke-width: 2px;
       opacity: 0;
     }
-    /* filter: drop-shadow(0px 0px 2px rgba(169, 166, 158, 1) ;); */
     &:hover {
       & > .circle {
         animation: fillIn 0.3s ease-in-out forwards;
@@ -75,7 +74,7 @@ const InfoLink = () => (
         />
         <path
           id="circle-border"
-          fill="green"
+          fill="#886851"
           d="M100 8.6c42.9 0 77.8 34.9 77.8 77.9s-34.9 77.9-77.8 77.9-77.8-34.9-77.8-77.9S57.1 8.6 100 8.6m0-8.6C52.2 0 13.5 38.7 13.5 86.5S52.2 173 100 173s86.5-38.7 86.5-86.5S147.8 0 100 0z"
         />
       </g>

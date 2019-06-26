@@ -13,24 +13,22 @@ const StyledCloudDisplay = styled.section`
   grid-row: 1/-1;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 46vh 32vh;
+  grid-template-rows: 78vh;
   position: relative;
-  justify-items: end;
   & img {
     width: 8vh;
-    margin: 0.5vh;
+    margin: 0;
     position: absolute;
     filter: grayscale(50%);
     z-index: 2;
     &#sunIcon {
       top: 4px;
-      right: 4px;
+      right: 0;
       z-index: 2;
     }
     &#moonIcon {
-      bottom: 4px;
-      right: 4px;
-      margin-bottom: 0.5vw;
+      bottom: -10vh;
+      right: 0;
     }
   }
   & .cloud-model-container {
@@ -43,12 +41,6 @@ const StyledCloudDisplay = styled.section`
     left: 0;
     z-index: 2;
     overflow: hidden;
-  }
-  & #cloud-model {
-    /* z-index: 1;
-    width: 70%;
-    height: 50%;
-    background: transparent; */
   }
 `;
 

@@ -4,7 +4,7 @@ import styled from "styled-components";
 const stylesStore = props => `opacity: ${props.opacityVal * 2 * 0.01}`;
 
 const StyledDayLayerOverlay = styled.div`
-  background: linear-gradient(165deg, #58c4e9 50%, #f5f5f5 130%);
+  background: linear-gradient(165deg, #4eb7da 50%, #f5f5f5 130%);
   width: 84vw;
   height: 78vh;
   position: absolute;
